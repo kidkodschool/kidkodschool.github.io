@@ -1,0 +1,122 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #709FDC;
+    height: 100vh;
+}
+.main-page {
+    text-align: center;
+    padding: .5em;
+    a {
+        font-size: 2em;
+        text-decoration: none;
+        color: white;
+        &:hover {
+            color: darkorange;
+        }
+    }
+    div {
+        margin: .5em;
+    }
+    h1 {
+        color: white;
+    }
+    .begin {
+        background-color: #11a1e2;
+    }
+    .adv {
+        background-color: #a83a01;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 1em;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 75%;
+    margin: auto;
+}
+
+h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+p {
+    font-size: large;
+    color: darkred;
+    background-color: #fff;
+    padding: .5em;
+}
+.additional {
+    padding: 1em;
+    margin: 0 1em;
+    background-color: white;
+    a {
+        display: block;
+        font-size: 2em;
+        color: black;
+        padding: 1em;
+        white-space: nowrap;
+        &:hover {
+            color: darkorange;
+        }
+    }    
+    .important {
+        color: rgb(211, 19, 51);
+        font-size: 1.95em;
+        padding: 0 1em;
+    }
+}
+
+ol {
+    li {
+        padding: 10px;
+        a {
+            font-size: 2em;
+            color: white;
+            align-self: center;
+        }
+    }
+}
+
+
+
+ol {
+  list-style: none;
+  counter-reset: customCounter;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+ol li {
+  counter-increment: customCounter;
+  display: flex;
+  width: 50%;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+ol li::before {
+  content: counter(customCounter);
+  font-weight: bold;
+  font-size: 3rem;
+  margin-right: 0.5rem;
+  line-height: 1;
+  color: #FFCA2D;
+}
+
+footer {
+    background-color: #1C2A49;
+    padding: 10px;
+    text-align: center;
+    margin: 1em;
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        li {
+            padding: 10px;
+        }
+    }
+}
