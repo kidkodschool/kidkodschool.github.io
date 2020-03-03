@@ -8,6 +8,23 @@
     <link href="css/style.css" rel="stylesheet">
     <title>Microsoft Visual Studio Code и git
     </title>
+    <style>
+        .container {
+            background-color: #EECE2C;
+        }
+        .container h4, .container h5 {
+            color: black;
+        }
+        .container h4::before {
+            content: '❗';
+        }
+        .container h5 {
+            margin-left: 1em;
+        }
+        .container h5::before {
+            content: '☑️';
+        }
+    </style>
 </head>
 
 <body>
@@ -43,11 +60,32 @@
             <img src="img/git_2.png" height="500px" alt="Вид">
         </li>
     </ol>
+    <h1>Создать игру - hangman</h1>
+    <div class="container">
+        <h4>Правила игры</h4>
+        <div class="items">
+            <h5>Игра загадывает слово и игрок должен угадать это слово</h5>
+            <h5>Попытки игрока угадать слово засчитываются побуквенно (В этой версии игры нельзя написать сразу слово)</h5>
+            <h5>У игрока есть 3 попытки, чтобы угадать</h5>
+            <h5>Игра показывает игроку, сколько попыток у него осталось</h5>
+            <h5>Игра подсказывает только количество букв в слове</h5>
+            <h5>Если угаданы все буквы в слове, игрок выигрывает</h5>
+            <h5>Если у игрока кончается последняя попытка, он проигрывает</h5>
+        </div>
+    </div>
+    <h1>Примерное представление об игре</h1>
+        <img src="img/lsn_7_1.png" alt="1" width="600px">
+        <img src="img/lsn_7_2.png" alt="2" width="600px">
+
     <div class="additional">
         <h2 class="important">Полезные ссылки:</h2>
         <a href="https://nikomedvedev.ru/other/vscodeshortcuts/hotkeys.html" target="_blank">Горячие клавиши для Visual Studio
             Code</a>
-
+        <a href="lesson_2.html">Урок 2 - Переменные, строки, ввод и вывод</a>
+        <a href="lesson_3.html">Урок 3 - Списки, кортежи</a>
+        <a href="lesson_4.html">Урок 4 - Сравнения</a>
+        <a href="lesson_5.html">Урок 5 - Циклы</a>
+        <a href="lesson_6.html">Урок 6 - Функции</a>
     </div>
     <footer>
         <h5>
