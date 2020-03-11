@@ -45,9 +45,7 @@ def move_up(f):
     for i in field_size:
         for j in field_size:
             if f[i][j] == 'x':
-                tmp = modified[i-1]
-                modified[i-1] = modified[i]
-                modified[i] = tmp
+                modified[i],  modified[i-1] = modified[i-1], modified[i]
                 break
     return modified
 
@@ -61,13 +59,10 @@ def move_down(f):
     for i in field_size:
         for j in field_size:
             if f[i][j] == 'x':
-                tmp = modified[i-1]
                 if i == len(f) - 1:
-                    modified[0] = modified[i]
-                    modified[i] = tmp
+                    modified[0],  modified[i-1] = modified[i-1], modified[0]
                 else:
-                    modified[i+1] = modified[i]
-                    modified[i] = tmp
+                    modified[i],  modified[i+1] = modified[i+1], modified[i]
                 break
     return modified
 
