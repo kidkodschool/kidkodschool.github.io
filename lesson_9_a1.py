@@ -1,5 +1,9 @@
 from random import uniform
 
+#CONSTANT DATA
+
+OBSTACLE_PERCENT = 50
+
 def build_field(n):
     """
     input: n - positive integer
@@ -97,7 +101,11 @@ def move_right(field, position):
 
 def direction_dispatcher(direction, field, position):
     """
-    #TODO change return maybe, for printing unavailable
+    input: direction - string
+           field - list of lists (2d field)
+           position - tuple, represented as coordinates of player at the field (0, 0) -> top, left corner
+    output: field - list of lists, with changed player (x) position
+    This function used as dispatcher of movement
     """
     obstacle = check_obstacle(direction, field, position)
 
@@ -110,13 +118,22 @@ def direction_dispatcher(direction, field, position):
     elif direction == 'left' and not obstacle:
         field = move_left(field, position)
     else:
-        print('Move unavailable')
+        blocked_direction(direction)
 
     return field
 
+
+def blocked_direction(direction):
+    """
+    input: direction as string
+    output: None, used as print() built-in function
+    """
+    print(f'Oops... Move to {direction} is blocked!')
+
 def find_position(field):
     """
-    #TODO add description
+    input: field - list of lists (2d field)
+    output: tuple - represented as coordinates of player at the field (0, 0) -> top, left corner
     """
     pos_x = 0
     pos_y = 0
@@ -133,7 +150,10 @@ def find_position(field):
 
 def check_obstacle(direction, field, position):
     """
-    #TODO add description
+    input: direction - string
+           field - list of lists (2d field)
+           position - tuple, represented as coordinates of player at the field (0, 0) -> top, left corner
+    output: boolean, if move at new position is blocked -> return True, else False
     """
     x, y = position
     flag = False
@@ -161,19 +181,21 @@ def check_obstacle(direction, field, position):
 
     return flag
 
-def add_obstacles(field):
+def add_obstacles(field, obs):
     """
-    #TODO add description
-    #TODO change magic number
+    input: field - list of lists (2d list) represented field
+           obs - integer, global value of obstacle % (converted to float obs/100) 
+    output: filed - list of lists (2d list) represented field, with added obstacles (o) to it.
     """
     field_length = range(len(field))
-
+    obs_percent = obs / 100
     for row in field_length:
         for col in field_length:
-            if uniform(0, 1) <= 0.25 and field[row][col] != 'x':
+            if uniform(0, 1) <= obs_percent and field[row][col] != 'x':
                 field[row][col] = 'o'
 
     return field
+
 
 def user_input():
     return input('Выебрите одно из направлений: up right down left или exit для выхода ')
@@ -181,12 +203,11 @@ def user_input():
 def user_input_fields():
     return int(input('Укажите размер поля: '))
 
-
 def main():
     game = True
     fields = user_input_fields()
     field = set_start_location(build_field(fields))
-    add_obstacles(field)
+    add_obstacles(field, OBSTACLE_PERCENT)
     show_field(field)
     
     while game:
