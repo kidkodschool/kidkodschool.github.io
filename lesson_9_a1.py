@@ -101,13 +101,13 @@ def direction_dispatcher(direction, field, position):
     """
     obstacle = check_obstacle(direction, field, position)
 
-    if direction == 'up' and obstacle:
+    if direction == 'up' and not obstacle:
         field = move_up(field, position)
-    elif direction == 'right' and obstacle:
+    elif direction == 'right' and not obstacle:
         field = move_right(field, position)
-    elif direction == 'down' and obstacle:
+    elif direction == 'down' and not obstacle:
         field = move_down(field, position)
-    elif direction == 'left' and obstacle:
+    elif direction == 'left' and not obstacle:
         field = move_left(field, position)
     else:
         print('Move unavailable')
@@ -136,28 +136,28 @@ def check_obstacle(direction, field, position):
     #TODO add description
     """
     x, y = position
-    flag = True
+    flag = False
 
     if direction == 'up':
         if field[x - 1][y] == 'o':
-            flag = False
+            flag = True
     elif direction == 'right':
         if y + 1 > len(field) - 1:
             if field[x][0] == 'o':
-                flag = False
+                flag = True
         else:
             if field[x][y + 1] == 'o':
-                flag = False
+                flag = True
     elif direction == 'down':
         if x + 1 > len(field) - 1:
             if field[0][y] == 'o':
-                flag = False
+                flag = True
         else:
             if field[x + 1][y] == 'o':
-                flag = False
+                flag = True
     elif direction == 'left':
         if field[x][y - 1] == 'o':
-            flag = False
+            flag = True
 
     return flag
 
@@ -170,7 +170,7 @@ def add_obstacles(field):
 
     for row in field_length:
         for col in field_length:
-            if uniform(0, 1) <= 0.5 and field[row][col] != 'x':
+            if uniform(0, 1) <= 0.25 and field[row][col] != 'x':
                 field[row][col] = 'o'
 
     return field
