@@ -37,7 +37,6 @@ def show_field(f):
     for i in f:
         print(' '.join(i))
 
-
 def move_up(field, position):
     """
     input: field - field
@@ -162,12 +161,6 @@ def check_obstacle(direction, field, position):
 
     return flag
 
-def user_input():
-    return input('Выебрите одно из направлений: up right down left или exit для выхода ')
-
-def user_input_fields():
-    return int(input('Укажите размер поля: '))
-
 def add_obstacles(field):
     """
     #TODO add description
@@ -176,11 +169,17 @@ def add_obstacles(field):
     field_length = range(len(field))
 
     for row in field_length:
-        for spot in field_length:
-            if uniform(0, 1) <= 0.5 and field[row][spot] != 'x':
-                field[row][spot] = 'o'
+        for col in field_length:
+            if uniform(0, 1) <= 0.5 and field[row][col] != 'x':
+                field[row][col] = 'o'
 
     return field
+
+def user_input():
+    return input('Выебрите одно из направлений: up right down left или exit для выхода ')
+
+def user_input_fields():
+    return int(input('Укажите размер поля: '))
 
 
 def main():
