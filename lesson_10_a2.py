@@ -1,3 +1,4 @@
+import pickle
 from random import uniform
 
 #CONSTANT DATA
@@ -198,10 +199,28 @@ def add_obstacles(field, obs):
 
 
 def user_input():
-    return input('Выебрите одно из направлений: up right down left или exit для выхода ')
+    return input('Выебрите одно из направлений: up right down left. exit для выхода. save для сохранения. load для загрузки. ')
 
 def user_input_fields():
     return int(input('Укажите размер поля: '))
+
+def save_game(f):
+    """
+    input: f (field) - list of lists (2d list) represented field
+    save field to file
+    """
+    with open('save.dat', 'wb') as sf:
+        pickle.dump(f, sf)
+    print('Game saved!')
+
+def load_game():
+    """
+    output: loaded field data (list of lists (2d list) represented field)
+    """
+    with open('save.dat', 'rb') as lf:
+        loaded_data = pickle.load(lf)
+    print('Game loaded!')
+    return loaded_data
 
 def main():
     game = True
@@ -212,6 +231,11 @@ def main():
     
     while game:
         user_direction = user_input()
+        if user_direction == 'save':
+            save_game(field)
+        elif user_direction == 'load':
+            field = load_game()
+
         position = find_position(field)
         field = direction_dispatcher(user_direction, field, position)
 
@@ -219,7 +243,6 @@ def main():
             game = False
         if game:
             show_field(field)
-
 
 main()
 
