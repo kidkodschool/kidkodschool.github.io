@@ -5,12 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
     <title>Классы #1
     </title>
     <style>
-
-    </style>
+        table {
+            max-width: 1200px;
+        }
+        caption {
+            background-color: #fff;
+            padding: .5em;
+        }
+        </style>
 </head>
 
 <body>
@@ -34,6 +41,44 @@
         <li>
             <h3>С помощью классов и модуля turtle построить дом своей мечты
             </h3>
+            <img src="img/l12_q1_2.png" alt="" width="500">
+            <table class="ml-3 table table-sm table-bordered table-dark table-hover">
+                <thead>
+                    <h5>Необходимые методы для создания программы</h5>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Как вызвать</th>
+                        <th scope="col">Что делает</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>t.forward(INT)</td>
+                        <td>Движение в сторону указателя у курсора</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>t.left(INT)/t.right(INT)</td>
+                        <td>Поворот на n градусов</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>t.penup()</td>
+                        <td>Прекратить рисование</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>t.pendown()</td>
+                        <td>Начать рисование</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>t.goto(X, Y)</td>
+                        <td>Переместить курсор в заданные координаты</td>
+                    </tr>
+                </tbody>
+            </table>
             <img src="img/l12_q1.png" alt="">
             <img src="img/l12_q1.gif" alt="">
             <h4>
