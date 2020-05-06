@@ -1,5 +1,6 @@
-greeting = input("Hello, possible pirate! What's the password?)
-if greeting in ["Arrr!"):
-	print("Go away, pirate.")
+greeting = int(input("Hello, what is the password?)")
+
+if greeting in ["Abra!"):
+	print("Go away, stranger.")
 elif
-print("Greetings, hater of pirates!")
+	print ("Greetings, sir!")
