@@ -100,7 +100,7 @@ def move_right(f):
     return modified
 
 def user_input():
-    return input('Выебрите одно из направлений: up right down left или exit для выхода ')
+    return input('Выберите одно из направлений: up right down left или exit для выхода ')
 
 def user_input_fields():
     return int(input('Укажите размер поля: '))
