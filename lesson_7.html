@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_lesson.css" rel="stylesheet">
     <title>Microsoft Visual Studio Code и git
     </title>
     <style>
@@ -14,6 +14,8 @@
         }
         .container h2, .container h3 {
             color: black;
+            margin: .5em;
+            font-size: 1.25em;
         }
         .container h2::before {
             content: '❗';
@@ -24,54 +26,66 @@
         .container h3::before {
             content: '☑️';
         }
+        .container > .items > h3 {
+            margin: .75em;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Пошаговая инструкция - как запустить дома Visual Studio Code</h1>
+    <h1 class="title">Пошаговая инструкция - как запустить дома Visual Studio Code</h1>
     <ol>
-        <li class="Первое число для шифра сейфа - 8">
-            <a href="https://code.visualstudio.com" target="_blank">Скачать и установить Visual Studio Code</a>
+        <li>
+            <h2>
+                <a href="https://code.visualstudio.com" target="_blank">Скачать и установить Visual Studio Code</a>
+            </h2>
         </li>
-        <li style="display: block;">
-            <h2 style="margin-right: 1em;">Устанавливаем расширения для python</h2>
-            <img src="img/vsc_1.png" height="500px" alt="Вид">
+        <li>
+            <h2>Устанавливаем расширения для python</h2>
+            <img src="img/vsc_1.png" width="500px" alt="Вид">
         </li>
-        <li style="display: block;">
-            <h2 style="margin-right: 1em;">Создаем и сохраняем новый файл с расширением .py</h2>
+        <li>
+            <h2>Создаем и сохраняем новый файл с расширением .py</h2>
             <img src="img/vsc_2.png" width="500px" alt="Вид">
         </li>
-        <li style="display: block;">
-            <h2 style="margin-right: 1em;">Можно писать код!</h2>
-            <img src="img/vsc_3.png" width="600px" alt="Вид">
-        </li>
-    </ol>
-    <ol>
-        <h1>Как зарегистрировать аккаунт на github</h1>
-        <li style="display: block;">
-            <a href="https://github.com/">Ссылка на сайт - github.com</a>
-        </li>
-        <li style="display: block;">
-            <h2 style="margin-right: 1em;">Вводим свои данные</h2>
-            <img src="img/git_1.png" height="500px" alt="Вид">
-        </li>
-        <li style="display: block;">
-            <h2 style="margin-right: 1em;">Жмем сюда</h2>
-            <img src="img/git_2.png" height="500px" alt="Вид">
-        </li>
-    </ol>
-    <ol>
-        <h1>Установить git</h1>
         <li>
-            <a href="https://git-scm.com/downloads">Скачать и установить git</a>
+            <h2>Можно писать код!</h2>
+            <img src="img/vsc_3.png" width="500px" alt="Вид">
+        </li>
+    </ol>
+    <h1 class="title">Как зарегистрировать аккаунт на github</h1>
+    <ol>
+        <li>
+            <h2>
+                <a href="https://github.com/">Ссылка на сайт - github.com</a>
+            </h2>
         </li>
         <li>
-            <img src="img/git.png" alt="Утановки git">
+            <h2>Вводим свои данные</h2>
+            <img src="img/git_1.png" width="800px" alt="Вид">
+        </li>
+        <li>
+            <h2>Жмем сюда</h2>
+            <img src="img/git_2.png" width="800px" alt="Вид">
         </li>
     </ol>
-    <h1>Создать игру - hangman</h1>
+    <h1 class="title">Установить git</h1>
+    <ol>
+        <li>
+            <h2>
+                <a href="https://git-scm.com/downloads">Скачать и установить git</a>
+            </h2>
+        </li>
+        <li>
+            <img src="img/git.png" width="600" alt="Утановка git">
+        </li>
+    </ol>
+    <h1 class="title">Создать игру - hangman (Виселица)</h1>
     <div class="container">
         <h2>Правила игры</h2>
+        <h2>
+            <a style="color: black;" href="https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D1%81%D0%B5%D0%BB%D0%B8%D1%86%D0%B0_(%D0%B8%D0%B3%D1%80%D0%B0)">Ссылка на правила</a>
+        </h2>
         <div class="items">
             <h3>Игра загадывает слово и игрок должен угадать это слово</h3>
             <h3>Попытки игрока угадать слово засчитываются побуквенно (В этой версии игры нельзя написать сразу слово)</h3>
@@ -82,37 +96,33 @@
             <h3>Если у игрока кончается последняя попытка, он проигрывает</h3>
         </div>
     </div>
-    <h1>Примерное представление об игре</h1>
+    <h1 class="title">Примерное представление об игре</h1>
 <iframe src="https://trinket.io/embed/python3/f9bf6f240b?outputOnly=true&runOption=run&start=result" width="100%"
     height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
     <div class="additional">
         <h2 class="important">Полезные ссылки:</h2>
-        <a href="https://nikomedvedev.ru/other/vscodeshortcuts/hotkeys.html" target="_blank">Горячие клавиши для Visual Studio
-            Code</a>
-        <a href="lesson_2.html">Урок 2 - Переменные, строки, ввод и вывод</a>
-        <a href="lesson_3.html">Урок 3 - Списки, кортежи</a>
-        <a href="lesson_4.html">Урок 4 - Сравнения</a>
-        <a href="lesson_5.html">Урок 5 - Циклы</a>
-        <a href="lesson_6.html">Урок 6 - Функции</a>
+        <div class="stuff">
+            <a href="https://nikomedvedev.ru/other/vscodeshortcuts/hotkeys.html" target="_blank">Горячие клавиши для Visual Studio
+                Code</a>
+            <a href="lesson_2.html">Урок 2 - Переменные, строки, ввод и вывод</a>
+            <a href="lesson_3.html">Урок 3 - Списки, кортежи</a>
+            <a href="lesson_4.html">Урок 4 - Сравнения</a>
+            <a href="lesson_5.html">Урок 5 - Циклы</a>
+            <a href="lesson_6.html">Урок 6 - Функции</a>
+        </div>
     </div>
-    <footer>
-        <h5>
-            Если возникнут вопросы можно написать их нам -
-        </h5>
-        <ul>
-            <li>
-                <a href="https://t.me/kidkod" target="_blank">
-                    <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-                </a>
-            </li>
-            <li>
-                <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                    <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <div class="footer">
+        <h5>Связь с преподавателем:</h5>
+        <div class="links">
+            <a href="https://t.me/kidkod" target="_blank">
+                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
+            </a>
+            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
+                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>

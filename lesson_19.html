@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_lesson.css" rel="stylesheet">
     <title>Алгоритмы
     </title>
     <style>
@@ -21,35 +21,35 @@
 </head>
 
 <body>
-    <h1>Алгоритмы</h1>
+    <h1 class="title">Алгоритмы</h1>
     <ol>
         <li>
-            <h3 style="line-height: 1.5em;font-size: 1.5em; background-color: #1B2A49;">
+            <h2 style="line-height: 1.5em;font-size: 1.5em; background-color: #1B2A49;">
                 <div>Создать функцию encode(), которая заменяет все буквы согласно следующей схеме:</div>
                 <div style="color: #FFCA03;">a - > 1, e -> 2, i -> 3, o -> 4, u -> 5</div>
                 <div>Пример, encode("hello") return "h2ll4"</div>
                 <div>Создать функцию decode(), которая заменяет все цифры в слове обратно на буквы (согласно схеме):</div>
                 <div>Пример, encode("h2ll4") return "hello"</div>
-            </h3>
+            </h2>
             <iframe src="https://trinket.io/embed/python3/5f5e1076e2" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h4>
+            <h2>
                 <a href="lesson_19_ans_1.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h4>
+            </h2>
         </li>
         <li>
-            <h3 style="line-height: 1.5em;font-size: 1.5em; background-color: #1B2A49;">
+            <h2 style="line-height: 1.5em;font-size: 1.5em; background-color: #1B2A49;">
                 <div>Задание: Вы получаете название города в виде строки, и вам нужно вернуть строку, показывающую, сколько раз каждая буква отображается в ней, используя звездочку (*)</div>
                 <div>Пример, "Moscow" -> "m:*,o:**,s:*,c:*,w:*"</div>
                 <div>Пример, "Chicago" -> "c:**,h:*,i:*,a:*,g:*,o:*"</div>
                 <div>Итоговая строка должна содержать, только буквы (пробелы игнорируются)</div>
-            </h3>
+            </h2>
             <iframe src="https://trinket.io/embed/python3/2509a45a78" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h4>
+            <h2>
                 <a href="lesson_19_ans_2.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h4>
+            </h2>
         </li>
         <li>
-            <h3 style="line-height: 1.5em;font-size: 1.5em; background-color: #1B2A49;">
+            <h2 style="line-height: 1.5em;font-size: 1.5em; background-color: #1B2A49;">
                 <div>Создать программу, которая ведет подсчет очков в игре Скрабл <a href="https://www.mosigra.ru/Face/Show/scrabble/rules/" target="_blank" rel="noopener noreferrer" style="font-size: 1em;">(что такое скрабл)</a></div>
                 <div style="color: #FFCA03;">A, E, I, O, U, L, N, R, S, T -> 1</div>
                 <div style="color: #FFCA03;">D, G -> 2</div>
@@ -61,38 +61,36 @@
                 <div>Пример, "cabbage" -> 14</div>
                 <div>3 очка за C, 1 очко за А (дважды), 3 очка за В (дважды), 2 очка за G, 1 очко за E</div>
                 <div>Результат: 3 + 1*2 + 3*2 + 2 + 1 = 14</div>
-            </h3>
+            </h2>
             <iframe src="https://trinket.io/embed/python3/880cd6b5fb" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h4>
+            <h2>
                 <a href="lesson_19_ans_3.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h4>
+            </h2>
         </li>
     </ol>
     <div class="additional">
     <h2 class="important">Где можно потренироваться решать задачи:</h2>
-    <a href="https://codecombat.com/" target="_blank" rel="noopener noreferrer">Codecombat - Ресурс для новичков</a>
-    <a href="https://www.codewars.com/" target="_blank" rel="noopener noreferrer">Codewars - Система рейтинга и задач соответствующих ему</a>
-    <a href="https://checkio.org/" target="_blank" rel="noopener noreferrer">Checkio - Решаем задачи в виде игры</a>
-    <h2 class="important">Что почитать:</h2>
-    <a href="https://ru.pdfdrive.com/%D0%93%D1%80%D0%BE%D0%BA%D0%B0%D0%B5%D0%BC-%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B-%D0%98%D0%BB%D0%BB%D1%8E%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5-%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5-%D0%B4%D0%BB%D1%8F-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82%D0%BE%D0%B2-%D0%B8-%D0%BB%D1%8E%D0%B1%D0%BE%D0%BF%D1%8B%D1%82%D1%81%D1%82%D0%B2%D1%83%D1%8E%D1%89%D0%B8%D1%85-e189605074.html" target="_blank" rel="noopener noreferrer">Грокаем алгоритмы</a>
+    <div class="stuff">
+        <a href="https://codecombat.com/" target="_blank" rel="noopener noreferrer">Codecombat - Ресурс для новичков</a>
+        <a href="https://www.codewars.com/" target="_blank" rel="noopener noreferrer">Codewars - Система рейтинга и задач соответствующих ему</a>
+        <a href="https://checkio.org/" target="_blank" rel="noopener noreferrer">Checkio - Решаем задачи в виде игры</a>
     </div>
-    <footer>
-        <h5>
-            Если возникнут вопросы можно написать их нам -
-        </h5>
-        <ul>
-            <li>
-                <a href="https://t.me/kidkod" target="_blank">
-                    <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-                </a>
-            </li>
-            <li>
-                <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                    <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <h2 class="important">Что почитать:</h2>
+    <div class="stuff">
+        <a href="https://ru.pdfdrive.com/%D0%93%D1%80%D0%BE%D0%BA%D0%B0%D0%B5%D0%BC-%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B-%D0%98%D0%BB%D0%BB%D1%8E%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5-%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5-%D0%B4%D0%BB%D1%8F-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82%D0%BE%D0%B2-%D0%B8-%D0%BB%D1%8E%D0%B1%D0%BE%D0%BF%D1%8B%D1%82%D1%81%D1%82%D0%B2%D1%83%D1%8E%D1%89%D0%B8%D1%85-e189605074.html" target="_blank" rel="noopener noreferrer">Грокаем алгоритмы</a>
+    </div>
+    </div>
+    <div class="footer">
+        <h5>Связь с преподавателем:</h5>
+        <div class="links">
+            <a href="https://t.me/kidkod" target="_blank">
+                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
+            </a>
+            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
+                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>
