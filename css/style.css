@@ -542,6 +542,7 @@ h2, h3, h4, h5, h6 {
 
 .footer h5 {
   font-size: 1.25em;
+  color: #fff !important;
 }
 
 .footer .links {
