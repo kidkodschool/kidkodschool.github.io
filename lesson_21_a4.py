@@ -4,6 +4,7 @@ def summation(num):
     return sum(range(num+1))
 
 assert summation(1) == 1
+assert summation(4) == 10
 assert summation(8) == 36
 assert summation(22) == 253
 assert summation(100) == 5050
