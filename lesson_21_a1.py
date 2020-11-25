@@ -1,5 +1,5 @@
 def get_average(marks):
-    pass
+    return sum(marks) // len(marks)
 
 assert get_average([2, 2, 2, 2]) == 2
 assert get_average([1, 5, 87, 45, 8, 8]) == 25
