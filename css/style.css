@@ -472,7 +472,7 @@ html, body {
   content: '';
   width: 30px;
   height: 30px;
-  background-image: url("js.png");
+  background-image: url("../img/python_icon.png");
   background-size: contain;
   background-position: 0 0;
   position: absolute;
