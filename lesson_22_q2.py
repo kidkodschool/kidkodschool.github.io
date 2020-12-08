@@ -3,10 +3,13 @@ def logger(func):
     def wrapper(*args, **kwargs):
         call_date = datetime.now()
         result = func(*args, **kwargs)
-        print('Date and time: {:%Y-%m-%d %H:%M}'.format(call_date))
-        print(f'Function name: {func.__name__}')
-        print('Function arguments: ' + ' '.join(map(lambda x: str(x), args)))
-        print(f'Return value: {result}\n')
+        data = ""
+        data += 'Date and time: {:%Y-%m-%d %H:%M}\n'.format(call_date)
+        data += f'Function name: {func.__name__}\n'
+        data += 'Function arguments: ' + ' '.join(map(lambda x: str(x), args)) + '\n'
+        data += f'Return value: {result}\n'
+        with open('log.txt', 'a') as f:
+            f.write(data)
         return result
     return wrapper
 

@@ -1,8 +1,8 @@
 def logger(func):
     def wrapper(*args, **kwargs):
-        # 
-        #   Место под ваш код
-        #
+        #########################
+        #   Место под ваш код   #
+        #########################
         result = func(*args, **kwargs)
         return result
     return wrapper
