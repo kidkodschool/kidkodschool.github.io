@@ -1,0 +1,8 @@
+Date and time: 2020-12-09 20:13
+Function name: add_one
+Function arguments: 2 4 5
+Return value: 12
+Date and time: 2020-12-09 20:13
+Function name: another_func
+Function arguments: 1 2 3
+Return value: 5

@@ -1,12 +1,9 @@
 def logger(func):
-    from datetime import datetime
     def wrapper(*args, **kwargs):
-        call_date = datetime.now()
+        #########################
+        #   Место под ваш код   #
+        #########################
         result = func(*args, **kwargs)
-        print('Date and time: {:%Y-%m-%d %H:%M}'.format(call_date))
-        print(f'Function name: {func.__name__}')
-        print('Function arguments: ' + ' '.join(map(lambda x: str(x), args)))
-        print(f'Return value: {result}\n')
         return result
     return wrapper
 
