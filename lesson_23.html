@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <link href="css/style_lesson.css" rel="stylesheet">
     <title>API
     </title>
@@ -24,12 +27,91 @@
 </head>
 
 <body>
+    <h1 class="title">Веб запросы</h1>
+    <table class=" table table-sm table-bordered table-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Тип запроса</th>
+                <th scope="col">Что делает</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>GET</td>
+                <td>Получение данных с сервера</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>POST</td>
+                <td>Отправка данных на сервер (например через форму)</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>DELETE</td>
+                <td>Удаление файла с сервера
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>PUT</td>
+                <td>Создание файла на сервере
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>HEAD</td>
+                <td>Получение данных с сервера (без основных данных вроде index.html)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>CONNECT</td>
+                <td>Создание http связи между клиент-сервером
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>OPTIONS</td>
+                <td>Запрос на получение всех доступных методов у сервера</td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td>TRACE</td>
+                <td>Запрос используемый для процесса дебага
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <h1 class="title">Супергеройское API</h1>
     <ol>
+        <li>
+            <h2><a href="https://www.superheroapi.com/">Ссылка на API</a></h2>
+        </li>
+        <li>
+
+                <button class="btn btn-primary mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Токен
+                </button>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body text-danger">
+                        10218686935504422
+                    </div>
+                </div>
+        </li>
         <li>
             <h2>Создать метод, который выводит в консоль статистику героев (используя форматирование)</h2>
             <img src="img/l23_q1.png" alt="Результат">
 
+        </li>
+    </ol>
+    <h1 class="title">Список публичных API</h1>
+    <ol>
+        <li>
+            <h2>
+                <a href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener noreferrer">Публичные API</a>
+            </h2>
         </li>
     </ol>
     <div class="additional" >
