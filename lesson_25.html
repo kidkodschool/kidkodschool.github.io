@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link href="css/style_lesson.css" rel="stylesheet">
+    <title>Django - Введение
+    </title>
+    <style>
+        .highlight {
+            background-color: #fff;
+            border-radius: 5px;
+            color: crimson;
+            padding: 4px;
+        }
+        table {
+            max-width: 1200px;
+        }
+        caption {
+            background-color: #fff;
+            padding: .5em;
+        }
+        h2 a {
+            color: white;
+        }
+        </style>
+</head>
+
+<body>
+    <h1 class="title">Необходимые команды для работы с django проектом</h1>
+    <table class=" table table-sm table-bordered table-dark table-hover mb-0">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Команда</th>
+                <th scope="col">Что делает</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>pip install django==3.1.5</td>
+                <td>Используемая нами версия django</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>django-admin</td>
+                <td>Список всех доступных команд</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>django-admin startproject project_name</td>
+                <td>Создание базового приложения</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>django-admin startapp app_name</td>
+                <td>Добавление "модуля" к приложению</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>py manage.py runserver</td>
+                <td>Запуск приложения</td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>py manage.py makemigrations</td>
+                <td>Добавление в очередь для обновления базы данных. <span class="important-text">Важно!</span> Выполняется до migrate</td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>py manage.py migrate</td>
+                <td>Обновление базы данных</td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td>py manage.py createsuperuser</td>
+                <td>Добавление административного аккаунта в приложение. <span class="important-text">Важно!</span> Запускать перед makemigrations и migrate</td>
+            </tr>
+            <tr>
+                <th scope="row">9</th>
+                <td>py manage.py shell</td>
+                <td>Запуск интерпретатора для работы с базой данных через консоль</td>
+            </tr>
+            </tbody>
+    </table>
+    <h1 class="title">Создать базовое веб-приложение используя django</h1>
+    <ol>
+        <li>
+            <h2><a href="https://docs.djangoproject.com/en/3.1/intro/tutorial01/" target="_blank" rel="noopener noreferrer">Django фреймворк</a></h2>
+        </li>
+    </ol>
+    <div class="additional" >
+        <h2 class="important">Что почитать:</h2>
+        <div class="stuff">
+            <a href="https://docs.python.org/3/tutorial/modules.html#packages" target="_blank" rel="noopener noreferrer">Что такое __init__</a>
+            <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/" target="_blank" rel="noopener noreferrer">Django - models - fields</a>
+            <a href="https://docs.djangoproject.com/en/3.1/intro/tutorial03/#a-shortcut-render" target="_blank" rel="noopener noreferrer">Django - render</a>
+            <a href="https://docs.djangoproject.com/en/3.1/ref/request-response/#httpresponse-objects" target="_blank" rel="noopener noreferrer">Django - response object</a>
+            <a href="https://tutorial.djangogirls.org/ru/django_start_project/" target="_blank" rel="noopener noreferrer">Создание django проекта *на русском. <span class="important-text" style="color: #fff;">Важно!</span> Данный материал скорее всего уже устарел, пользуйтесь с осторожностью</a>
+        </div>
+    </div>
+    <div class="footer">
+        <h5>Связь с преподавателем:</h5>
+        <div class="links">
+        <a href="https://t.me/kidkodschool" target="_blank">
+                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
+            </a>
+            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
+                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

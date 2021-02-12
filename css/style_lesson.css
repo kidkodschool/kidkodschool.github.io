@@ -392,6 +392,12 @@ html, body {
           justify-content: space-between;
 }
 
+.important-text {
+  background-color: #ff304f;
+  padding: .25em;
+  border-radius: 5px;
+}
+
 .title {
   background-color: #278ea5;
   color: #fff;
