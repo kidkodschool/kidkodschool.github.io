@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <link href="css/style_lesson.css" rel="stylesheet">
     <title>Django - Введение
     </title>
@@ -19,22 +19,28 @@
             color: crimson;
             padding: 4px;
         }
+
         table {
             max-width: 1200px;
         }
+
         caption {
             background-color: #fff;
             padding: .5em;
         }
+
         h2 a {
             color: white;
         }
-        </style>
+
+        table.django tr { border-bottom: 1px solid #fafafa}
+        table.django td { border-left: 1px solid #fafafa; border-right: 1px solid #fafafa}
+    </style>
 </head>
 
 <body>
     <h1 class="title">Необходимые команды для работы с django проектом</h1>
-    <table class=" table table-sm table-bordered table-dark table-hover mb-0">
+    <table class="table table-sm table-bordered table-dark table-hover mb-0">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -71,7 +77,8 @@
             <tr>
                 <th scope="row">6</th>
                 <td>py manage.py makemigrations</td>
-                <td>Добавление в очередь для обновления базы данных. <span class="important-text">Важно!</span> Выполняется до migrate</td>
+                <td>Добавление в очередь для обновления базы данных. <span class="important-text">Важно!</span>
+                    Выполняется до migrate</td>
             </tr>
             <tr>
                 <th scope="row">7</th>
@@ -81,35 +88,114 @@
             <tr>
                 <th scope="row">8</th>
                 <td>py manage.py createsuperuser</td>
-                <td>Добавление административного аккаунта в приложение. <span class="important-text">Важно!</span> Запускать перед makemigrations и migrate</td>
+                <td>Добавление административного аккаунта в приложение. <span class="important-text">Важно!</span>
+                    Запускать перед makemigrations и migrate</td>
             </tr>
             <tr>
                 <th scope="row">9</th>
                 <td>py manage.py shell</td>
                 <td>Запуск интерпретатора для работы с базой данных через консоль</td>
             </tr>
-            </tbody>
+        </tbody>
     </table>
+
+    <h1 class="title">Структура django приложений</h1>
+    <h1 class="highlight" style="border-radius: 0; font-size: 1.25rem;">Наведи на секцию, чтобы узнать подробности</h1>
+    <table class="table w-50 table-secondary table-hover mb-0 django">
+        <tbody>
+            <tr >
+                <td class="table-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Название вашего приложения, и основная папка где содержатся все главные настройки">app_name</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Необходимый системный файл в пайтоне для определения директории как модуля">__init__.py</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Модуль для асинхронного отображения контента">asgi.py</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Основные настройки нашего веб-приложения">settings.py</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="url путь до обработчика отображения контента для html файла">urls.py</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Модуль для обработки веб-запросов">wsgi.py</td>
+            </tr>
+            <tr>
+                <td class="table-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Корневой каталог для модуля в нашем приложении">module_name</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Тут будут находиться системные файлы для отслеживания действий с базой данных">migrations</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Необходимый системный файл в пайтоне для определения директории как модуля">__init__.py</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Модуль для административной панели">admin.py</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Тут мы можем настроить наш модуль*
+                *эта секция для продвинутого пользования django приложений
+                ">apps.py</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Основной “движок” нашего приложения это его модели, т.е как наше приложение взаимодействует с базой данных">models.py</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Тут мы сможем добавлять тестирование для нашего модуля news">tests.py</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Движок для отображения информации из базы данных на html файле">views.py</td>
+            </tr>
+            <tr >
+                <td class="table-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Служебный файл, через который мы будем запускать основные команды для работы с веб-сервером">manage.py</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
     <h1 class="title">Создать базовое веб-приложение используя django</h1>
     <ol>
         <li>
-            <h2><a href="https://docs.djangoproject.com/en/3.1/intro/tutorial01/" target="_blank" rel="noopener noreferrer">Django фреймворк</a></h2>
+            <h2><a href="https://docs.djangoproject.com/en/3.1/intro/tutorial01/" target="_blank"
+                    rel="noopener noreferrer">Django фреймворк</a></h2>
         </li>
     </ol>
-    <div class="additional" >
+    <div class="additional">
         <h2 class="important">Что почитать:</h2>
         <div class="stuff">
-            <a href="https://docs.python.org/3/tutorial/modules.html#packages" target="_blank" rel="noopener noreferrer">Что такое __init__</a>
-            <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/" target="_blank" rel="noopener noreferrer">Django - models - fields</a>
-            <a href="https://docs.djangoproject.com/en/3.1/intro/tutorial03/#a-shortcut-render" target="_blank" rel="noopener noreferrer">Django - render</a>
-            <a href="https://docs.djangoproject.com/en/3.1/ref/request-response/#httpresponse-objects" target="_blank" rel="noopener noreferrer">Django - response object</a>
-            <a href="https://tutorial.djangogirls.org/ru/django_start_project/" target="_blank" rel="noopener noreferrer">Создание django проекта *на русском. <span class="important-text" style="color: #fff;">Важно!</span> Данный материал скорее всего уже устарел, пользуйтесь с осторожностью</a>
+            <a href="https://docs.python.org/3/tutorial/modules.html#packages" target="_blank"
+                rel="noopener noreferrer">Что такое __init__</a>
+            <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/" target="_blank"
+                rel="noopener noreferrer">Django - models - fields</a>
+            <a href="https://docs.djangoproject.com/en/3.1/intro/tutorial03/#a-shortcut-render" target="_blank"
+                rel="noopener noreferrer">Django - render</a>
+            <a href="https://docs.djangoproject.com/en/3.1/ref/request-response/#httpresponse-objects" target="_blank"
+                rel="noopener noreferrer">Django - response object</a>
+            <a href="https://tutorial.djangogirls.org/ru/django_start_project/" target="_blank"
+                rel="noopener noreferrer">Создание django проекта *на русском. <span class="important-text"
+                    style="color: #fff;">Важно!</span> Данный материал скорее всего уже устарел, пользуйтесь с
+                осторожностью</a>
         </div>
     </div>
     <div class="footer">
         <h5>Связь с преподавателем:</h5>
         <div class="links">
-        <a href="https://t.me/kidkodschool" target="_blank">
+            <a href="https://t.me/kidkodschool" target="_blank">
                 <img src="/img/telegram.png" class="social-icon" alt="телеграм">
             </a>
             <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
@@ -117,6 +203,10 @@
             </a>
         </div>
     </div>
+    <script>var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })</script>
 </body>
 
 </html>
