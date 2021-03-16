@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link href="css/style_lesson.css" rel="stylesheet">
+    <title>Django - Login, Logout, Register
+    </title>
+    <style>
+        .highlight {
+            background-color: #fff;
+            border-radius: 5px;
+            color: crimson;
+            padding: 4px;
+        }
+
+        table {
+            max-width: 1200px;
+        }
+
+        caption {
+            background-color: #fff;
+            padding: .5em;
+        }
+
+        h2 a {
+            color: white;
+        }
+
+        table.django tr { border-bottom: 1px solid #fafafa}
+        table.django td { border-left: 1px solid #fafafa; border-right: 1px solid #fafafa}
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Структура django приложений</h1>
+    <h1 class="highlight" style="border-radius: 0; font-size: 1.25rem;">Наведи на секцию, чтобы узнать подробности</h1>
+    <table class="table w-75 table-secondary table-hover mb-0 django">
+        <tbody>
+            <tr >
+                <td class="table-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Название вашего приложения, и основная папка где содержатся все главные настройки">app_name</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Необходимый системный файл в пайтоне для определения директории как модуля">__init__.py</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Модуль для асинхронного отображения контента">asgi.py</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Основные настройки нашего веб-приложения">settings.py</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="url путь до обработчика отображения контента для html файла">urls.py</td>
+
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Модуль для обработки веб-запросов">wsgi.py</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td class="table-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Корневой каталог для модуля в нашем приложении">module_name</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Тут будут находиться системные файлы для отслеживания действий с базой данных">migrations</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Директория для модульных шаблонов">templates</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td class="table-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Директория для html файлов в модульных шаблонах">module_name</td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Шаблон для модульного контента">detail.html</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Необходимый системный файл в пайтоне для определения директории как модуля">__init__.py</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Модуль для административной панели">admin.py</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Тут мы можем настроить наш модуль*
+                *эта секция для продвинутого пользования django приложений
+                ">apps.py</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Модуль для добавления форм
+                ">forms.py</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Основной “движок” нашего приложения это его модели, т.е как наше приложение взаимодействует с базой данных">models.py</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Тут мы сможем добавлять тестирование для нашего модуля news">tests.py</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Движок для отображения информации из базы данных на html файле">views.py</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr >
+                <td class="table-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Директория для основных шаблонов в приложении">templates</td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr >
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Основной шаблон, содержащий meta, head, body теги">base.html</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr >
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Шаблон для отображения главное страницы приложения">index.html</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr >
+                <td></td>
+                <td class="table-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Шаблон для отображения форм">forms.html</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr >
+                <td class="table-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Служебный файл, через который мы будем запускать основные команды для работы с веб-сервером">manage.py</td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <h1 class="title">Добавить форму регистрации, логина</h1>
+    <ol>
+        <li>
+            <img src="img/login_form.png" alt="form" width="300">
+        </li>
+        <li>
+            <img src="img/register_form.png" alt="form" width="300">
+        </li>
+    </ol>
+    <div class="additional">
+        <h2 class="important">Пользователь:</h2>
+        <div class="stuff">
+            <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/auth/" target="_blank" rel="noopener noreferrer">Объект User (пользователь)</a>
+            <a href="https://docs.djangoproject.com/en/3.1/topics/auth/" target="_blank" rel="noopener noreferrer">атутентификация</a>
+            <a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/" target="_blank" rel="noopener noreferrer">Сессии пользователей</a>
+            <a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/#using-sessions-in-views" target="_blank" rel="noopener noreferrer">Использование сессий во view</a>
+            <a href="https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#django.contrib.auth.get_user_model" target="_blank" rel="noopener noreferrer">Пользовательская модель в джанго</a>
+        </div>
+        <h2 class="important">Верификация:</h2>
+        <div class="stuff">
+            <a href="https://docs.djangoproject.com/en/3.1/topics/auth/default/#django.contrib.auth.logout" target="_blank" rel="noopener noreferrer">logout - выход из приложения</a>
+            <a href="https://docs.djangoproject.com/en/3.1/topics/auth/default/#django.contrib.auth.login" target="_blank" rel="noopener noreferrer">login - вход в приложение</a>
+            <a href="https://docs.djangoproject.com/en/3.1/topics/auth/default/#django.contrib.auth.authenticate" target="_blank" rel="noopener noreferrer">authenticate - проверяем данные пользователя</a>
+        </div>
+        <h2 class="important">Форма:</h2>
+        <div class="stuff">
+            <a href="https://docs.djangoproject.com/en/3.1/ref/forms/validation/" target="_blank" rel="noopener noreferrer">Обработка данных из формы</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" target="_blank" rel="noopener noreferrer">HTML форма и её атрибуты</a>
+            <a href="https://docs.djangoproject.com/en/3.1/ref/forms/fields/#django.forms.Field.label" target="_blank" rel="noopener noreferrer">Добавление атрибутов к форме в джанго</a>
+            <a href="https://docs.djangoproject.com/en/3.1/ref/forms/fields/#emailfield" target="_blank" rel="noopener noreferrer">Поля для формы (emailfield)</a>
+            
+        </div>
+        <h2 class="important">Ограничение доступа:</h2>
+        <div class="stuff">
+            <a href="https://docs.djangoproject.com/en/3.1/topics/auth/default/#the-login-required-decorator" target="_blank" rel="noopener noreferrer">Ограничение доступа к view (login_required)</a>
+            <a href="https://docs.djangoproject.com/en/3.1/topics/auth/default/#the-permission-required-decorator" target="_blank" rel="noopener noreferrer">Ограничение доступа к view (permission_required)</a>
+        </div>
+        <h2 class="important">Другое:</h2>
+        <div class="stuff">
+            <a href="https://docs.djangoproject.com/en/3.1/topics/db/examples/many_to_one/" target="_blank" rel="noopener noreferrer">Связь между моделями (Foreign Key)</a>
+            <a href="https://docs.djangoproject.com/en/3.1/topics/http/shortcuts/#redirect" target="_blank" rel="noopener noreferrer">redirect() - перенаправление</a>
+            <a href="https://django-allauth.readthedocs.io/en/latest/overview.html" target="_blank" rel="noopener noreferrer">allauth модуль</a>
+        </div>
+    </div>
+    <div class="footer">
+        <h5>Связь с преподавателем:</h5>
+        <div class="links">
+            <a href="https://t.me/kidkodschool" target="_blank">
+                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
+            </a>
+            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
+                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
+            </a>
+        </div>
+    </div>
+    <script>var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })</script>
+</body>
+
+</html>
