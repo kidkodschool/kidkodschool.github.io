@@ -32,6 +32,21 @@
         h2 a {
             color: white;
         }
+        .code {
+            background-color: #e2f3f5;
+            border-left: 4px solid #fc5185;
+            padding: 1.25em;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        body > ol > li > .code > div {
+            color: #303a52;
+            font-size: 1.25em;
+        }
+        body > ol > li > .code > div:not(:last-of-type) {
+            margin-bottom: 15px;
+        }
 
         table.django tr { border-bottom: 1px solid #fafafa}
         table.django td { border-left: 1px solid #fafafa; border-right: 1px solid #fafafa}
@@ -39,17 +54,227 @@
 </head>
 
 <body>
-    <h1 class="title">Зарегистрировать аккаунт на heroku</h1>
+    <h1 class="title">Пошаговая инструкция размещения приложения на Heroku</h1>
     <ol>
+        <li>
+            <h2>
+                <a href="https://dashboard.heroku.com/">Создать аккаунт на heroku</a></h2>
+        </li>
+        <li>
+            <h2>Создать новый репозиторий на github или использовать ранее созданный</h2>
+            <h2>
+                <a href="https://kidkodschool.github.io/lesson_22.html">
+                Подробная инструкция</a></h2>
+        </li>
+        <li>
+            <h2>Создать файл .gitignore и добавить в него следующий контент</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        # Text backup files
+                    </div>
+                    <div>
+                        *.bak
+                    </div>
+                </p>
+                <p>
+                    <div>
+                        # Database
+                    </div>
+                    <div>
+                        *.sqlite3
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>Создать файл runtime.txt и добавить в него следующий контент</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        python-3.8.6
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>Создать файл Procfile и добавить в него следующий контент</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        web: gunicorn locallibrary.wsgi --log-file -
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>Установить gunicorn</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        pip install gunicorn
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>Установить dj-database-url</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        pip install dj-database-url
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>Установить whitenoise</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        pip install whitenoise
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>Открыть settings.py и добавить в него следующий контент (в самом конце файла)</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        # Heroku: Update database configuration from $DATABASE_URL.
+                    </div>
+                    <div>
+                        import dj_database_url
+                    </div>
+                    <div>
+                        db_from_env = dj_database_url.config(conn_max_age=500)
+                    </div>
+                    <div>
+                        DATABASES['default'].update(db_from_env)
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>Открыть settings.py и изменить/добавить в него следующий контент</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        STATIC_ROOT = BASE_DIR / 'staticfiles'
+                    </div>
+                    <div>
+                        STATIC_URL = '/static/'
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>Открыть settings.py и добавить в MIDDLEWARE после 'django.middleware.security.SecurityMiddleware' следующую строчку</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        'whitenoise.middleware.WhiteNoiseMiddleware'
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>Открыть settings.py и изменить/добавить в него следующий контент</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>Создать requirements.txt</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        pip3 freeze > requirements.txt
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>Добавить все файлы в github репозиторий</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        git add .
+                    </div>
+                    <div>
+                        git commit -m "init"
+                    </div>
+                    <div>
+                        git push
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>Создать новый контейнер на heroku и отправить туда файлы</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        heroku login
+                    </div>
+                    <div>
+                        heroku create
+                    </div>
+                    <div>
+                        git push heroku main
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>Проверить, что все работает</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        heroku open
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>*Вспомогательные команды на heroku</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        heroku run python manage.py migrate
+                    </div>
+                    <div>
+                        heroku run python manage.py createsuperuser
+                    </div>
+                </p>
+            </div>
+        </li>
     </ol>
     <div class="additional">
         <h2 class="important">Файлы для текущей темы:</h2>
         <div class="stuff">
             <a href="img/geckodriver.exe" download>firefox geckodriver</a>
         </div>
+        <h2 class="important">Тестирование:</h2>
+        <div class="stuff">
+            <a href="https://docs.djangoproject.com/en/3.2/topics/testing/overview/" target="_blank" rel="noopener noreferrer">Тестирование в django</a>
+            <a href="https://docs.djangoproject.com/en/3.2/topics/testing/tools/" target="_blank" rel="noopener noreferrer">Инструменты для тестирования</a>
+            <a href="https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEqual" target="_blank" rel="noopener noreferrer">assertEqual</a>
+            <a href="https://docs.djangoproject.com/en/3.2/topics/testing/tools/#django.test.Client.post" target="_blank" rel="noopener noreferrer">POST запрос</a>
+            <a href="https://docs.djangoproject.com/en/3.2/topics/testing/tools/#django.test.Response" target="_blank" rel="noopener noreferrer">Объект Response</a>
+            <a href="https://docs.djangoproject.com/en/3.2/topics/testing/tools/#django.test.Client.login" target="_blank" rel="noopener noreferrer">Логин в тестах</a>
+            <a href="https://docs.djangoproject.com/en/3.2/topics/testing/tools/#django.test.SimpleTestCase" target="_blank" rel="noopener noreferrer">Список тестов для приложения</a>
+        </div>
         <h2 class="important">Полезная информация:</h2>
         <div class="stuff">
-        
+            <a href="https://docs.djangoproject.com/en/3.2/ref/models/querysets/#django.db.models.query.QuerySet.exists" target="_blank" rel="noopener noreferrer">Метод: exists()</a>
+            <a href="https://docs.djangoproject.com/en/3.2/ref/settings/#std:setting-LOGIN_URL" target="_blank" rel="noopener noreferrer">Login URL</a>
+            <a href="https://selenium-python.readthedocs.io/" target="_blank" rel="noopener noreferrer">Selenium</a>
         </div>
     </div>
     <div class="footer">
