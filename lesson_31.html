@@ -88,7 +88,7 @@
             </div>
         </li>
         <li>
-            <h2>Создать файл runtime.txt и добавить в него следующий контент</h2>
+            <h2>Создать файл runtime.txt в каталоге на уровне manage.py и добавить в него следующий контент</h2>
             <div class="code">
                 <p>
                     <div>
@@ -98,7 +98,7 @@
             </div>
         </li>
         <li>
-            <h2>Создать файл Procfile и добавить в него следующий контент</h2>
+            <h2>Создать файл Procfile на уровне manage.py и добавить в него следующий контент</h2>
             <div class="code">
                 <p>
                     <div>
@@ -123,6 +123,16 @@
                 <p>
                     <div>
                         pip install dj-database-url
+                    </div>
+                </p>
+            </div>
+        </li>
+        <li>
+            <h2>Установить psycopg2</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        pip install psycopg2-binary
                     </div>
                 </p>
             </div>
@@ -200,9 +210,10 @@
             </div>
         </li>
         <li>
-            <h2>Добавить все файлы в github репозиторий</h2>
+            <h2>Добавить все файлы в github репозиторий. Репозиторий должен быть инициирован на уровне manage.py файла.</h2>
             <div class="code">
                 <p>
+                    <div>Если уже есть инициированный репозиторий, иначе выполнить все команды из github</div>
                     <div>
                         git add .
                     </div>
@@ -242,6 +253,34 @@
             </div>
         </li>
         <li>
+            <h2>Скорее всего вы увидите следующее сообщение</h2>
+            <img src="css/heroku.png" alt="heroku error">
+            <h2>В это случае добавьте ссылку на ваше приложение в ALLOWED_HOSTS</h2>
+            <div class="code">
+                <p>
+                    <div>ALLOWED_HOSTS = ['ИМЯ_ПРИЛОЖЕНИЯ.herokuapp.com']</div>
+                </p>
+            </div>
+            <h2>После этого выполните следующие команды</h2>
+            <div class="code">
+                <p>
+                    <div>
+                        git add .
+                    </div>
+                    <div>
+                        git commit -m "init"
+                    </div>
+                    <div>
+                        git push
+                    </div>
+                    <div>
+                        git push heroku main
+                    </div>
+                </p>
+            </div>
+
+        </li>
+        <li>
             <h2>*Вспомогательные команды на heroku</h2>
             <div class="code">
                 <p>
@@ -269,6 +308,11 @@
         <div class="stuff">
             <a href="img/geckodriver.exe" download>firefox geckodriver</a>
         </div>
+        <h2 class="important">
+            <div class="stuff">
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment" target="_blank" rel="noopener noreferrer">Как выложить приложение на heroku</a>
+            </div>
+        </h2>
         <h2 class="important">Тестирование:</h2>
         <div class="stuff">
             <a href="https://docs.djangoproject.com/en/3.2/topics/testing/overview/" target="_blank" rel="noopener noreferrer">Тестирование в django</a>
