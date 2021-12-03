@@ -66,7 +66,7 @@ class ProfileTest(TestCase):
         self.assertEqual(check_form_field_1, True, msg='Неправильно указан тип или название поля для username (используйте CharField())')
         form_field_2 = RegisterForm.declared_fields.get('email', '')
         check_form_field_2 = isinstance(form_field_2, EmailField)
-        self.assertEqual(check_form_field_2, True, msg='Неправильно указан тип или название поля для email (используйте EmailField())')
+        self.assertEqual(check_form_field_2, True, msg='Неправильно указан тип или название поля для email (используйте CharField())')
         form_field_3 = RegisterForm.declared_fields.get('password', '')
         check_form_field_3 = isinstance(form_field_3, CharField)
         self.assertEqual(check_form_field_3, True, msg='Неправильно указан тип или название поля для password (используйте CharField())')
