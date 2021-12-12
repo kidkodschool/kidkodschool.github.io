@@ -3,7 +3,9 @@
     position: relative;
     padding: 150px 0;
     background-color: $mediumwhite;
-
+    @include media('<=sm') {
+        padding: 75px 0;
+    }
     &-wrapper {
         height: 100%;
         justify-content: center;
@@ -11,7 +13,6 @@
 
         @include media('<=sm') {
             flex-direction: column;
-            padding: 175px 16px 100px 16px !important;
         }
 
         &__image {

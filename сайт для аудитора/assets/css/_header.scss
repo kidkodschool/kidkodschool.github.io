@@ -8,13 +8,15 @@
         flex-direction: column;
         @include media('<=sm') {
             flex-direction: column;
-            padding: 175px 16px 100px 16px !important;
         }
 
         &__title {
             max-width: 62ch;
             text-align: center;
             margin-bottom: 100px;
+            @include media('<=sm') {
+                margin-bottom: 50px;
+            }
             &__name, &__subname {
                 @include balsamiq;
                 color: $black;
@@ -30,6 +32,9 @@
             max-width: 100ch;
             text-align: center;
             margin-bottom: 50px;
+            @include media('<=sm') {
+                margin-bottom: 25px;
+            }
             &__name, &__subname {
                 @include balsamiq;
                 color: $black;
