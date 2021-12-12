@@ -1,0 +1,47 @@
+.section-footer {
+    width: 100%;
+    position: relative;
+    padding-top: 150px;
+    margin-bottom: 150px;
+    &-wrapper {
+        height: 100%;
+        flex-direction: column;
+        text-align: center;
+        @include media('<=sm') {
+            flex-direction: column;
+            padding: 175px 16px 100px 16px !important;
+        }
+
+        &__title {
+            max-width: 62ch;
+            text-align: center;
+            margin-bottom: 100px;
+            &__name, &__subname {
+                @include balsamiq;
+                color: $black;
+            }
+            &__name {
+                @include title-small-font-size;
+            }
+            &__subname {
+                @include title-font-size;
+            }
+        }
+
+        &__footer_text {
+            @include comfortaa-bold;
+            @include lg-font-size;
+            position: relative;
+            line-height: 40px;
+            ul {
+                margin-bottom: 40px;
+            }
+            .thin {
+                @include comfortaa-regular;
+
+            }
+        }
+    }
+
+}
+

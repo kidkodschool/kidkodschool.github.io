@@ -1,0 +1,66 @@
+@import './reset';
+@import './breakpoints';
+@import './text_setup';
+@import './colors';
+@import './nav';
+@import './header';
+@import './subheader';
+@import './subheader2';
+@import './footer';
+
+html, body {
+    overflow-x: hidden;
+    line-height: normal;
+    scroll-behavior: smooth;
+}
+
+// Maximum width for wrappers & center elements
+.section-nav-wrapper, 
+.section-nav-offers-wrapper
+{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 0 16px;
+    max-width: 1364px;
+}
+
+.section-header-wrapper,
+.section-subheader-wrapper,
+.section-subheader2-wrapper,
+.section-footer-wrapper
+{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 0 16px;
+    max-width: 1000px;
+}
+
+@include media('<=sm') {
+    .section-nav-wrapper, 
+    .section-nav-offers-wrapper, 
+    .section-header-wrapper,
+    .section-subheader-wrapper,
+    .section-subheader2-wrapper,
+    .section-footer-wrapper
+
+    {
+        max-width: 620px;
+    }
+}
+
+::-webkit-scrollbar-track
+{
+    background : $white;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background : rgba($darkgray, 0.5);
+    box-shadow:  0 0 6px rgba($color: darkgray, $alpha: 0.6);
+}
+
