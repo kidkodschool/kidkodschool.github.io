@@ -4,6 +4,7 @@
 @import './colors';
 @import './nav';
 @import './header';
+@import './header2';
 @import './subheader';
 @import './subheader2';
 @import './footer';
@@ -26,6 +27,7 @@ html, body {
 }
 
 .section-header-wrapper,
+.section-header2-wrapper,
 .section-subheader-wrapper,
 .section-subheader2-wrapper,
 .section-footer-wrapper
@@ -41,6 +43,7 @@ html, body {
     .section-nav-wrapper, 
     .section-nav-offers-wrapper, 
     .section-header-wrapper,
+    .section-header2-wrapper,
     .section-subheader-wrapper,
     .section-subheader2-wrapper,
     .section-footer-wrapper

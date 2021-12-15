@@ -1,8 +1,9 @@
-.section-header {
+.section-header2 {
     width: 100%;
     position: relative;
-    padding-top: 200px;
-    margin-bottom: 150px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-color: $mediumwhite;
     &-wrapper {
         height: 100%;
         flex-direction: column;
@@ -45,7 +46,6 @@
             &__subname {
                 @include title-font-size;
             }
-
         }
         &__text {
             @include comfortaa-regular;
@@ -55,29 +55,15 @@
             ul {
                 margin-bottom: 40px;
             }
-
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: -20px;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 40%;
-                height: 2px;
-                background-color: $black;
-                border-radius: 5px;
-            }
         }
-
         &__text_r {
             position: relative;
-            line-height: 24px;
+            line-height: 30px;
             display: flex;
             justify-content: space-between;
             background-color: lightblue;
             border-radius: 5px;
-            padding: 50px 25px 15px 25px;
+            padding: 25px;
             gap: 50px;
             margin-bottom: 25px;
             @include media('<=sm') {
@@ -89,45 +75,12 @@
             &__left {
                 @include comfortaa-light;
                 @include sm-font-size;
-                flex-basis: 35%;
-                flex-grow: 1;
-                &::selection {
-                    color: $black;
-                    background: $yellow;
-                  }
-                position: relative;
-
-                &::before {
-                    @include comfortaa-bold;
-                    content: 'Сведения';
-                    position: absolute;
-                    top: -30px;
-                }
             }
             &__right {
                 @include comfortaa-light;
                 @include sm-font-size;
-                flex-basis: 65%;
-
-                flex-grow: 0;
-
-                &::selection {
-                    color: $black;
-                    background: $yellow;
-                  }
-                position: relative;
-
-                &::before {
-                    @include comfortaa-bold;
-
-                    content: 'Раскрытие информации';
-                    position: absolute;
-                    top: -30px;
-                }
             }
         }
-    
-        
         .back {
             @include comfortaa-regular;
             @include sm-font-size;
@@ -143,13 +96,6 @@
             }
         }
     }
-    .section-header-wrapper__text_r__left.last {
-        flex-basis: 65% !important;
 
-    }
-    .section-header-wrapper__text_r__right.last {
-        flex-basis: 35% !important;
-
-    }
 }
 
