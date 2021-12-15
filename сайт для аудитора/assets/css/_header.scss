@@ -143,8 +143,30 @@
             }
         }
     }
+    .section-header-wrapper__text_r.last {
+        padding: 15px 25px;
+    }
     .section-header-wrapper__text_r__left.last {
+
         flex-basis: 65% !important;
+        &::before {
+            content: '';
+        }
+        table {
+            border-collapse:separate; 
+            border-spacing: 0 .5em;
+
+            tr {
+                th {
+                    @include comfortaa-bold;
+                    @include sm-font-size;
+                    text-align: start;
+                }
+                td {
+                    padding-right: 15px;
+                }
+            }
+        }
 
     }
     .section-header-wrapper__text_r__right.last {

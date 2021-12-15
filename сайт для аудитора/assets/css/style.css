@@ -966,9 +966,52 @@ textarea {
   color: #faee1c;
 }
 
+.section-header .section-header-wrapper__text_r.last {
+  padding: 15px 25px;
+}
+
 .section-header .section-header-wrapper__text_r__left.last {
   -ms-flex-preferred-size: 65% !important;
       flex-basis: 65% !important;
+}
+
+.section-header .section-header-wrapper__text_r__left.last::before {
+  content: '';
+}
+
+.section-header .section-header-wrapper__text_r__left.last table {
+  border-collapse: separate;
+  border-spacing: 0 .5em;
+}
+
+.section-header .section-header-wrapper__text_r__left.last table tr th {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  color: #000;
+  font-size: 20px;
+  text-align: start;
+}
+
+@media (max-width: 1280px) {
+  .section-header .section-header-wrapper__text_r__left.last table tr th {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1026px) {
+  .section-header .section-header-wrapper__text_r__left.last table tr th {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .section-header .section-header-wrapper__text_r__left.last table tr th {
+    font-size: 15px;
+  }
+}
+
+.section-header .section-header-wrapper__text_r__left.last table tr td {
+  padding-right: 15px;
 }
 
 .section-header .section-header-wrapper__text_r__right.last {
