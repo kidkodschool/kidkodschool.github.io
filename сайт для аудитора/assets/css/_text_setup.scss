@@ -1,0 +1,140 @@
+@mixin title-font-size {
+    font-size: 38px;
+
+    @include media('<=lg') {
+        font-size: 38px;
+    }
+
+    @include media('<=md') {
+        font-size: 28px;
+    }
+
+    @include media('<=sm') {
+        font-size: 26px;
+    }
+
+    @include media('<=xs') {
+        font-size: 20px;
+    }
+}
+
+@mixin title-small-font-size {
+    font-size: 35px;
+
+    @include media('<=lg') {
+        font-size: 30px;
+    }
+    
+    @include media('<=md') {
+        font-size: 22px;
+    }
+
+    @include media('<=sm') {
+        font-size: 18px;
+    }
+}
+
+@mixin lg-font-size {
+    font-size: 26px;
+
+    @include media('<=lg') {
+        font-size: 23px;
+    }
+    
+    @include media('<=md') {
+        font-size: 20px;
+    }
+}
+
+@mixin md-font-size {
+    font-size: 24px;
+
+    @include media('<=lg') {
+        font-size: 22px;
+    }
+
+    @include media('<=md') {
+        font-size: 18px;
+    }
+}
+
+@mixin sm-font-size {
+    font-size: 20px;
+
+    @include media('<=lg') {
+        font-size: 18px;
+    }
+
+    @include media('<=md') {
+        font-size: 16px;
+    }
+
+    @include media('<=xs') {
+        font-size: 15px;
+    }
+}
+
+@mixin xs-font-size {
+    font-size: 18px;
+
+    @include media('<=lg') {
+        font-size: 16px;
+    }
+}
+
+@mixin xxs-font-size {
+    font-size: 10px;
+
+    @include media('<=md') {
+        font-size: 8px;
+    }
+
+}
+
+@mixin lg-button {
+    font-size: 18px;
+
+    @include media('<=lg') {
+        font-size: 17px;
+    }
+
+    @include media('<=md') {
+        font-size: 14px;
+    }
+}
+
+@mixin balsamiq {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
+    color: #000;
+}
+
+@mixin comfortaa-light {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    color: #000;
+}
+
+@mixin comfortaa-regular {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    color: #000;
+}
+
+@mixin comfortaa-medium {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    color: #000;
+}
+
+@mixin comfortaa-semibold {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    color: #000;
+}
+
+@mixin comfortaa-bold {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: #000;
+}

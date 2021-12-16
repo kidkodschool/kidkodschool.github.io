@@ -1,0 +1,177 @@
+.section-header {
+    width: 100%;
+    position: relative;
+    padding-top: 200px;
+    margin-bottom: 150px;
+    &-wrapper {
+        height: 100%;
+        flex-direction: column;
+        @include media('<=sm') {
+            flex-direction: column;
+        }
+
+        &__title {
+            max-width: 62ch;
+            text-align: center;
+            margin-bottom: 100px;
+            @include media('<=sm') {
+                margin-bottom: 50px;
+            }
+            &__name, &__subname {
+                @include balsamiq;
+                color: $black;
+            }
+            &__name {
+                @include title-small-font-size;
+            }
+            &__subname {
+                @include title-font-size;
+            }
+        }
+        &__title_r {
+            max-width: 100ch;
+            text-align: center;
+            margin-bottom: 50px;
+            @include media('<=sm') {
+                margin-bottom: 25px;
+            }
+            &__name, &__subname {
+                @include balsamiq;
+                color: $black;
+            }
+            &__name {
+                @include title-small-font-size;
+            }
+            &__subname {
+                @include title-font-size;
+            }
+
+        }
+        &__text {
+            @include comfortaa-regular;
+            @include lg-font-size;
+            position: relative;
+            line-height: 40px;
+            ul {
+                margin-bottom: 40px;
+            }
+
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 40%;
+                height: 2px;
+                background-color: $black;
+                border-radius: 5px;
+            }
+        }
+
+        &__text_r {
+            position: relative;
+            line-height: 24px;
+            display: flex;
+            justify-content: space-between;
+            background-color: lightblue;
+            border-radius: 5px;
+            padding: 50px 25px 15px 25px;
+            gap: 50px;
+            margin-bottom: 25px;
+            @include media('<=sm') {
+                flex-direction: column;
+            }
+            ul {
+                margin-bottom: 40px;
+            }
+            &__left {
+                @include comfortaa-light;
+                @include sm-font-size;
+                flex-basis: 35%;
+                flex-grow: 1;
+                &::selection {
+                    color: $black;
+                    background: $yellow;
+                  }
+                position: relative;
+
+                &::before {
+                    @include comfortaa-bold;
+                    content: 'Сведения';
+                    position: absolute;
+                    top: -30px;
+                }
+            }
+            &__right {
+                @include comfortaa-light;
+                @include sm-font-size;
+                flex-basis: 65%;
+
+                flex-grow: 0;
+
+                &::selection {
+                    color: $black;
+                    background: $yellow;
+                  }
+                position: relative;
+
+                &::before {
+                    @include comfortaa-bold;
+
+                    content: 'Раскрытие информации';
+                    position: absolute;
+                    top: -30px;
+                }
+            }
+        }
+    
+        
+        .back {
+            @include comfortaa-regular;
+            @include sm-font-size;
+            text-decoration: none;
+            padding: 20px 35px;
+            background-color: $black-gray;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all ease .25s;
+            color: $white;
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+    .section-header-wrapper__text_r.last {
+        padding: 15px 25px;
+    }
+    .section-header-wrapper__text_r__left.last {
+
+        flex-basis: 65% !important;
+        &::before {
+            content: '';
+        }
+        table {
+            border-collapse:separate; 
+            border-spacing: 0 .5em;
+
+            tr {
+                th {
+                    @include comfortaa-bold;
+                    @include sm-font-size;
+                    text-align: start;
+                }
+                td {
+                    padding-right: 15px;
+                }
+            }
+        }
+
+    }
+    .section-header-wrapper__text_r__right.last {
+        flex-basis: 35% !important;
+
+    }
+}
+
