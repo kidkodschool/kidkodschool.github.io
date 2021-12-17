@@ -42,8 +42,8 @@ class ChatTest(TestCase):
         self.assertEqual('navbar.html' in template_names, True, msg='Нехватает шаблона navbar.html, для отображения основной навигационной панели')
         not_auth_login = 'login' in str(get_request.content)
         not_auth_register = 'registration' in str(get_request.content)
-        self.assertEqual(not_auth_login, True, msg='Отстутствует ссылка на логин внутри навигационной панели. Используйте имя - login')
-        self.assertEqual(not_auth_register, True, msg='Отстутствует ссылка на регистрацию внутри навигационной панели. Используйте имя - registration')
+        self.assertEqual(not_auth_login, True, msg='Отсутствует ссылка на логин внутри навигационной панели. Используйте имя - login')
+        self.assertEqual(not_auth_register, True, msg='Отсутствует ссылка на регистрацию внутри навигационной панели. Используйте имя - registration')
         post_request = self.client.post('/login/', {
             'username': 'basic',
             'password': 'basic',
@@ -51,8 +51,8 @@ class ChatTest(TestCase):
         get_request = self.client.get('')
         auth_account = 'profile' in str(get_request.content)
         auth_logout = 'logout' in str(get_request.content)
-        self.assertEqual(auth_account, True, msg='Отстутствует ссылка на профиль для авторизированного пользователя внутри навигационной панели. Используйте имя - profile')
-        self.assertEqual(auth_logout, True, msg='Отстутствует ссылка на логаут для авторизированного пользователя внутри навигационной панели. Используйте имя - logout')
+        self.assertEqual(auth_account, True, msg='Отсутствует ссылка на профиль для авторизированного пользователя внутри навигационной панели. Используйте имя - profile')
+        self.assertEqual(auth_logout, True, msg='Отсутствует ссылка на логаут для авторизированного пользователя внутри навигационной панели. Используйте имя - logout')
         print('Тестирование модуля chat - Проверка шаблонов [x]')
 
     def test_2(self):
