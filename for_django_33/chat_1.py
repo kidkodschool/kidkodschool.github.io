@@ -108,7 +108,7 @@ class ChatTest(TestCase):
         input_content = 'type="submit"' in str(get_request.content)
         text_content = 'textarea' in str(get_request.content)
         action_content = 'action="/send/"' in str(get_request.content)
-        self.assertEqual(text_content, True, msg='В шаблоне формы отсутствует поле для ввода текста (textarea). Для создания этого тега необходимо использовать виджет для CharField, подробнее вы сможете узнать в вспомогательном репозитории.')
+        self.assertEqual(text_content, True, msg='В шаблоне формы отсутствует поле для ввода текста (textarea). Для создания этого тега необходимо использовать виджет для CharField.')
         self.assertEqual(input_content, True, msg='В шаблоне формы отсутствует кнопка подтверждения ввода')
         self.assertEqual(action_content, True, msg='В шаблоне формы отсутствует или неправильно введен адрес для отправления запроса при обработке отправки сообщения. Используйте - /send/')
         print('Тестирование модуля chat - Проверка контекста в шаблоне [x]')
