@@ -22,7 +22,7 @@ class ChatTest(TestCase):
         admin_user.save()
         self.admin_user = admin_user
 
-    def test_1(self):
+    def test_chat_view_url(self):
         print('Тестирование модуля chat - Проверка urls.py для главной страницы [ ]')
         from django.urls.exceptions import NoReverseMatch
         rev = False
@@ -55,7 +55,7 @@ class ChatTest(TestCase):
         self.assertEqual(auth_logout, True, msg='Отсутствует ссылка на логаут для авторизированного пользователя внутри навигационной панели. Используйте имя - logout')
         print('Тестирование модуля chat - Проверка шаблонов [x]')
 
-    def test_2(self):
+    def test_chat_model(self):
         print('Тестирование модуля chat - Проверка модели [ ]')
         print('Тестирование модуля chat - Проверка импортирования модели для "Чата" [ ]')
         try:
@@ -95,7 +95,7 @@ class ChatTest(TestCase):
         self.assertEqual(check_text_field, True, msg='Неправильно указан тип поля для text (используйте TextField())')
         self.assertEqual(check_date_field, True, msg='Неправильно указан тип поля для date (используйте DateTimeField(auto_now_add=True))')
 
-    def test_3(self):
+    def test_chat_form_and_context(self):
         print('Тестирование модуля chat - Проверка контекста в шаблоне [ ]')
         print('Тестирование модуля chat - Проверка формы [ ]')
         get_request = self.client.get('')
@@ -113,7 +113,7 @@ class ChatTest(TestCase):
         self.assertEqual(action_content, True, msg='В шаблоне формы отсутствует или неправильно введен адрес для отправления запроса при обработке отправки сообщения. Используйте - /send/')
         print('Тестирование модуля chat - Проверка контекста в шаблоне [x]')
 
-    def test_4(self):
+    def test_chat_send_message(self):
         from django.urls import reverse
         from .models import ChatModel
         print('Тестирование модуля chat - Проверка urls.py для отправления сообщений [ ]')

@@ -16,7 +16,7 @@ class ProfileTest(TestCase):
         basic_user.save()
         self.basic_user = basic_user
 
-    def test_1(self):
+    def test_account_model(self):
         from django.db.models import OneToOneField
         print('Тестирование модуля accounts - Модель для пользователя [ ]')
         print('Тестирование модуля accounts - Проверка импортирования модели для "Пользователя" [ ]')
@@ -48,7 +48,7 @@ class ProfileTest(TestCase):
         self.assertEqual(check_o2o_f, True, msg='Неправильно указан тип поля для profile (используйте OneToOneField())')
         print('Тестирование модуля accounts - Модель для пользователя [x]')
 
-    def test_2(self):
+    def test_account_registration_form(self):
         from .models import UserProfile
 
         print('Тестирование модуля accounts - Проверка формы для регистрации[ ]')
@@ -101,7 +101,7 @@ class ProfileTest(TestCase):
         self.assertEqual(post_request.status_code, 302, msg='Ошибка при успешной регистрации пользователя. Необходимо перенаправить (используйте redirect) пользователя на главную страницу приложения')
         print('Тестирование модуля accounts - Создание пользователя [x]')
 
-    def test_3(self):
+    def test_account_login_form(self):
         print('Тестирование модуля accounts - Проверка формы для логина [ ]')
         print('Тестирование модуля accounts - Проверка импортирования формы для "Логина" [ ]')
         try:
@@ -147,7 +147,7 @@ class ProfileTest(TestCase):
         self.assertEqual(post_request.status_code, 302, msg='Ошибка при не успешном логине пользователя. Необходимо перенаправить (используйте redirect) пользователя на главную страницу приложения')
         print('Тестирование модуля accounts - Логин пользователя [x]')
 
-    def test_4(self):
+    def test_account_logout_form(self):
         print('Тестирование модуля accounts - Проверка urls.py для логаута [ ]')
         from django.urls import reverse
         from django.urls.exceptions import NoReverseMatch
@@ -171,7 +171,7 @@ class ProfileTest(TestCase):
         self.assertEqual(get_request.status_code, 302, msg='Ошибка при разлогине пользователя. Необходимо перенаправить (используйте redirect) пользователя на главную страницу приложения')
         print('Тестирование модуля accounts - Логаут пользователя [x]')
 
-    def test_5(self):
+    def test_account_profile_view(self):
         print('Тестирование модуля accounts - Проверка urls.py для профиля [ ]')
         from django.urls import reverse
         from django.urls.exceptions import NoReverseMatch
@@ -201,7 +201,7 @@ class ProfileTest(TestCase):
         self.assertNotEqual(error_msg, KeyError, msg='Ошибка при получении контекста в профиле, используйте имя - profile, для контекста')
         print('Тестирование модуля accounts - Аутентификация [x]')
 
-    def test_6(self):
+    def test_account_profile_display(self):
         print('Тестирование модуля accounts - Отображение данных в профиле [ ]')
         from chat.models import ChatModel
         objs = ChatModel.objects.bulk_create([ChatModel(user=self.basic_user, text=f'news - {i}') for i in range(113)])

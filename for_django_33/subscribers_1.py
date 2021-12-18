@@ -24,7 +24,7 @@ class SubscribersTest(TestCase):
         subs_user.save()
         self.subs_user = subs_user
 
-    def test_1(self):
+    def test_subscribers_model_and_view(self):
         print('Тестирование модуля subscribers - Проверка модели [ ]')
         print('Тестирование модуля subscribers - Проверка импортирования модели для "Подписок" [ ]')
         try:
@@ -103,7 +103,7 @@ class SubscribersTest(TestCase):
         self.assertTrue(text_content_with_data_admin and text_content_with_data_subs, msg='Ошибка в шаблоне внутри пользовательского кабинета, вы должны вывести имена всех пользователей, которые находятся в подписках')
         print('Тестирование модуля subscribers - Проверка добавления пользователей в подписки [x]')
 
-    def test_2(self):
+    def test_subscribers_filter_1(self):
         print('Тестирование модуля subscribers - Проверка добавления фильтра для отображения определенных пользователей [ ]')
         self.client.login(username='basic', password='basic')
         chat_model_subs = ChatModel.objects.bulk_create([ChatModel(user=self.subs_user, text=f'text for subs {i}') for i in range(5)])
@@ -114,7 +114,7 @@ class SubscribersTest(TestCase):
         self.assertEqual(str(get_request_index.content).count('<mark>admin'), 15, msg='Ошибка в использовании фильтрации для отображения определенных пользователей')
         print('Тестирование модуля subscribers - Проверка добавления фильтра для отображения определенных пользователей [x]')
 
-    def test_3(self):
+    def test_subscribers_filter_2(self):
         print('Тестирование модуля subscribers - Проверка добавления фильтра для отображения только пользователей на которых есть подписка [ ]')
         self.client.login(username='basic', password='basic')
         chat_model_subs = ChatModel.objects.bulk_create([ChatModel(user=self.subs_user, text=f'text for subs {i}') for i in range(3)])
