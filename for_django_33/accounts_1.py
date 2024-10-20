@@ -166,7 +166,7 @@ class ProfileTest(TestCase):
         sess_before = len(self.client.session.items())
         get_request = self.client.get('/logout/')
         sess_after = len(self.client.session.items())
-        self.assertEquals(sess_before > sess_after and not sess_after, True, msg='Ошибка при логауте пользователя')
+        self.assertEqual(sess_before > sess_after and not sess_after, True, msg='Ошибка при логауте пользователя')
 
         self.assertEqual(get_request.status_code, 302, msg='Ошибка при разлогине пользователя. Необходимо перенаправить (используйте redirect) пользователя на главную страницу приложения')
         print('Тестирование модуля accounts - Логаут пользователя [x]')
