@@ -1,165 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Microsoft Visual Studio Code и git
-    </title>
-    <style>
-        .container {
-            background-color: #EECE2C;
-        }
-        .container h2, .container h3 {
-            color: black;
-            margin: .5em;
-            font-size: 1.25em;
-        }
-        .container h2::before {
-            content: '❗';
-        }
-        .container h3 {
-            margin-left: 1em;
-        }
-        .container h3::before {
-            content: '☑️';
-        }
-        .container > .items > h3 {
-            margin: .75em;
-        }
-    </style>
+    <title>Урок 7. VS Code, GitHub и «Виселица» — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Настраиваем компьютер как настоящие разработчики и пишем первую игру.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=4" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kk:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Пошаговая инструкция - как запустить дома Visual Studio Code</h1>
-    <ol>
-        <li>
-            <h2>
-                <a href="https://code.visualstudio.com" target="_blank">Скачать и установить Visual Studio Code</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Устанавливаем расширения для python</h2>
-            <img src="img/vsc_1.png" width="500px" alt="Вид">
-        </li>
-        <li>
-            <h2>Создаем и сохраняем новый файл с расширением .py</h2>
-            <img src="img/vsc_2.png" width="500px" alt="Вид">
-        </li>
-        <li>
-            <h2>Можно писать код!</h2>
-            <img src="img/vsc_3.png" width="500px" alt="Вид">
-        </li>
-    </ol>
-    <h1 class="title">Как зарегистрировать аккаунт на github</h1>
-    <ol>
-        <li>
-            <h2>
-                <a href="https://github.com/">Ссылка на сайт - github.com</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Вводим свои данные и нажимаем Sign up for github</h2>
-            <img src="img/git_1.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Проверяем почту и нажимаем continue</h2>
-            <img src="img/git_2.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Вводим пароль и нажимаем continue</h2>
-            <img src="img/git_3.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Вводим никнейм и нажимаем continue</h2>
-            <img src="img/git_4.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Пишем no и нажимаем continue</h2>
-            <img src="img/git_5.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Нажимаем на Start puzzle и проходим головоломку</h2>
-            <img src="img/git_6.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>После успешного прохождения нажимаем на Create account</h2>
-            <img src="img/git_7.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Далее вводим полученный на почту код</h2>
-            <img src="img/git_8.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Отмечаем пункты как указано на картинке</h2>
-            <img src="img/git_9.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>В следующем меню жмем Continue</h2>
-            <img src="img/git_10.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Выбираем Continue for free</h2>
-            <img src="img/git_11.png" width="600" alt="Вид">
-        </li>
-    </ol>
-    <h1 class="title">Установить git</h1>
-    <ol>
-        <li>
-            <h2>
-                <a href="https://git-scm.com/downloads">Скачать и установить git</a>
-            </h2>
-        </li>
-        <li>
-            <img src="img/git.png" width="600" alt="Утановка git">
-        </li>
-    </ol>
-    <h1 class="title">Создать игру - hangman (Виселица)</h1>
-    <div class="container">
-        <h2>
-            <a style="color: black;" href="https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D1%81%D0%B5%D0%BB%D0%B8%D1%86%D0%B0_(%D0%B8%D0%B3%D1%80%D0%B0)">Описание игры</a>
-        </h2>
-        <h2>Правила игры</h2>
-        <div class="items">
-            <h3>Игра загадывает слово и игрок должен угадать это слово</h3>
-            <h3>Попытки игрока угадать слово засчитываются побуквенно (В этой версии игры нельзя написать сразу слово)</h3>
-            <h3>У игрока есть 3 попытки, чтобы угадать</h3>
-            <h3>Игра показывает игроку, сколько попыток у него осталось</h3>
-            <h3>Игра подсказывает только количество букв в слове</h3>
-            <h3>Если угаданы все буквы в слове, игрок выигрывает</h3>
-            <h3>Если у игрока кончается последняя попытка, он проигрывает</h3>
-        </div>
-    </div>
-    <h1 class="title">Примерное представление об игре</h1>
-<iframe src="https://trinket.io/embed/python3/f9bf6f240b?outputOnly=true&runOption=run&start=result" width="100%"
-    height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-    <div class="additional">
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
-            <a href="https://nikomedvedev.ru/other/vscodeshortcuts/hotkeys.html" target="_blank">Горячие клавиши для Visual Studio
-                Code</a>
-            <a href="lesson_2.html">Урок 2 - Переменные, строки, ввод и вывод</a>
-            <a href="lesson_3.html">Урок 3 - Списки, кортежи</a>
-            <a href="lesson_4.html">Урок 4 - Сравнения</a>
-            <a href="lesson_5.html">Урок 5 - Циклы</a>
-            <a href="lesson_6.html">Урок 6 - Функции</a>
-            <a href="img/python_memo.pdf">Основные типы данных и операции с ними</a>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Python</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">Базовый курс</a>
+            <a href="index.html#advanced" class="hide-sm">Продвинутый</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Базовый курс</a><span>›</span><span>Урок 7</span></div>
+<h1>Инструменты программиста и игра «Виселица»</h1>
+<p class="lead">Настраиваем компьютер как настоящие разработчики и пишем первую игру.</p>
+<div class="chips"><span class="chip">📋 Заданий: 2</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Visual Studio Code</a><a class="sec" href="#sec-1">Регистрация на GitHub</a><a class="sec" href="#sec-2">Установка git</a><a class="sec" href="#sec-3">Игра «Виселица»</a><a href="#task-1"><span class="n">1</span><span>Создай игру «Виселица» (hangman)</span></a><a href="#task-2"><span class="n">2</span><span>Выложи игру на GitHub</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🛠️</span>Visual Studio Code</h2>
+<ol class="steps"><li><p>Скачай и установи <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a>.</p></li><li><p>Установи расширение для Python.</p><div class="shots single"><img class="zoomable" src="img/vsc_1.png" alt="Расширения для Python" loading="lazy"></div></li><li><p>Создай и сохрани новый файл с расширением <code>.py</code>.</p><div class="shots single"><img class="zoomable" src="img/vsc_2.png" alt="Новый файл .py" loading="lazy"></div></li><li><p>Можно писать код!</p><div class="shots single"><img class="zoomable" src="img/vsc_3.png" alt="Код в VS Code" loading="lazy"></div></li></ol>
+<h2 class="sec-title" id="sec-1"><span class="emoji">🐙</span>Регистрация на GitHub</h2>
+<ol class="steps"><li><p>Открой сайт <a href="https://github.com/" target="_blank" rel="noopener">github.com</a>.</p></li><li><p>Введи свои данные и нажми <b>Sign up for GitHub</b>.</p><div class="shots single"><img class="zoomable" src="img/git_1.png" alt="Регистрация" loading="lazy"></div></li><li><p>Проверь почту и нажми <b>Continue</b>.</p><div class="shots single"><img class="zoomable" src="img/git_2.png" alt="Почта" loading="lazy"></div></li><li><p>Введи пароль и нажми <b>Continue</b>.</p><div class="shots single"><img class="zoomable" src="img/git_3.png" alt="Пароль" loading="lazy"></div></li><li><p>Введи никнейм и нажми <b>Continue</b>.</p><div class="shots single"><img class="zoomable" src="img/git_4.png" alt="Никнейм" loading="lazy"></div></li><li><p>Напиши <b>n</b> и нажми <b>Continue</b>.</p><div class="shots single"><img class="zoomable" src="img/git_5.png" alt="Рассылка" loading="lazy"></div></li><li><p>Нажми <b>Start puzzle</b> и пройди головоломку.</p><div class="shots single"><img class="zoomable" src="img/git_6.png" alt="Головоломка" loading="lazy"></div></li><li><p>После прохождения нажми <b>Create account</b>.</p><div class="shots single"><img class="zoomable" src="img/git_7.png" alt="Создание аккаунта" loading="lazy"></div></li><li><p>Введи код, который пришёл на почту.</p><div class="shots single"><img class="zoomable" src="img/git_8.png" alt="Код подтверждения" loading="lazy"></div></li><li><p>Отметь пункты, как на картинке.</p><div class="shots single"><img class="zoomable" src="img/git_9.png" alt="Настройки" loading="lazy"></div></li><li><p>В следующем меню нажми <b>Continue</b>.</p><div class="shots single"><img class="zoomable" src="img/git_10.png" alt="Продолжить" loading="lazy"></div></li><li><p>Выбери <b>Continue for free</b>.</p><div class="shots single"><img class="zoomable" src="img/git_11.png" alt="Бесплатный план" loading="lazy"></div></li></ol>
+<h2 class="sec-title" id="sec-2"><span class="emoji">🌿</span>Установка git</h2>
+<ol class="steps"><li><p>Скачай и установи git с сайта <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git-scm.com</a>.</p><div class="shots single"><img class="zoomable" src="img/git.png" alt="Установка git" loading="lazy"></div></li></ol>
+<h2 class="sec-title" id="sec-3"><span class="emoji">🎮</span>Игра «Виселица»</h2>
+<article class="task" id="task-1" data-task="l7:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Создай игру «Виселица» (hangman)</h3><div class="badges"><span class="badge lvl-2">средне</span></div></div>
+</div>
+<div class="task-body">
+<p><a href="https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D1%81%D0%B5%D0%BB%D0%B8%D1%86%D0%B0_(%D0%B8%D0%B3%D1%80%D0%B0)" target="_blank" rel="noopener">Описание игры</a>. Правила нашей версии:</p><ul><li>игра загадывает слово, игрок должен его угадать;</li><li>угадывать можно только по одной букве (целое слово писать нельзя);</li><li>у игрока есть 3 попытки;</li><li>игра показывает, сколько попыток осталось;</li><li>игра подсказывает только количество букв в слове;</li><li>если угаданы все буквы — игрок выигрывает;</li><li>если закончилась последняя попытка — проигрывает.</li></ul>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+word = 'питон'
+guessed = []
+tries = 3
+
+print('Игра «Виселица»! Я загадал слово из', len(word), 'букв.')
+
+while tries > 0:
+    shown = ''
+    for letter in word:
+        if letter in guessed:
+            shown += letter + ' '
+        else:
+            shown += '_ '
+    print('Слово:', shown)
+
+    if '_' not in shown:
+        print('Ура! Ты угадал слово:', word)
+        break
+
+    letter = input('Назови букву: ').lower()
+    if letter in word:
+        print('Есть такая буква!')
+        guessed.append(letter)
+    else:
+        tries -= 1
+        print('Нет такой буквы. Осталось попыток:', tries)
+else:
+    print('Попытки закончились. Было загадано слово:', word)
+</script></div>
+<div class="py" data-mode="editor" data-key="l7:1"><script type="text/x-python">
+word = 'питон'
+guessed = []
+tries = 3
+
+# твой код
+</script></div>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l7:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Выложи игру на GitHub</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge local">на компьютере</span></div></div>
+</div>
+<div class="task-body">
+<p>Сохрани файл с игрой на компьютере и загрузи его в свой репозиторий на GitHub (как это сделать — в <a href="lesson_8.html#github">уроке 8</a>).</p>
+
+<p class="note info">🖥️ Эту задачу нужно запускать в <b>VS Code</b> на компьютере (модули вроде <code>turtle</code> и <code>tkinter</code> не работают в браузере).</p>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://nikomedvedev.ru/other/vscodeshortcuts/hotkeys.html" target="_blank" rel="noopener"><span class="ico">🛠️</span><span>Горячие клавиши VS Code<small>nikomedvedev.ru</small></span></a>
+<a class="link-card" href="img/python_memo.pdf" target="_blank" rel="noopener"><span class="ico">📄</span><span>Основные типы данных и операции (памятка)<small>kidkodschool</small></span></a>
+</div>
+<h3 class="links-title">Повторить</h3>
+<div class="links-grid">
+<a class="link-card" href="lesson_2.html"><span class="ico">🐍</span><span>Урок 2 — переменные, строки, ввод и вывод<small>kidkodschool</small></span></a>
+<a class="link-card" href="lesson_3.html"><span class="ico">🐍</span><span>Урок 3 — списки и кортежи<small>kidkodschool</small></span></a>
+<a class="link-card" href="lesson_4.html"><span class="ico">🐍</span><span>Урок 4 — сравнения<small>kidkodschool</small></span></a>
+<a class="link-card" href="lesson_5.html"><span class="ico">🐍</span><span>Урок 5 — циклы<small>kidkodschool</small></span></a>
+<a class="link-card" href="lesson_6.html"><span class="ico">🐍</span><span>Урок 6 — функции<small>kidkodschool</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_6.html"><small>← Предыдущий</small>Урок 6. Функции</a>
+<a class="next" href="lesson_8.html"><small>Следующий →</small>Урок 8. Практика и GitHub</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=4"></script>
+<script src="assets/kk.js?v=4"></script>
 </body>
-
 </html>

@@ -1,90 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Введение в computer science.
-        Синтаксис языка python.
-        Арифметические операции.
-    </title>
+    <title>Урок 1. Типы данных и арифметика — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Разбираемся, как компьютер хранит числа, и учимся считать на Python: от простого сложения до целочисленного деления и остатка.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=4" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kk:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Введение в computer science. Арифметические операции.</h1>
-    <ol>
-        <li>
-            <h2>
-                <a href="https://www.w3schools.com/python/python_operators.asp" target="_blank" rel="noopener noreferrer">Арифметические операторы</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Определите тип данных у следующих выражений</h2>
-            <ol>
-                <li style="margin: 2.5em;">
-                    <h2 style="border: 1px solid #f3558e; border-radius: 5px; padding: .5em; display: inline; font-size: 1.5em;">2 + 2 * 3 // 0.1</h2>
-                </li>
-                <li style="margin: 2.5em;">
-                    <h2 style="border: 1px solid #f3558e; border-radius: 5px; padding: .5em; display: inline; font-size: 1.5em;">0.1 + 2 / 3 // 0.1 % 2</h2>
-                </li>
-                <li style="margin: 2.5em;">
-                    <h2 style="border: 1px solid #f3558e; border-radius: 5px; padding: .5em; display: inline; font-size: 1.5em;">1 * float(1) - 0</h2>
-                </li>
-                <li style="margin: 2.5em;">
-                    <h2 style="border: 1px solid #f3558e; border-radius: 5px; padding: .5em; display: inline; font-size: 1.5em;">10 * int(1) - 0 * 0.0</h2>
-                </li>
-            </ol>
-        </li>
-        <li>
-            <img src="img/lesson_1_1.png" width="900" alt="Упрощенная схема работы компьютера с сохраняемой программой">
-        </li>
-    </ol>
 
-    <h1 class="title">Как установить python дома</h1>
-    <ol>
-        <li>
-            <h2>
-                <a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">Ссылка на скачивание</a>
-            </h2>
-            <img src="img/python_how_2.png" width="900" alt="Нажимаем download для скачивания">
-        </li>
-    </ol>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Python</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">Базовый курс</a>
+            <a href="index.html#advanced" class="hide-sm">Продвинутый</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-    <div class="additional">
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
-            <a href="https://pythonworld.ru/tipy-dannyx-v-python/chisla-int-float-complex.html" target="_blank" rel="noopener noreferrer">Числа и операции с ними</a>
-            <a href="python_tests/lesson_1/python.html" target="_blank" rel="noopener noreferrer">Тест для 1 урока</a>
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Базовый курс</a><span>›</span><span>Урок 1</span></div>
+<h1>Введение в computer science. Арифметические операции</h1>
+<p class="lead">Разбираемся, как компьютер хранит числа, и учимся считать на Python: от простого сложения до целочисленного деления и остатка.</p>
+<div class="chips"><span class="chip">📋 Заданий: 6</span><span class="chip">✅ С автопроверкой: 5</span><span class="chip">✨ Новых: 5</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Разминка</a><a href="#task-1"><span class="n">1</span><span>Определи тип данных у выражений</span></a><a href="#task-2"><span class="n">2</span><span>Сколько секунд в сутках?</span></a><a href="#task-3"><span class="n">3</span><span>Конфеты поровну</span></a><a href="#task-4"><span class="n">4</span><span>Прямоугольник</span></a><a href="#task-5"><span class="n">5</span><span>Средняя оценка</span></a><a href="#task-6"><span class="n">6</span><span>Степени двойки</span></a><a class="sec" href="#sec-7">Как работает компьютер</a><a class="sec" href="#sec-8">Как установить Python дома</a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🧠</span>Разминка</h2>
+<div class="note info"><p><b>Шпаргалка:</b> <code>//</code> — целочисленное деление, <code>%</code> — остаток от деления, <code>**</code> — степень. Если в выражении есть хотя бы одно число <code>float</code> (с точкой) — результат тоже будет <code>float</code>.</p></div>
+<article class="task" id="task-1" data-task="l1:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Определи тип данных у выражений</h3><div class="badges"><span class="badge lvl-1">легко</span></div></div>
+</div>
+<div class="task-body">
+<p>Для каждого выражения сначала <b>подумай</b>, какой получится тип — <code>int</code> или <code>float</code>. Потом проверь себя в редакторе с помощью <code>type()</code>.</p><ul class="expr-list"><li><code>2 + 2 * 3 // 0.1</code></li><li><code>0.1 + 2 / 3 // 0.1 % 2</code></li><li><code>1 * float(1) - 0</code></li><li><code>10 * int(1) - 0 * 0.0</code></li></ul>
+
+<div class="py" data-mode="editor" data-key="l1:1"><script type="text/x-python">
+# Сначала подумай, потом проверь!
+print(type(2 + 2 * 3 // 0.1))
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code"># Все четыре выражения дают float:
+print(type(2 + 2 * 3 // 0.1))        # &lt;class &#x27;float&#x27;&gt;  (есть 0.1)
+print(type(0.1 + 2 / 3 // 0.1 % 2))  # &lt;class &#x27;float&#x27;&gt;  (деление / всегда даёт float)
+print(type(1 * float(1) - 0))        # &lt;class &#x27;float&#x27;&gt;  (float(1) == 1.0)
+print(type(10 * int(1) - 0 * 0.0))   # &lt;class &#x27;float&#x27;&gt;  (0 * 0.0 == 0.0)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l1:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Сколько секунд в сутках?</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Посчитай с помощью Python, сколько секунд в <b>сутках</b>, в <b>неделе</b> и в <b>году</b> (365 дней). Выведи три числа — каждое на своей строке.</p>
+
+<div class="py" data-mode="editor" data-key="l1:2" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;86400&quot;, &quot;604800&quot;, &quot;31536000&quot;]}]"><script type="text/x-python">
+seconds_in_minute = 60
+# Продолжи: минуты в часе, часы в сутках...
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">seconds_in_minute = 60
+minutes_in_hour = 60
+hours_in_day = 24
+
+day = seconds_in_minute * minutes_in_hour * hours_in_day
+print(day)
+print(day * 7)
+print(day * 365)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l1:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Конфеты поровну</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>У Пети <b>47</b> конфет. Он хочет раздать их поровну <b>5</b> друзьям. Сколько конфет получит каждый и сколько останется Пете?</p><p>Используй операторы <code>//</code> и <code>%</code>.</p>
+<p class="sample-label">Пример вывода</p><pre class="sample">Каждый получит: 9
+Останется: 2</pre>
+
+<div class="py" data-mode="editor" data-key="l1:3" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;Каждый получит: 9&quot;, &quot;Останется: 2&quot;]}]"><script type="text/x-python">
+candies = 47
+friends = 5
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">candies = 47
+friends = 5
+print(&#x27;Каждый получит:&#x27;, candies // friends)
+print(&#x27;Останется:&#x27;, candies % friends)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l1:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Прямоугольник</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Стороны прямоугольника равны <code>a = 7</code> и <code>b = 4</code>. Выведи его <b>площадь</b> и <b>периметр</b>.</p>
+<p class="sample-label">Пример вывода</p><pre class="sample">Площадь: 28
+Периметр: 22</pre>
+
+<div class="py" data-mode="editor" data-key="l1:4" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;Площадь: 28&quot;, &quot;Периметр: 22&quot;]}]"><script type="text/x-python">
+a = 7
+b = 4
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">a = 7
+b = 4
+print(&#x27;Площадь:&#x27;, a * b)
+print(&#x27;Периметр:&#x27;, 2 * (a + b))</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l1:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Средняя оценка</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>За неделю ты получил оценки <b>5, 4, 5</b>. Найди среднюю оценку и выведи её, округлив до двух знаков после точки функцией <code>round(число, 2)</code>.</p>
+<p class="sample-label">Пример вывода</p><pre class="sample">Средняя оценка: 4.67</pre>
+
+<div class="py" data-mode="editor" data-key="l1:5" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;4.67&quot;]}]"><script type="text/x-python">
+a = 5
+b = 4
+c = 5
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">a = 5
+b = 4
+c = 5
+average = (a + b + c) / 3
+print(&#x27;Средняя оценка:&#x27;, round(average, 2))</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l1:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Степени двойки</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Выведи значения 2<sup>10</sup>, 2<sup>20</sup> и 2<sup>100</sup> с помощью оператора <code>**</code>. Удивись, какие большие числа умеет считать Python!</p>
+
+<div class="py" data-mode="editor" data-key="l1:6" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;1024&quot;, &quot;1048576&quot;, &quot;1267650600228229401496703205376&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">print(2 ** 10)
+print(2 ** 20)
+print(2 ** 100)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="sec-7"><span class="emoji">💻</span>Как работает компьютер</h2>
+<div class="shots single"><img class="zoomable" src="img/lesson_1_1.png" alt="Упрощённая схема работы компьютера с сохраняемой программой" loading="lazy"></div>
+<h2 class="sec-title" id="sec-8"><span class="emoji">⬇️</span>Как установить Python дома</h2>
+<ol class="steps"><li><p>Открой <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org/downloads</a> и нажми большую жёлтую кнопку <b>Download</b>.</p></li><li><p>Запусти установщик. <b>Важно:</b> поставь галочку <b>Add Python to PATH</b>, затем нажми <b>Install Now</b>.</p><div class="shots single"><img class="zoomable" src="img/python_how_2.png" alt="Нажимаем Download для скачивания" loading="lazy"></div></li><li><p>Для удобной работы с кодом установи редактор <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a> (подробная инструкция — в <a href="lesson_7.html">уроке 7</a>).</p></li></ol>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/python/python_operators.asp" target="_blank" rel="noopener"><span class="ico">📘</span><span>Арифметические операторы<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://pythonworld.ru/tipy-dannyx-v-python/chisla-int-float-complex.html" target="_blank" rel="noopener"><span class="ico">📘</span><span>Числа и операции с ними<small>pythonworld.ru</small></span></a>
+<a class="link-card" href="python_tests/lesson_1/python.html" target="_blank" rel="noopener"><span class="ico">📝</span><span>Тест для 1 урока<small>kidkodschool</small></span></a>
+</div>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BF%D1%80%D0%B5%D1%82%D0%B0%D1%82%D0%BE%D1%80" target="_blank" rel="noopener"><span class="ico">📚</span><span>Что такое интерпретатор<small>ru.wikipedia.org</small></span></a>
+<a class="link-card" href="https://ru.wikipedia.org/wiki/Bombe" target="_blank" rel="noopener"><span class="ico">📚</span><span>«Бомба» — компьютер для расшифровки «Энигмы»<small>ru.wikipedia.org</small></span></a>
+<a class="link-card" href="http://wombat.org.ua/AByteOfPython/AByteofPythonRussian-2.01.pdf" target="_blank" rel="noopener"><span class="ico">📚</span><span>Byte of Python — начните читать!<small>wombat.org.ua</small></span></a>
+</div>
+<h3 class="links-title">Где потренироваться</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_numbers1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Числа — упражнение<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_datatypes1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Типы данных — упражнение<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="next" href="lesson_2.html"><small>Следующий →</small>Урок 2. Переменные, строки, ввод и вывод</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
-            <a href="https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BF%D1%80%D0%B5%D1%82%D0%B0%D1%82%D0%BE%D1%80" target="_blank" rel="noopener noreferrer">Что такое интерпретатор</a>
-            <a href="https://ru.wikipedia.org/wiki/Bombe" target="_blank" rel="noopener noreferrer" style="white-space: normal;">"Бомба" компьютер с фиксированной программой для расшифровки немецкого шифра "Энигма" во время второй мировой</a>
-            <a href="http://wombat.org.ua/AByteOfPython/AByteofPythonRussian-2.01.pdf" target="_blank" rel="noopener noreferrer">Byte of Python - Начните читать!</a>
-        </div>
-        <h2 class="important">Где потренироваться:</h2>
-        <h2 class="task">Числа</h2>
-        <div class="stuff">
-        <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_numbers1">Упражнение</a>
-        </div>
-        <h2 class="task">Типы данных</h2>
-        <div class="stuff">
-        <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_datatypes1">Упражнение</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=4"></script>
+<script src="assets/kk.js?v=4"></script>
 </body>
-
 </html>

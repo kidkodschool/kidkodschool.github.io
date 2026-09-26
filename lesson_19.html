@@ -1,96 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Алгоритмы
-    </title>
-    <style>
-        table {
-            max-width: 1200px;
-        }
-        caption {
-            background-color: #fff;
-            padding: .5em;
-        }
-        </style>
+    <title>Урок 19. Алгоритмы — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Решаем задачи как на олимпиадах и собеседованиях. Все задачи проверяются автоматически.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=4" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kk:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Алгоритмы</h1>
-    <ol>
-        <li>
-            <h2 style="line-height: 1.5em;font-size: 1.5em; background-color: #1B2A49;">
-                <div>Создать функцию encode(), которая заменяет все буквы согласно следующей схеме:</div>
-                <div style="color: #FFCA03;">a - > 1, e -> 2, i -> 3, o -> 4, u -> 5</div>
-                <div>Пример, encode("hello") return "h2ll4"</div>
-                <div>Создать функцию decode(), которая заменяет все цифры в слове обратно на буквы (согласно схеме):</div>
-                <div>Пример, encode("h2ll4") return "hello"</div>
-            </h2>
-            <iframe src="https://trinket.io/embed/python3/5f5e1076e2" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_19_ans_1.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2 style="line-height: 1.5em;font-size: 1.5em; background-color: #1B2A49;">
-                <div>Задание: Вы получаете название города в виде строки, и вам нужно вернуть строку, показывающую, сколько раз каждая буква отображается в ней, используя звездочку (*)</div>
-                <div>Пример, "Moscow" -> "m:*,o:**,s:*,c:*,w:*"</div>
-                <div>Пример, "Chicago" -> "c:**,h:*,i:*,a:*,g:*,o:*"</div>
-                <div>Итоговая строка должна содержать, только буквы (пробелы игнорируются)</div>
-            </h2>
-            <iframe src="https://trinket.io/embed/python3/2509a45a78" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_19_ans_2.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2 style="line-height: 1.5em;font-size: 1.5em; background-color: #1B2A49;">
-                <div>Создать программу, которая ведет подсчет очков в игре Скрабл <a href="https://www.mosigra.ru/Face/Show/scrabble/rules/" target="_blank" rel="noopener noreferrer" style="font-size: 1em;">(что такое скрабл)</a></div>
-                <div style="color: #FFCA03;">A, E, I, O, U, L, N, R, S, T -> 1</div>
-                <div style="color: #FFCA03;">D, G -> 2</div>
-                <div style="color: #FFCA03;">B, C, M, P -> 3</div>
-                <div style="color: #FFCA03;">F, H, V, W, Y -> 4</div>
-                <div style="color: #FFCA03;">K -> 5</div>
-                <div style="color: #FFCA03;">J, X -> 8</div>
-                <div style="color: #FFCA03;">Q, Z -> 10</div>
-                <div>Пример, "cabbage" -> 14</div>
-                <div>3 очка за C, 1 очко за А (дважды), 3 очка за В (дважды), 2 очка за G, 1 очко за E</div>
-                <div>Результат: 3 + 1*2 + 3*2 + 2 + 1 = 14</div>
-            </h2>
-            <iframe src="https://trinket.io/embed/python3/880cd6b5fb" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_19_ans_3.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-    </ol>
-    <div class="additional">
-    <h2 class="important">Где можно потренироваться решать задачи:</h2>
-    <div class="stuff">
-        <a href="https://codecombat.com/" target="_blank" rel="noopener noreferrer">Codecombat - Ресурс для новичков</a>
-        <a href="https://www.codewars.com/" target="_blank" rel="noopener noreferrer">Codewars - Система рейтинга и задач соответствующих ему</a>
-        <a href="https://checkio.org/" target="_blank" rel="noopener noreferrer">Checkio - Решаем задачи в виде игры</a>
+
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Python</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">Базовый курс</a>
+            <a href="index.html#advanced" class="hide-sm">Продвинутый</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
     </div>
-    <h2 class="important">Что почитать:</h2>
-    <div class="stuff">
-        <a href="https://www.litres.ru/aditya-bhargava/grokaem-algoritmy-illustrirovannoe-posobie-dlya-p-39158380/" target="_blank" rel="noopener noreferrer">Грокаем алгоритмы</a>
-    </div>
-    </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
+</header>
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Базовый курс</a><span>›</span><span>Урок 19</span></div>
+<h1>Алгоритмы</h1>
+<p class="lead">Решаем задачи как на олимпиадах и собеседованиях. Все задачи проверяются автоматически.</p>
+<div class="chips"><span class="chip">📋 Заданий: 7</span><span class="chip">✅ С автопроверкой: 7</span><span class="chip">✨ Новых: 4</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Шифровка гласных</span></a><a href="#task-2"><span class="n">2</span><span>Звёздочки для букв</span></a><a href="#task-3"><span class="n">3</span><span>Очки в «Скрабл»</span></a><a href="#task-4"><span class="n">4</span><span>Анаграммы</span></a><a href="#task-5"><span class="n">5</span><span>Шифр Цезаря</span></a><a href="#task-6"><span class="n">6</span><span>Сортировка пузырьком</span></a><a href="#task-7"><span class="n">7</span><span>Бинарный поиск</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🧮</span>Задания</h2>
+<article class="task" id="task-1" data-task="l19:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Шифровка гласных</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай функцию <code>encode()</code>, которая заменяет буквы по схеме: <code>a → 1, e → 2, i → 3, o → 4, u → 5</code>. Например, <code>encode("hello")</code> → <code>"h2ll4"</code>.</p><p>Создай функцию <code>decode()</code>, которая заменяет цифры обратно на буквы: <code>decode("h2ll4")</code> → <code>"hello"</code>.</p>
+
+<div class="py" data-mode="editor" data-key="l19:1" data-tests="[{&quot;call&quot;: &quot;encode(&#x27;hello&#x27;)&quot;, &quot;want&quot;: &quot;&#x27;h2ll4&#x27;&quot;}, {&quot;call&quot;: &quot;encode(&#x27;How are you today?&#x27;)&quot;, &quot;want&quot;: &quot;&#x27;H4w 1r2 y45 t4d1y?&#x27;&quot;}, {&quot;call&quot;: &quot;decode(&#x27;h2ll4&#x27;)&quot;, &quot;want&quot;: &quot;&#x27;hello&#x27;&quot;}, {&quot;call&quot;: &quot;decode(&#x27;H4w 1r2 y45 t4d1y?&#x27;)&quot;, &quot;want&quot;: &quot;&#x27;How are you today?&#x27;&quot;}]"><script type="text/x-python">
+def encode(st):
+    pass
+
+
+def decode(st):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def encode(st):
+    for i, v in enumerate(&#x27;aeiou&#x27;, start=1):
+        st = st.replace(v, str(i))
+    return st
+
+
+def decode(st):
+    for i, v in enumerate(&#x27;aeiou&#x27;, start=1):
+        st = st.replace(str(i), v)
+    return st</pre><img class="zoomable" src="img/l19_a1_1.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l19:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Звёздочки для букв</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Функция <code>get_strings(city)</code> получает название города и возвращает строку, показывающую, сколько раз каждая буква встречается в нём (звёздочками). Регистр не важен, пробелы игнорируются, буквы идут в порядке первого появления.</p>
+<p class="sample-label">Примеры</p><pre class="sample">&quot;Moscow&quot;  → &quot;m:*,o:**,s:*,c:*,w:*&quot;
+&quot;Chicago&quot; → &quot;c:**,h:*,i:*,a:*,g:*,o:*&quot;</pre>
+
+<div class="py" data-mode="editor" data-key="l19:2" data-tests="[{&quot;call&quot;: &quot;get_strings(&#x27;Moscow&#x27;)&quot;, &quot;want&quot;: &quot;&#x27;m:*,o:**,s:*,c:*,w:*&#x27;&quot;}, {&quot;call&quot;: &quot;get_strings(&#x27;Chicago&#x27;)&quot;, &quot;want&quot;: &quot;&#x27;c:**,h:*,i:*,a:*,g:*,o:*&#x27;&quot;}, {&quot;call&quot;: &quot;get_strings(&#x27;Las Vegas&#x27;)&quot;, &quot;want&quot;: &quot;&#x27;l:*,a:**,s:**,v:*,e:*,g:*&#x27;&quot;}]"><script type="text/x-python">
+def get_strings(city):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def get_strings(city):
+    city = city.lower().replace(&#x27; &#x27;, &#x27;&#x27;)
+    parts = []
+    for letter in city:
+        item = f&#x27;{letter}:&#x27; + &#x27;*&#x27; * city.count(letter)
+        if item not in parts:
+            parts.append(item)
+    return &#x27;,&#x27;.join(parts)</pre><img class="zoomable" src="img/l19_a2_1.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l19:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Очки в «Скрабл»</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию <code>scrabble_score(word)</code>, которая считает очки за слово в игре <a href="https://www.mosigra.ru/Face/Show/scrabble/rules/" target="_blank" rel="noopener">Скрабл</a>. Регистр не важен.</p>
+<p class="sample-label">Таблица очков</p><pre class="sample">A, E, I, O, U, L, N, R, S, T → 1
+D, G → 2
+B, C, M, P → 3
+F, H, V, W, Y → 4
+K → 5
+J, X → 8
+Q, Z → 10</pre>
+<p class="sample-label">Пример</p><pre class="sample">&quot;cabbage&quot; → 14  (3 + 1·2 + 3·2 + 2 + 1)</pre>
+
+<div class="py" data-mode="editor" data-key="l19:3" data-tests="[{&quot;call&quot;: &quot;scrabble_score(&#x27;cabbage&#x27;)&quot;, &quot;want&quot;: &quot;14&quot;}, {&quot;call&quot;: &quot;scrabble_score(&#x27;&#x27;)&quot;, &quot;want&quot;: &quot;0&quot;}, {&quot;call&quot;: &quot;scrabble_score(&#x27;STREET&#x27;)&quot;, &quot;want&quot;: &quot;6&quot;}, {&quot;call&quot;: &quot;scrabble_score(&#x27;quiz&#x27;)&quot;, &quot;want&quot;: &quot;22&quot;}]"><script type="text/x-python">
+def scrabble_score(word):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">POINTS = {
+    &#x27;aeioulnrst&#x27;: 1, &#x27;dg&#x27;: 2, &#x27;bcmp&#x27;: 3, &#x27;fhvwy&#x27;: 4, &#x27;k&#x27;: 5, &#x27;jx&#x27;: 8, &#x27;qz&#x27;: 10,
+}
+
+
+def scrabble_score(word):
+    score = 0
+    for letter in word.lower():
+        for letters, value in POINTS.items():
+            if letter in letters:
+                score += value
+    return score</pre><img class="zoomable" src="img/l19_a3_1.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l19:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Анаграммы</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию <code>is_anagram(a, b)</code>: возвращает <code>True</code>, если слова состоят из одних и тех же букв («кот» и «ток»). Регистр не важен.</p>
+
+<div class="py" data-mode="editor" data-key="l19:4" data-tests="[{&quot;call&quot;: &quot;is_anagram(&#x27;кот&#x27;, &#x27;ток&#x27;)&quot;, &quot;want&quot;: &quot;True&quot;}, {&quot;call&quot;: &quot;is_anagram(&#x27;Listen&#x27;, &#x27;Silent&#x27;)&quot;, &quot;want&quot;: &quot;True&quot;}, {&quot;call&quot;: &quot;is_anagram(&#x27;кот&#x27;, &#x27;кит&#x27;)&quot;, &quot;want&quot;: &quot;False&quot;}, {&quot;call&quot;: &quot;is_anagram(&#x27;ааб&#x27;, &#x27;абб&#x27;)&quot;, &quot;want&quot;: &quot;False&quot;}]"><script type="text/x-python">
+def is_anagram(a, b):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def is_anagram(a, b):
+    return sorted(a.lower()) == sorted(b.lower())</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l19:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Шифр Цезаря</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию <code>caesar(text, shift)</code>, которая сдвигает каждую <b>маленькую латинскую</b> букву на <code>shift</code> позиций по алфавиту (после <code>z</code> снова идёт <code>a</code>). Остальные символы не меняются.</p>
+<p class="sample-label">Примеры</p><pre class="sample">caesar(&#x27;abc&#x27;, 1)        → &#x27;bcd&#x27;
+caesar(&#x27;xyz&#x27;, 3)        → &#x27;abc&#x27;
+caesar(&#x27;hello, world&#x27;, 13) → &#x27;uryyb, jbeyq&#x27;</pre>
+
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Номер буквы в алфавите: <code>ord(ch) - ord('a')</code>, обратно — <code>chr(номер + ord('a'))</code>. Остаток <code>% 26</code> поможет «закольцевать» алфавит.</p></div></details>
+<div class="py" data-mode="editor" data-key="l19:5" data-tests="[{&quot;call&quot;: &quot;caesar(&#x27;abc&#x27;, 1)&quot;, &quot;want&quot;: &quot;&#x27;bcd&#x27;&quot;}, {&quot;call&quot;: &quot;caesar(&#x27;xyz&#x27;, 3)&quot;, &quot;want&quot;: &quot;&#x27;abc&#x27;&quot;}, {&quot;call&quot;: &quot;caesar(&#x27;hello, world&#x27;, 13)&quot;, &quot;want&quot;: &quot;&#x27;uryyb, jbeyq&#x27;&quot;}, {&quot;call&quot;: &quot;caesar(caesar(&#x27;secret&#x27;, 5), -5)&quot;, &quot;want&quot;: &quot;&#x27;secret&#x27;&quot;}]"><script type="text/x-python">
+def caesar(text, shift):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def caesar(text, shift):
+    result = &#x27;&#x27;
+    for ch in text:
+        if &#x27;a&#x27; &lt;= ch &lt;= &#x27;z&#x27;:
+            result += chr((ord(ch) - ord(&#x27;a&#x27;) + shift) % 26 + ord(&#x27;a&#x27;))
+        else:
+            result += ch
+    return result</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l19:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Сортировка пузырьком</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию <code>bubble_sort(arr)</code>, которая сортирует список по возрастанию <b>без</b> <code>sort()</code> и <code>sorted()</code> и возвращает его. Идея: много раз проходим по списку и меняем местами соседей, стоящих не по порядку.</p>
+
+<div class="py" data-mode="editor" data-key="l19:6" data-tests="[{&quot;call&quot;: &quot;bubble_sort([3, 1, 2])&quot;, &quot;want&quot;: &quot;[1, 2, 3]&quot;}, {&quot;call&quot;: &quot;bubble_sort([5, -1, 5, 0])&quot;, &quot;want&quot;: &quot;[-1, 0, 5, 5]&quot;}, {&quot;call&quot;: &quot;bubble_sort([])&quot;, &quot;want&quot;: &quot;[]&quot;}]"><script type="text/x-python">
+def bubble_sort(arr):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(n - 1 - i):
+            if arr[j] &gt; arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-7" data-task="l19:7">
+<div class="task-head">
+<span class="task-num">7</span>
+<div class="task-title"><h3>Бинарный поиск</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию <code>binary_search(arr, x)</code>: в <b>отсортированном</b> списке находит индекс числа <code>x</code> или возвращает <code>-1</code>. Каждый шаг смотри на середину и отбрасывай половину списка.</p>
+
+<div class="py" data-mode="editor" data-key="l19:7" data-tests="[{&quot;call&quot;: &quot;binary_search([1, 3, 5, 7, 9], 7)&quot;, &quot;want&quot;: &quot;3&quot;}, {&quot;call&quot;: &quot;binary_search([1, 3, 5, 7, 9], 1)&quot;, &quot;want&quot;: &quot;0&quot;}, {&quot;call&quot;: &quot;binary_search([1, 3, 5, 7, 9], 4)&quot;, &quot;want&quot;: &quot;-1&quot;}, {&quot;call&quot;: &quot;binary_search([], 4)&quot;, &quot;want&quot;: &quot;-1&quot;}, {&quot;call&quot;: &quot;binary_search(list(range(0, 1000000, 2)), 777776)&quot;, &quot;want&quot;: &quot;388888&quot;}]"><script type="text/x-python">
+def binary_search(arr, x):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def binary_search(arr, x):
+    left, right = 0, len(arr) - 1
+    while left &lt;= right:
+        mid = (left + right) // 2
+        if arr[mid] == x:
+            return mid
+        if arr[mid] &lt; x:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Где решать задачи</h3>
+<div class="links-grid">
+<a class="link-card" href="https://codecombat.com/" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Codecombat — для новичков<small>codecombat.com</small></span></a>
+<a class="link-card" href="https://www.codewars.com/" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Codewars — рейтинг и задачи<small>codewars.com</small></span></a>
+<a class="link-card" href="https://checkio.org/" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Checkio — задачи в виде игры<small>checkio.org</small></span></a>
+</div>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.litres.ru/aditya-bhargava/grokaem-algoritmy-illustrirovannoe-posobie-dlya-p-39158380/" target="_blank" rel="noopener"><span class="ico">📚</span><span>«Грокаем алгоритмы»<small>litres.ru</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_17_18.html"><small>← Предыдущий</small>Урок 17–18. Проект «Лабиринт»</a>
+<a class="next" href="lesson_20.html"><small>Следующий →</small>Урок 20. Что делать дальше</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
+</footer>
+<script src="assets/course-map.js?v=4"></script>
+<script src="assets/kk.js?v=4"></script>
 </body>
-
 </html>

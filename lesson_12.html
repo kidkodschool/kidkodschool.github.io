@@ -1,121 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Классы #1
-    </title>
-    <style>
-        table {
-            max-width: 1200px;
-        }
-        caption {
-            background-color: #fff;
-            padding: .5em;
-        }
-        </style>
+    <title>Урок 12. Классы #1 — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Знакомимся с объектно-ориентированным программированием: создаём свои классы и объекты.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=4" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kk:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Классы #1</h1>
-    <ol>
-        <li>
-            <h2>Что мы увидим в консоли, если</h2>
-            <img src="img/l12_q2.png" alt="" width="800">
-            <img src="img/l12_q2_2.png" alt="" width="800">
-            <h2>
-                <a href="lesson_12_ans_3.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>С помощью классов создайте следующее</h2>
-            <iframe src="https://trinket.io/embed/python3/d493bfd05f?outputOnly=true&runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_12_ans_2.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>С помощью классов и модуля turtle построить дом своей мечты
-            </h2>
-            <img src="img/l12_q1_2.png" alt="" width="500">
-            <table class="ml-3 table table-sm table-bordered table-dark table-hover">
-                <thead>
-                    <h5>Необходимые методы для создания программы</h5>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Как вызвать</th>
-                        <th scope="col">Что делает</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>t.forward(INT)</td>
-                        <td>Движение в сторону указателя у курсора</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>t.left(INT)/t.right(INT)</td>
-                        <td>Поворот на n градусов</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>t.penup()</td>
-                        <td>Прекратить рисование</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>t.pendown()</td>
-                        <td>Начать рисование</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>t.goto(X, Y)</td>
-                        <td>Переместить курсор в заданные координаты</td>
-                    </tr>
-                </tbody>
-            </table>
-            <img src="img/l12_q1.png" alt="">
-            <img src="img/l12_q1.gif" alt="">
-            <h2>
-                <a href="lesson_12_ans_1.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-    </ol>
-    <div class="additional">
-    <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
 
-            <a href="https://docs.python.org/3.3/library/turtle.html?highlight=turtle" target="_blank" rel="noopener noreferrer">Модуль turtle и все его методы</a>
-            <a href="http://snakeproject.ru/rubric/article.php?art=python_turtle" target="_blank" rel="noopener noreferrer">Методы turtle на русском</a>
-            <a href="https://python-scripts.com/python-class" target="_blank" rel="noopener noreferrer">Классы в python</a>
-            <a href="https://www.w3schools.com/python/python_classes.asp" target="_blank" rel="noopener noreferrer">Классы - тренировка</a>
-            <a href="https://pythoner.name/documentation/tutorial/classes" target="_blank" rel="noopener noreferrer">Классы - документация на русском</a>
-            <a href="https://docs.python.org/3/tutorial/classes.html" target="_blank" rel="noopener noreferrer">Классы - документация на английском</a>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Python</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">Базовый курс</a>
+            <a href="index.html#advanced" class="hide-sm">Продвинутый</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Базовый курс</a><span>›</span><span>Урок 12</span></div>
+<h1>Классы #1</h1>
+<p class="lead">Знакомимся с объектно-ориентированным программированием: создаём свои классы и объекты.</p>
+<div class="chips"><span class="chip">📋 Заданий: 6</span><span class="chip">✅ С автопроверкой: 3</span><span class="chip">✨ Новых: 3</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Что мы увидим в консоли?</span></a><a href="#task-2"><span class="n">2</span><span>Варвар и маг</span></a><a href="#task-3"><span class="n">3</span><span>Дом мечты с turtle</span></a><a href="#task-4"><span class="n">4</span><span>Собака</span></a><a href="#task-5"><span class="n">5</span><span>Прямоугольник</span></a><a href="#task-6"><span class="n">6</span><span>Копилка</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🏗️</span>Задания</h2>
+<article class="task" id="task-1" data-task="l12:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Что мы увидим в консоли?</h3><div class="badges"><span class="badge lvl-1">легко</span></div></div>
+</div>
+<div class="task-body">
+<p>Сначала подумай, что выведет программа, а потом проверь в редакторе.</p>
+<div class="shots"><img class="zoomable" src="img/l12_q2.png" alt="Классы Plant и Fruit" loading="lazy"><img class="zoomable" src="img/l12_q2_2.png" alt="Продолжение программы" loading="lazy"></div>
+<div class="py" data-mode="editor" data-key="l12:1"><script type="text/x-python">
+class Plant:
+    def grow(self):
+        print(f'{self.name} is growing!')
+
+    def plant(self):
+        print(f'Plant a {self.name}')
+
+
+class Fruit(Plant):
+    def feed(self):
+        self.feed_status += 1
+        if self.feed_status >= 5:
+            self.feed_status = 0
+            self.grow()
+        else:
+            print(f'{5 - self.feed_status} times to feed remain!')
+
+# допиши код с картинки
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l12_a3.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l12:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Варвар и маг</h3><div class="badges"><span class="badge lvl-2">средне</span></div></div>
+</div>
+<div class="task-body">
+<p>С помощью классов создай игру: есть персонажи Barbarian и Mage, пользователь выбирает, кто атакует.</p>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+class Player:
+    def attack(self):
+        print(f'{self._class} attacks!')
+
+class Barbarian(Player):
+    def __init__(self, name):
+        self._class = 'barbarian'
+        self.name = name
+
+class Mage(Player):
+    def __init__(self, name):
+        self._class = 'mage'
+        self.name = name
+
+barb_name = input('Your barbarian name: ')
+mage_name = input('Your mage name: ')
+
+barb = Barbarian(barb_name)
+mage = Mage(mage_name)
+
+game = True
+
+while game:
+    action = input('What character you choose to attack Mage or Barbarian: ').lower()
+    if action == 'mage':
+        mage.attack()
+    elif action == 'barbarian':
+        barb.attack()
+    elif action == 'exit':
+        game = False
+    else:
+        print('Try again or type exit to finish')
+
+
+
+</script></div>
+<div class="py" data-mode="editor" data-key="l12:2"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l12_a2_1.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l12_a2_2.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l12:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Дом мечты с turtle</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">на компьютере</span></div></div>
+</div>
+<div class="task-body">
+<p>С помощью классов и модуля <code>turtle</code> построй дом своей мечты.</p>
+<div class="shots"><img class="zoomable" src="img/l12_q1_2.png" alt="Пример дома" loading="lazy"><img class="zoomable" src="img/l12_q1.png" alt="Пример кода" loading="lazy"><img class="zoomable" src="img/l12_q1.gif" alt="Как рисует черепашка" loading="lazy"></div>
+<p class="note info">🖥️ Эту задачу нужно запускать в <b>VS Code</b> на компьютере (модули вроде <code>turtle</code> и <code>tkinter</code> не работают в браузере).</p>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l12_a1_1.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l12_a1_2.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l12_a1_3.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<p><b>Методы turtle для задачи про дом</b></p><div class="table-wrap"><table class="nice"><thead><tr><th>#</th><th>Как вызвать</th><th>Что делает</th></tr></thead><tbody><tr><td>1</td><td><code>t.forward(INT)</code></td><td>Движение вперёд в сторону указателя</td></tr><tr><td>2</td><td><code>t.left(INT)</code> / <code>t.right(INT)</code></td><td>Поворот на n градусов</td></tr><tr><td>3</td><td><code>t.penup()</code></td><td>Прекратить рисование</td></tr><tr><td>4</td><td><code>t.pendown()</code></td><td>Начать рисование</td></tr><tr><td>5</td><td><code>t.goto(X, Y)</code></td><td>Переместить курсор в заданные координаты</td></tr></tbody></table></div>
+<article class="task" id="task-4" data-task="l12:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Собака</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай класс <code>Dog</code>. При создании передаётся имя: <code>Dog('Шарик')</code>. Метод <code>bark()</code> <b>возвращает</b> строку <code>'Шарик: Гав!'</code>.</p>
+
+<div class="py" data-mode="editor" data-key="l12:4" data-tests="[{&quot;call&quot;: &quot;Dog(&#x27;Шарик&#x27;).bark()&quot;, &quot;want&quot;: &quot;&#x27;Шарик: Гав!&#x27;&quot;}, {&quot;call&quot;: &quot;Dog(&#x27;Бобик&#x27;).name&quot;, &quot;want&quot;: &quot;&#x27;Бобик&#x27;&quot;}]"><script type="text/x-python">
+class Dog:
+    def __init__(self, name):
+        pass
+
+    def bark(self):
+        pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        return f&#x27;{self.name}: Гав!&#x27;</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l12:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Прямоугольник</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай класс <code>Rectangle(width, height)</code> с методами <code>area()</code>, <code>perimeter()</code> и <code>is_square()</code>.</p>
+
+<div class="py" data-mode="editor" data-key="l12:5" data-tests="[{&quot;call&quot;: &quot;Rectangle(3, 4).area()&quot;, &quot;want&quot;: &quot;12&quot;}, {&quot;call&quot;: &quot;Rectangle(3, 4).perimeter()&quot;, &quot;want&quot;: &quot;14&quot;}, {&quot;call&quot;: &quot;Rectangle(3, 4).is_square()&quot;, &quot;want&quot;: &quot;False&quot;}, {&quot;call&quot;: &quot;Rectangle(5, 5).is_square()&quot;, &quot;want&quot;: &quot;True&quot;}]"><script type="text/x-python">
+class Rectangle:
+    def __init__(self, width, height):
+        pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+    def perimeter(self):
+        return 2 * (self.width + self.height)
+
+    def is_square(self):
+        return self.width == self.height</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l12:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Копилка</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай класс <code>PiggyBank</code>. У копилки есть <code>balance</code> (сначала 0) и методы:</p><ul><li><code>deposit(amount)</code> — положить деньги;</li><li><code>withdraw(amount)</code> — достать деньги. Если денег не хватает — баланс не меняется, метод возвращает <code>False</code>, иначе <code>True</code>.</li></ul>
+
+<div class="py" data-mode="editor" data-key="l12:6" data-tests="[{&quot;code&quot;: &quot;p = PiggyBank()\np.deposit(100)\nassert p.balance == 100, f\&quot;После deposit(100) баланс {p.balance}, а должен быть 100\&quot;&quot;, &quot;label&quot;: &quot;deposit(100) → balance 100&quot;}, {&quot;code&quot;: &quot;p = PiggyBank()\np.deposit(50)\nassert p.withdraw(30) is True, \&quot;withdraw(30) должен вернуть True\&quot;\nassert p.balance == 20, f\&quot;Баланс {p.balance}, а должен быть 20\&quot;&quot;, &quot;label&quot;: &quot;withdraw(30) → True, balance 20&quot;}, {&quot;code&quot;: &quot;p = PiggyBank()\np.deposit(10)\nassert p.withdraw(99) is False, \&quot;Нельзя снять больше, чем есть\&quot;\nassert p.balance == 10, \&quot;Баланс не должен меняться\&quot;&quot;, &quot;label&quot;: &quot;withdraw(99) → False&quot;}]"><script type="text/x-python">
+class PiggyBank:
+    def __init__(self):
+        self.balance = 0
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">class PiggyBank:
+    def __init__(self):
+        self.balance = 0
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if amount &gt; self.balance:
+            return False
+        self.balance -= amount
+        return True</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://docs.python.org/3/library/turtle.html" target="_blank" rel="noopener"><span class="ico">📘</span><span>Модуль turtle и все его методы<small>docs.python.org</small></span></a>
+<a class="link-card" href="http://snakeproject.ru/rubric/article.php?art=python_turtle" target="_blank" rel="noopener"><span class="ico">📘</span><span>Методы turtle на русском<small>snakeproject.ru</small></span></a>
+<a class="link-card" href="https://python-scripts.com/python-class" target="_blank" rel="noopener"><span class="ico">📘</span><span>Классы в Python<small>python-scripts.com</small></span></a>
+<a class="link-card" href="https://pythoner.name/documentation/tutorial/classes" target="_blank" rel="noopener"><span class="ico">📘</span><span>Классы — документация на русском<small>pythoner.name</small></span></a>
+<a class="link-card" href="https://docs.python.org/3/tutorial/classes.html" target="_blank" rel="noopener"><span class="ico">📘</span><span>Классы — документация на английском<small>docs.python.org</small></span></a>
+</div>
+<h3 class="links-title">Где потренироваться</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_classes1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Классы — упражнение<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_inheritance1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Наследование — упражнение<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_11.html"><small>← Предыдущий</small>Урок 11. Рекурсия и Codewars</a>
+<a class="next" href="lesson_13.html"><small>Следующий →</small>Урок 13. Классы #2</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-    <h2 class="important">Где потренироваться:</h2>
-    <div class="stuff">
-
-        <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_classes1">Классы</a>
-        <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_inheritance1">Наследование</a>
-
-    </div>
-    </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
+</footer>
+<script src="assets/course-map.js?v=4"></script>
+<script src="assets/kk.js?v=4"></script>
 </body>
-
 </html>

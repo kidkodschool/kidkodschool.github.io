@@ -1,91 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Рекурсия
-    </title>
-    <style>
-
-    </style>
+    <title>Урок 11. Рекурсия и Codewars — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Разбираемся с рекурсией, регистрируемся на Codewars и доделываем хвосты по прошлым урокам.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=4" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kk:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Регистрируемся и тренируемся</h1>
-    <ol>
-        <li>
-            <h2>
-                <a href="https://www.codewars.com/" target="_blank" rel="noopener noreferrer">codewars - оттачиваем навыки python</a>
-            </h2>
-            <img src="img/codewars.png" alt="codewars">
-        </li>
-    </ol>
-    <h1 class="title">Что такое рекурсия</h1>
-    <ol>
-        <li>
-            <h2>
 
-                <a href="https://pythontutor.ru/lessons/functions/" target="_blank" rel="noopener noreferrer">Рекурсия</a>
-            </h2>
-        </li>
-    </ol>
-    <h1 class="title">Доделать все прошлые задания!</h1>
-    <ol>
-        <li>
-            <h2>
-<a href="lesson_1.html">Задания из 1 урока</a>
-            </h2></li>
-        <li>
-            <h2>
-<a href="lesson_2.html">Задания из 2 урока</a>
-            </h2></li>
-        <li>
-            <h2>
-<a href="lesson_3.html">Задания из 3 урока</a>
-            </h2></li>
-        <li>
-            <h2>
-<a href="lesson_4.html">Задания из 4 урока</a>
-            </h2></li>
-        <li>
-            <h2>
-<a href="lesson_5.html">Задания из 5 урока</a>
-            </h2></li>
-        <li>
-            <h2>
-<a href="lesson_6.html">Задания из 6 урока</a>
-            </h2></li>
-        <li>
-            <h2>
-<a href="lesson_7.html">Задания из 7 урока</a>
-            </h2></li>
-        <li>
-            <h2>
-<a href="lesson_8.html">Задания из 8 урока</a>
-            </h2></li>
-        <li>
-            <h2>
-<a href="lesson_9.html">Задания из 9 урока</a>
-            </h2></li>
-        <li>
-            <h2>
-<a href="lesson_10.html">Задания из 10 урока</a>
-            </h2></li>
-    </ol>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Python</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">Базовый курс</a>
+            <a href="index.html#advanced" class="hide-sm">Продвинутый</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Базовый курс</a><span>›</span><span>Урок 11</span></div>
+<h1>Рекурсия и тренировка на Codewars</h1>
+<p class="lead">Разбираемся с рекурсией, регистрируемся на Codewars и доделываем хвосты по прошлым урокам.</p>
+<div class="chips"><span class="chip">📋 Заданий: 5</span><span class="chip">✅ С автопроверкой: 5</span><span class="chip">✨ Новых: 5</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Тренируемся на Codewars</a><a class="sec" href="#sec-1">Рекурсия</a><a href="#task-1"><span class="n">1</span><span>Факториал</span></a><a href="#task-2"><span class="n">2</span><span>Обратный отсчёт</span></a><a href="#task-3"><span class="n">3</span><span>Числа Фибоначчи</span></a><a href="#task-4"><span class="n">4</span><span>Сумма цифр рекурсией</span></a><a href="#task-5"><span class="n">5</span><span>Степень числа</span></a><a class="sec" href="#sec-7">Доделай прошлые задания</a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🥋</span>Тренируемся на Codewars</h2>
+<ol class="steps"><li><p>Зарегистрируйся на <a href="https://www.codewars.com/" target="_blank" rel="noopener">codewars.com</a> и реши 3 задачи уровня 8 kyu.</p><div class="shots single"><img class="zoomable" src="img/codewars.png" alt="Codewars" loading="lazy"></div></li></ol>
+<h2 class="sec-title" id="sec-1"><span class="emoji">🪆</span>Рекурсия</h2>
+<div class="note info"><p><b>Рекурсия</b> — это когда функция вызывает саму себя. Важно не забыть <b>базовый случай</b> — условие, при котором функция перестаёт себя вызывать. Подробнее — на <a href="https://pythontutor.ru/lessons/functions/" target="_blank" rel="noopener">pythontutor.ru</a>.</p></div>
+<article class="task" id="task-1" data-task="l11:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Факториал</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши <b>рекурсивную</b> функцию <code>factorial(n)</code>. Факториал: <code>5! = 5 × 4 × 3 × 2 × 1 = 120</code>, а <code>0! = 1</code>.</p>
+
+<div class="py" data-mode="editor" data-key="l11:1" data-tests="[{&quot;call&quot;: &quot;factorial(0)&quot;, &quot;want&quot;: &quot;1&quot;}, {&quot;call&quot;: &quot;factorial(1)&quot;, &quot;want&quot;: &quot;1&quot;}, {&quot;call&quot;: &quot;factorial(5)&quot;, &quot;want&quot;: &quot;120&quot;}, {&quot;call&quot;: &quot;factorial(10)&quot;, &quot;want&quot;: &quot;3628800&quot;}]"><script type="text/x-python">
+def factorial(n):
+    if n == 0:
+        return 1
+    # твой код
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l11:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Обратный отсчёт</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши рекурсивную функцию <code>countdown(n)</code>, которая печатает числа от <code>n</code> до 1, а затем «Пуск!». Циклы не используй.</p>
+
+<div class="py" data-mode="editor" data-key="l11:2" data-tests="[{&quot;code&quot;: &quot;countdown(3)&quot;, &quot;label&quot;: &quot;countdown(3)&quot;, &quot;expect&quot;: [&quot;3 2 1 Пуск!&quot;]}, {&quot;code&quot;: &quot;countdown(0)&quot;, &quot;label&quot;: &quot;countdown(0)&quot;, &quot;expect&quot;: [&quot;Пуск!&quot;]}]"><script type="text/x-python">
+def countdown(n):
+    pass
+
+
+countdown(3)
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def countdown(n):
+    if n == 0:
+        print(&#x27;Пуск!&#x27;)
+        return
+    print(n)
+    countdown(n - 1)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l11:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Числа Фибоначчи</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши рекурсивную функцию <code>fib(n)</code>, которая возвращает n-е число Фибоначчи: 0, 1, 1, 2, 3, 5, 8, 13… (<code>fib(0) = 0</code>, <code>fib(1) = 1</code>, дальше каждое — сумма двух предыдущих).</p>
+
+<div class="py" data-mode="editor" data-key="l11:3" data-tests="[{&quot;call&quot;: &quot;fib(0)&quot;, &quot;want&quot;: &quot;0&quot;}, {&quot;call&quot;: &quot;fib(1)&quot;, &quot;want&quot;: &quot;1&quot;}, {&quot;call&quot;: &quot;fib(7)&quot;, &quot;want&quot;: &quot;13&quot;}, {&quot;call&quot;: &quot;fib(15)&quot;, &quot;want&quot;: &quot;610&quot;}]"><script type="text/x-python">
+def fib(n):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def fib(n):
+    if n &lt; 2:
+        return n
+    return fib(n - 1) + fib(n - 2)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l11:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Сумма цифр рекурсией</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши рекурсивную функцию <code>sum_digits(n)</code>, которая возвращает сумму цифр натурального числа.</p>
+
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Последняя цифра — <code>n % 10</code>, остальные — <code>n // 10</code>.</p></div></details>
+<div class="py" data-mode="editor" data-key="l11:4" data-tests="[{&quot;call&quot;: &quot;sum_digits(7)&quot;, &quot;want&quot;: &quot;7&quot;}, {&quot;call&quot;: &quot;sum_digits(123)&quot;, &quot;want&quot;: &quot;6&quot;}, {&quot;call&quot;: &quot;sum_digits(99999)&quot;, &quot;want&quot;: &quot;45&quot;}]"><script type="text/x-python">
+def sum_digits(n):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def sum_digits(n):
+    if n &lt; 10:
+        return n
+    return n % 10 + sum_digits(n // 10)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l11:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Степень числа</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши рекурсивную функцию <code>power(a, n)</code>, которая возводит <code>a</code> в натуральную степень <code>n</code> без оператора <code>**</code>.</p>
+
+<div class="py" data-mode="editor" data-key="l11:5" data-tests="[{&quot;call&quot;: &quot;power(2, 10)&quot;, &quot;want&quot;: &quot;1024&quot;}, {&quot;call&quot;: &quot;power(5, 0)&quot;, &quot;want&quot;: &quot;1&quot;}, {&quot;call&quot;: &quot;power(3, 3)&quot;, &quot;want&quot;: &quot;27&quot;}]"><script type="text/x-python">
+def power(a, n):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def power(a, n):
+    if n == 0:
+        return 1
+    return a * power(a, n - 1)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="sec-7"><span class="emoji">📌</span>Доделай прошлые задания</h2>
+<div class="note "><p>Загляни в прошлые уроки — невыполненные задания видно по прогрессу на <a href="index.html#basic">главной странице</a>.</p></div>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Повторить</h3>
+<div class="links-grid">
+<a class="link-card" href="lesson_1.html"><span class="ico">🐍</span><span>Задания урока 1<small>kidkodschool</small></span></a>
+<a class="link-card" href="lesson_2.html"><span class="ico">🐍</span><span>Задания урока 2<small>kidkodschool</small></span></a>
+<a class="link-card" href="lesson_3.html"><span class="ico">🐍</span><span>Задания урока 3<small>kidkodschool</small></span></a>
+<a class="link-card" href="lesson_4.html"><span class="ico">🐍</span><span>Задания урока 4<small>kidkodschool</small></span></a>
+<a class="link-card" href="lesson_5.html"><span class="ico">🐍</span><span>Задания урока 5<small>kidkodschool</small></span></a>
+<a class="link-card" href="lesson_6.html"><span class="ico">🐍</span><span>Задания урока 6<small>kidkodschool</small></span></a>
+<a class="link-card" href="lesson_7.html"><span class="ico">🐍</span><span>Задания урока 7<small>kidkodschool</small></span></a>
+<a class="link-card" href="lesson_8.html"><span class="ico">🐍</span><span>Задания урока 8<small>kidkodschool</small></span></a>
+<a class="link-card" href="lesson_9.html"><span class="ico">🐍</span><span>Задания урока 9<small>kidkodschool</small></span></a>
+<a class="link-card" href="lesson_10.html"><span class="ico">🐍</span><span>Задания урока 10<small>kidkodschool</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_10.html"><small>← Предыдущий</small>Урок 10. Словари</a>
+<a class="next" href="lesson_12.html"><small>Следующий →</small>Урок 12. Классы #1</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
+</footer>
+<script src="assets/course-map.js?v=4"></script>
+<script src="assets/kk.js?v=4"></script>
 </body>
-
 </html>

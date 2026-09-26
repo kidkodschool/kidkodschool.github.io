@@ -1,0 +1,84 @@
+/* Общее оформление КИДКОД для старых страниц (уроки 23–35 и справочные страницы).
+ * Подключается после css/style_lesson.css и перекрывает его. */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Nunito:wght@400;700;800;900&display=swap');
+
+:root {
+  --brand: #8b70ff;
+  --brand-2: #ff4d8d;
+  --sun: #ffd23f;
+  --bg: #110f24;
+  --surface: #1b1836;
+  --ink: #f1efff;
+  --muted: #9893c2;
+  --line: #2f2a57;
+}
+
+html, body {
+  display: block !important;
+  background: var(--bg) !important;
+  color: var(--ink) !important;
+  font-family: 'Nunito', system-ui, sans-serif !important;
+  font-size: 17px;
+  line-height: 1.6;
+}
+body { padding: 0 clamp(16px, 4vw, 40px) 40px !important; max-width: 1200px; margin: 0 auto !important; }
+img { max-width: 100%; height: auto; }
+code, pre { font-family: 'JetBrains Mono', monospace; }
+
+.kk-legacy-header {
+  display: flex; align-items: center; gap: 12px; justify-content: space-between; flex-wrap: wrap;
+  padding: 14px 0; margin-bottom: 20px; border-bottom: 1px solid var(--line);
+}
+.kk-legacy-header a { text-decoration: none; color: var(--ink); font-weight: 800; }
+.kk-legacy-header .logo { display: inline-flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 900; }
+.kk-legacy-header .logo-mark {
+  width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff;
+  font-family: 'JetBrains Mono', monospace; font-size: 15px;
+}
+.kk-legacy-header .back { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: 15px; }
+.kk-legacy-header .back:hover { border-color: var(--brand); }
+
+.title, h1.title {
+  display: block !important;
+  background: none !important;
+  padding: 16px 0 8px !important;
+  font-family: 'Nunito', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: clamp(26px, 4vw, 38px) !important;
+  line-height: 1.2;
+  color: var(--ink) !important;
+}
+ol li h2, ol li h2 a { color: var(--ink) !important; }
+ol li h2 a, p a, li a { border-bottom: 0 !important; color: var(--brand) !important; }
+ol li img { border-radius: 12px; border: 1px solid var(--line); }
+
+.additional {
+  background: var(--surface) !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 20px !important;
+  margin-top: 32px;
+}
+.additional .important { color: var(--sun) !important; font-family: 'Nunito', sans-serif !important; font-weight: 900; font-size: 1.4em !important; padding-left: 0 !important; }
+.additional .important::before, .additional .task::before { display: none !important; }
+.additional .task { color: var(--muted) !important; padding-left: 0 !important; }
+.additional .stuff a {
+  font-size: 16px !important; font-weight: 700; padding: 12px 16px !important; margin: 6px !important;
+  background: var(--bg); color: var(--ink) !important; border: 1px solid var(--line); border-radius: 12px !important;
+  box-shadow: none !important; white-space: normal !important;
+}
+.additional .stuff a:hover { border-color: var(--brand); color: var(--ink) !important; }
+
+.table { border-radius: 12px; overflow: hidden; }
+.important-text { background: var(--brand-2) !important; }
+
+.footer { display: none !important; }
+.kk-legacy-footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted);
+  display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center;
+}
+.kk-legacy-footer a { color: var(--ink); font-weight: 800; text-decoration: none; margin-left: 14px; }
+.kk-legacy-footer a:hover { color: var(--brand); }
+caption { background: var(--surface) !important; color: var(--sun) !important; border-radius: 12px 12px 0 0; padding: 10px 14px !important; }

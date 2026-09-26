@@ -1,103 +1,367 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Циклы
-    </title>
+    <title>Урок 5. Циклы — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Заставляем компьютер повторять действия: перебираем списки, считаем суммы и пишем первые игры.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=4" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kk:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Циклы</h1>
-    <ol>
-        <li>
-            <h2>Создайте программу, которая сохраняет в список (list) числа больше 5 из набора положительных чисел
-            </h2>
-                <img src="img/l5_q1.png" alt="вопрос 1">
-                <img src="img/l5_q1_2.png" alt="вопрос 1_2">
-            <h2>
-                <a href="lesson_5_ans_1.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте программу, которая сохраняет в список (list) делители числа
-            </h2>
-<iframe src="https://trinket.io/embed/python3/4f8f0dd637?outputOnly=true&runOption=run&start=result" width="100%"
-    height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_5_ans_2.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте программу, которая выводит сумму ряда чисел с шагом 1 (арифметическая прогрессия)
-            </h2>
-            <h2>
-                <a href="https://www.yaklass.ru/p/algebra/9-klass/progressii-9139/arifmeticheskaia-progressiia-9141/re-9be60eb3-2e3a-4782-b724-d5bca94395dc" target="_blank" rel="noopener noreferrer">Что такое арифметическая прогрессия</a>
-            </h2>
-            <h2>Пример:</h2>
-            <img src="img/l5_q3_3.png" alt="арифметическая прогрессия">
-<iframe src="https://trinket.io/embed/python3/3fa16a7321?outputOnly=true&runOption=run&start=result" width="100%"
-    height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_5_ans_3.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте программу, которая загадывает загадку и в зависимости от ответа выдает результат. (используемый цикл - while)
-            </h2>
-<iframe src="https://trinket.io/embed/python3/686b8fe1fe?outputOnly=true&runOption=run&start=result" width="100%"
-    height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_5_ans_4.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте программу, которая находит самое большое и самое маленькое число в списке
-            </h2>
-            <img src="img/l5_q5.png" alt="вопрос 5">
-            <img src="img/l5_q5_2.png" alt="вопрос 5_2">
-            <h2>
-                <a href="lesson_5_ans_5.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-    </ol>
-    <div class="additional">
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
 
-            <a href="https://pythontutor.ru/lessons/while/">Цикл while</a>
-            <a href="https://pythontutor.ru/lessons/for_loop/" target="_blank" rel="noopener noreferrer">Цикл for</a>
-            <a href="https://www.w3schools.com/python/ref_func_range.asp" target="_blank" rel="noopener noreferrer">Функция range()</a>
-            <a href="https://all-python.ru/osnovy/range.html" target="_blank" rel="noopener noreferrer">Более детально о range()</a>
-            <a href="python_tests/lesson_5/5python.html" target="_blank" rel="noopener noreferrer">Тест для 5 урока</a>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Python</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">Базовый курс</a>
+            <a href="index.html#advanced" class="hide-sm">Продвинутый</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Базовый курс</a><span>›</span><span>Урок 5</span></div>
+<h1>Циклы for и while</h1>
+<p class="lead">Заставляем компьютер повторять действия: перебираем списки, считаем суммы и пишем первые игры.</p>
+<div class="chips"><span class="chip">📋 Заданий: 10</span><span class="chip">✅ С автопроверкой: 7</span><span class="chip">✨ Новых: 5</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Числа больше пяти</span></a><a href="#task-2"><span class="n">2</span><span>Делители числа</span></a><a href="#task-3"><span class="n">3</span><span>Сумма ряда чисел</span></a><a href="#task-4"><span class="n">4</span><span>Загадка</span></a><a href="#task-5"><span class="n">5</span><span>Минимум и максимум</span></a><a href="#task-6"><span class="n">6</span><span>Таблица умножения</span></a><a href="#task-7"><span class="n">7</span><span>Обратный отсчёт</span></a><a href="#task-8"><span class="n">8</span><span>Сумма цифр</span></a><a href="#task-9"><span class="n">9</span><span>FizzBuzz</span></a><a href="#task-10"><span class="n">10</span><span>Игра «Угадай число»</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🔁</span>Задания</h2>
+<article class="task" id="task-1" data-task="l5:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Числа больше пяти</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай программу, которая сохраняет в список числа <b>больше 5</b> из набора положительных чисел.</p>
+<div class="shots"><img class="zoomable" src="img/l5_q1.png" alt="Заготовка программы" loading="lazy"><img class="zoomable" src="img/l5_q1_2.png" alt="Ожидаемый результат" loading="lazy"></div>
+<div class="py" data-mode="editor" data-key="l5:1" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;[6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]&quot;]}]"><script type="text/x-python">
+numbers = list(range(20))
+greater_five = []
+
+# твой код
+
+print(greater_five)
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l5_a1.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l5:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Делители числа</h3><div class="badges"><span class="badge lvl-1">легко</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай программу, которая сохраняет в список все делители числа.</p>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+number = int(input('Введите положительное число: '))
+divisors = []
+
+for i in range(number, 0, -1):
+    if number % i == 0:
+        divisors.append(i)
+
+print(f'Делители числа {number}: {divisors}')
+</script></div>
+<div class="py" data-mode="editor" data-key="l5:2"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l5_a2.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l5:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Сумма ряда чисел</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай программу, которая выводит сумму ряда чисел с шагом 1 (<a href="https://www.yaklass.ru/p/algebra/9-klass/progressii-9139/arifmeticheskaia-progressiia-9141/re-9be60eb3-2e3a-4782-b724-d5bca94395dc" target="_blank" rel="noopener">арифметическая прогрессия</a>).</p>
+<p class="sample-label">Пример</p><pre class="sample">5 -&gt; 5 + 4 + 3 + 2 + 1 = 15
+3 -&gt; 3 + 2 + 1 = 6</pre>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+numbers = range(int(input('Введите число: ')))
+sum_of_numbers = 0
+
+for i in numbers:
+    sum_of_numbers += i + 1
+
+print(sum_of_numbers)
+</script></div>
+<div class="py" data-mode="editor" data-key="l5:3" data-tests="[{&quot;inputs&quot;: [&quot;5&quot;], &quot;expect&quot;: [&quot;15&quot;]}, {&quot;inputs&quot;: [&quot;100&quot;], &quot;expect&quot;: [&quot;5050&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l5_a3.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l5:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Загадка</h3><div class="badges"><span class="badge lvl-2">средне</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай программу, которая загадывает загадку и в зависимости от ответа выдаёт результат. Используй цикл <code>while</code>.</p>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+print('''
+    Попробуй отгадай загадку!
+    - Кто может поднять и передвинуть и коня, и слона?
+''')
+
+a = input('Ответ: ')
+
+while a.lower() != 'шахматист':
+    print('Ответ неверный, попробуй еще! Если сдаешься напиши - сдаюсь')
+    a = input('Ответ: ')
+    if a.lower() == 'сдаюсь':
+        break
+
+if a.lower() == 'шахматист':
+    print('Молодец, это правильный ответ!')
+else:
+    print('Правильный ответ: Шахматист!')
+
+</script></div>
+<div class="py" data-mode="editor" data-key="l5:4"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l5_a4.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l5:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Минимум и максимум</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай программу, которая находит самое большое и самое маленькое число в списке (без <code>min()</code> и <code>max()</code>).</p>
+<div class="shots"><img class="zoomable" src="img/l5_q5.png" alt="Заготовка программы" loading="lazy"><img class="zoomable" src="img/l5_q5_2.png" alt="Ожидаемый результат" loading="lazy"></div>
+<div class="py" data-mode="editor" data-key="l5:5" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;Минимальное число в списке - 2&quot;, &quot;Максимальное число в списке - 22&quot;]}]"><script type="text/x-python">
+numbers = [7, 4, 5, 10, 7, 14, 22, 4, 2, 3]
+tmp_min = 0
+tmp_max = 0
+
+# твой код
+
+print(f'''
+Список - {numbers}
+Минимальное число в списке - {tmp_min}
+Максимальное число в списке - {tmp_max}
+''')
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l5_a5.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l5:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Таблица умножения</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Пользователь вводит число. Выведи для него таблицу умножения от 1 до 10.</p>
+<p class="sample-label">Пример работы</p><pre class="sample">Число: 7
+7 x 1 = 7
+7 x 2 = 14
+...
+7 x 10 = 70</pre>
+
+<div class="py" data-mode="editor" data-key="l5:6" data-tests="[{&quot;inputs&quot;: [&quot;7&quot;], &quot;expect&quot;: [&quot;7 x 1 = 7&quot;, &quot;7 x 5 = 35&quot;, &quot;7 x 10 = 70&quot;]}, {&quot;inputs&quot;: [&quot;12&quot;], &quot;expect&quot;: [&quot;12 x 10 = 120&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">n = int(input(&#x27;Число: &#x27;))
+for i in range(1, 11):
+    print(f&#x27;{n} x {i} = {n * i}&#x27;)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-7" data-task="l5:7">
+<div class="task-head">
+<span class="task-num">7</span>
+<div class="task-title"><h3>Обратный отсчёт</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Пользователь вводит число <code>n</code>. С помощью цикла <code>while</code> выведи числа от <code>n</code> до 1, а в конце — «Старт! 🚀».</p>
+<p class="sample-label">Пример работы</p><pre class="sample">С какого числа? 3
+3
+2
+1
+Старт! 🚀</pre>
+
+<div class="py" data-mode="editor" data-key="l5:7" data-tests="[{&quot;inputs&quot;: [&quot;3&quot;], &quot;expect&quot;: [&quot;3 2 1 Старт&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">n = int(input(&#x27;С какого числа? &#x27;))
+while n &gt; 0:
+    print(n)
+    n -= 1
+print(&#x27;Старт! 🚀&#x27;)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-8" data-task="l5:8">
+<div class="task-head">
+<span class="task-num">8</span>
+<div class="task-title"><h3>Сумма цифр</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Пользователь вводит целое число. Посчитай сумму его цифр.</p>
+<p class="sample-label">Пример работы</p><pre class="sample">Число: 12345
+Сумма цифр: 15</pre>
+
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Можно перебрать строку символ за символом: <code>for digit in text:</code>, а можно в цикле брать остаток <code>n % 10</code> и делить <code>n //= 10</code>.</p></div></details>
+<div class="py" data-mode="editor" data-key="l5:8" data-tests="[{&quot;inputs&quot;: [&quot;12345&quot;], &quot;expect&quot;: [&quot;Сумма цифр: 15&quot;]}, {&quot;inputs&quot;: [&quot;9&quot;], &quot;expect&quot;: [&quot;Сумма цифр: 9&quot;]}, {&quot;inputs&quot;: [&quot;1000&quot;], &quot;expect&quot;: [&quot;Сумма цифр: 1&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">text = input(&#x27;Число: &#x27;)
+total = 0
+for digit in text:
+    total += int(digit)
+print(&#x27;Сумма цифр:&#x27;, total)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-9" data-task="l5:9">
+<div class="task-head">
+<span class="task-num">9</span>
+<div class="task-title"><h3>FizzBuzz</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Классическая задача программистов! Выведи числа от 1 до 30, но:</p><ul><li>вместо чисел, которые делятся на 3, пиши <b>Fizz</b>;</li><li>вместо тех, что делятся на 5, — <b>Buzz</b>;</li><li>а если делится и на 3, и на 5 — <b>FizzBuzz</b>.</li></ul>
+<p class="sample-label">Начало вывода</p><pre class="sample">1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+...</pre>
+
+<div class="py" data-mode="editor" data-key="l5:9" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16&quot;, &quot;29 FizzBuzz&quot;], &quot;reject&quot;: [&quot;15&quot;, &quot;30&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">for i in range(1, 31):
+    if i % 15 == 0:
+        print(&#x27;FizzBuzz&#x27;)
+    elif i % 3 == 0:
+        print(&#x27;Fizz&#x27;)
+    elif i % 5 == 0:
+        print(&#x27;Buzz&#x27;)
+    else:
+        print(i)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-10" data-task="l5:10">
+<div class="task-head">
+<span class="task-num">10</span>
+<div class="task-title"><h3>Игра «Угадай число»</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span></div></div>
+</div>
+<div class="task-body">
+<p>Компьютер загадывает случайное число от 1 до 50 (<code>from random import randint</code>). Игрок угадывает, а программа подсказывает «больше» или «меньше». Когда число угадано — выведи количество попыток.</p>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+from random import randint
+
+secret = randint(1, 50)
+print('Я загадал число от 1 до 50. Угадаешь?')
+tries = 0
+
+while True:
+    guess = int(input('Твой вариант: '))
+    tries += 1
+    if guess < secret:
+        print('Моё число больше ⬆')
+    elif guess > secret:
+        print('Моё число меньше ⬇')
+    else:
+        print(f'Угадал за {tries} попыток! 🎉')
+        break
+</script></div>
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Бесконечный цикл <code>while True:</code> можно прервать командой <code>break</code>.</p></div></details>
+<div class="py" data-mode="editor" data-key="l5:10"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">from random import randint
+
+secret = randint(1, 50)
+print(&#x27;Я загадал число от 1 до 50. Угадаешь?&#x27;)
+tries = 0
+
+while True:
+    guess = int(input(&#x27;Твой вариант: &#x27;))
+    tries += 1
+    if guess &lt; secret:
+        print(&#x27;Моё число больше ⬆&#x27;)
+    elif guess &gt; secret:
+        print(&#x27;Моё число меньше ⬇&#x27;)
+    else:
+        print(f&#x27;Угадал за {tries} попыток! 🎉&#x27;)
+        break</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://pythontutor.ru/lessons/while/" target="_blank" rel="noopener"><span class="ico">📘</span><span>Цикл while<small>pythontutor.ru</small></span></a>
+<a class="link-card" href="https://pythontutor.ru/lessons/for_loop/" target="_blank" rel="noopener"><span class="ico">📘</span><span>Цикл for<small>pythontutor.ru</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/python/ref_func_range.asp" target="_blank" rel="noopener"><span class="ico">📘</span><span>Функция range()<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://all-python.ru/osnovy/range.html" target="_blank" rel="noopener"><span class="ico">📘</span><span>Более детально о range()<small>all-python.ru</small></span></a>
+<a class="link-card" href="python_tests/lesson_5/5python.html" target="_blank" rel="noopener"><span class="ico">📝</span><span>Тест для 5 урока<small>kidkodschool</small></span></a>
+</div>
+<h3 class="links-title">Где потренироваться</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_while_loops1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Цикл while — упражнение<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_for_loops1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Цикл for — упражнение<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_4.html"><small>← Предыдущий</small>Урок 4. Сравнения и условия</a>
+<a class="next" href="lesson_6.html"><small>Следующий →</small>Урок 6. Функции</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Где потренироваться:</h2>
-        <h2 class="task">Цикл "пока" (while)</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_while_loops1">Упражнение</a>
-
-        </div>
-        <h2 class="task">Цикл "для" (for)</h2>
-        <div class="stuff">
-
-            <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_for_loops1">Упражнение</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=4"></script>
+<script src="assets/kk.js?v=4"></script>
 </body>
-
 </html>

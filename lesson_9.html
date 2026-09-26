@@ -1,70 +1,611 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Модули и файлы
-    </title>
+    <title>Урок 9. Модули и файлы — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Подключаем готовые модули (&lt;code&gt;random&lt;/code&gt;, &lt;code&gt;math&lt;/code&gt;) и учимся сохранять данные в файлы. Файлы работают даже в браузере!">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=4" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kk:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Модули и файлы</h1>
-    <ol>
-        <li>
-            <h2>Добавьте препятствия в игру с перемещением по 2д полю
-            </h2>
-            <iframe src="https://trinket.io/embed/python3/e932931645?outputOnly=true&runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_9_ans_1.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Добавьте случайный выбор слова в игру hangman</h2>
-            <iframe src="https://trinket.io/embed/python3/6ac0976805?outputOnly=true&runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_9_ans_2.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-    </ol>
-    <div class="additional">
-        <h2 class="important">Полезные ссылки - Модули</h2>
-        <div class="stuff">
 
-            <a href="https://docs.python.org/3/library/" target="_blank" rel="noopener noreferrer">Основные встроенные модули в python</a>
-            <a href="https://pythonworld.ru/moduli" target="_blank" rel="noopener noreferrer">Основные модули на русском</a>
-            <a href="https://pythonworld.ru/osnovy/rabota-s-modulyami-sozdanie-podklyuchenie-instrukciyami-import-i-from.html" target="_blank" rel="noopener noreferrer">Как работать с модулями</a>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Python</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">Базовый курс</a>
+            <a href="index.html#advanced" class="hide-sm">Продвинутый</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Базовый курс</a><span>›</span><span>Урок 9</span></div>
+<h1>Модули и файлы</h1>
+<p class="lead">Подключаем готовые модули (<code>random</code>, <code>math</code>) и учимся сохранять данные в файлы. Файлы работают даже в браузере!</p>
+<div class="chips"><span class="chip">📋 Заданий: 6</span><span class="chip">✅ С автопроверкой: 3</span><span class="chip">✨ Новых: 4</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Препятствия на поле</span></a><a href="#task-2"><span class="n">2</span><span>Случайное слово в «Виселице»</span></a><a href="#task-3"><span class="n">3</span><span>Бросаем кубики</span></a><a href="#task-4"><span class="n">4</span><span>Гипотенуза</span></a><a href="#task-5"><span class="n">5</span><span>Генератор паролей</span></a><a href="#task-6"><span class="n">6</span><span>Дневник в файле</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">📂</span>Задания</h2>
+<article class="task" id="task-1" data-task="l9:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Препятствия на поле</h3><div class="badges"><span class="badge lvl-3">сложно</span></div></div>
+</div>
+<div class="task-body">
+<p>Добавь препятствия <code>o</code> в игру с перемещением по двумерному полю (задание 4 из <a href="lesson_8.html#task-4">урока 8</a>). Через препятствие пройти нельзя.</p>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+from random import uniform
+
+#CONSTANT DATA
+
+OBSTACLE_PERCENT = 50
+
+def build_field(n):
+    """
+    input: n - positive integer
+    output: grid - list of lists represented field
+    example:
+    n = 3
+    [['_', '_', '_']
+     ['_', '_', '_']
+     ['_', '_', '_']]
+    """
+    tmp = []
+    field = []
+    for i in range(n):
+        tmp.append('_')
+    for j in range(n):
+        field.append(tmp[:])
+    return field
+
+def set_start_location(f):
+    """
+    input: f - field
+    output: field with added x position (x - player)
+    [['x', '_', '_']
+     ['_', '_', '_']
+     ['_', '_', '_']]
+    """
+    f[0][0] = 'x'
+    return f
+
+def show_field(f):
+    """
+    input: f - field
+    prints field in terminal
+    """
+    for i in f:
+        print(' '.join(i))
+
+def move_up(field, position):
+    """
+    input: field - field
+    output: modified field with changed x position
+    """
+    x, y = position
+
+    field[x - 1][y] = 'x'
+    field[x][y] = '_'
+
+    return field
+
+
+def move_down(field, position):
+    """
+    input: field - field
+    output: modified field with changed x position
+    """
+    x, y = position
+
+    if x + 1 > len(field) - 1:
+        field[0][y] = 'x'
+        field[x][y] = '_'
+    else:
+        field[x + 1][y] = 'x'
+        field[x][y] = '_'
+
+    return field
+
+
+def move_left(field, position):
+    """
+    input: field - field
+    output: modified field with changed x position
+    """
+    x, y = position
+
+    field[x][y - 1] = 'x'
+    field[x][y] = '_'
+
+    return field
+
+def move_right(field, position):
+    """
+    input: field - field
+    output: modified field with changed x position
+    """
+    x, y = position
+
+    if y + 1 > len(field) - 1:
+        field[x][0] = 'x'
+        field[x][y] = '_'
+    else:
+        field[x][y + 1] ='x'
+        field[x][y] = '_'
+
+    return field
+
+def direction_dispatcher(direction, field, position):
+    """
+    input: direction - string
+           field - list of lists (2d field)
+           position - tuple, represented as coordinates of player at the field (0, 0) -> top, left corner
+    output: field - list of lists, with changed player (x) position
+    This function used as dispatcher of movement
+    """
+    obstacle = check_obstacle(direction, field, position)
+
+    if direction == 'up' and not obstacle:
+        field = move_up(field, position)
+    elif direction == 'right' and not obstacle:
+        field = move_right(field, position)
+    elif direction == 'down' and not obstacle:
+        field = move_down(field, position)
+    elif direction == 'left' and not obstacle:
+        field = move_left(field, position)
+    elif obstacle:
+        blocked_direction(direction)
+
+    return field
+
+
+def blocked_direction(direction):
+    """
+    input: direction as string
+    output: None, used as print() built-in function
+    """
+    print(f'Oops... Move to {direction} is blocked!')
+
+def find_position(field):
+    """
+    input: field - list of lists (2d field)
+    output: tuple - represented as coordinates of player at the field (0, 0) -> top, left corner
+    """
+    pos_x = 0
+    pos_y = 0
+    field_length = range(len(field))
+
+    for x in field_length:
+        for y in field_length:
+            if field[x][y] == 'x':
+                pos_x = x
+                pos_y = y
+                break
+
+    return pos_x, pos_y
+
+def check_obstacle(direction, field, position):
+    """
+    input: direction - string
+           field - list of lists (2d field)
+           position - tuple, represented as coordinates of player at the field (0, 0) -> top, left corner
+    output: boolean, if move at new position is blocked -> return True, else False
+    """
+    x, y = position
+    flag = False
+
+    if direction == 'up':
+        if field[x - 1][y] == 'o':
+            flag = True
+    elif direction == 'right':
+        if y + 1 > len(field) - 1:
+            if field[x][0] == 'o':
+                flag = True
+        else:
+            if field[x][y + 1] == 'o':
+                flag = True
+    elif direction == 'down':
+        if x + 1 > len(field) - 1:
+            if field[0][y] == 'o':
+                flag = True
+        else:
+            if field[x + 1][y] == 'o':
+                flag = True
+    elif direction == 'left':
+        if field[x][y - 1] == 'o':
+            flag = True
+
+    return flag
+
+def add_obstacles(field, obs):
+    """
+    input: field - list of lists (2d list) represented field
+           obs - integer, global value of obstacle % (converted to float obs/100) 
+    output: filed - list of lists (2d list) represented field, with added obstacles (o) to it.
+    """
+    field_length = range(len(field))
+    obs_percent = obs / 100
+    for row in field_length:
+        for col in field_length:
+            if uniform(0, 1) <= obs_percent and field[row][col] != 'x':
+                field[row][col] = 'o'
+
+    return field
+
+
+def user_input():
+    return input('Выебрите одно из направлений: up right down left или exit для выхода ')
+
+def user_input_fields():
+    return int(input('Укажите размер поля: '))
+
+def main():
+    game = True
+    fields = user_input_fields()
+    field = set_start_location(build_field(fields))
+    add_obstacles(field, OBSTACLE_PERCENT)
+    show_field(field)
+    
+    while game:
+        user_direction = user_input()
+        position = find_position(field)
+        field = direction_dispatcher(user_direction, field, position)
+
+        if user_direction == 'exit':
+            game = False
+        if game:
+            show_field(field)
+
+
+main()
+
+
+
+</script></div>
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Случайно расставить препятствия поможет <code>from random import uniform</code> или <code>randint</code>.</p></div></details>
+<div class="py" data-mode="editor" data-key="l9:1"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l9_a1.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l9_a1_2.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l9_a1_3.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l9_a1_4.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l9_a1_5.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l9_a1_6.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l9_a1_7.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l9_a1_8.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l9:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Случайное слово в «Виселице»</h3><div class="badges"><span class="badge lvl-2">средне</span></div></div>
+</div>
+<div class="task-body">
+<p>Добавь случайный выбор слова в игру «Виселица» из <a href="lesson_7.html">урока 7</a>.</p>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+from random import choice
+
+def get_word(w):
+    """
+    input: w - list with strings (words)
+    output: random string from list
+    """
+    return choice(w)
+
+
+def start_template(w):
+    """
+    input: w - string (word)
+    output: replace all chars in string to '_',
+            return replaced chars as string with length w == t
+    """
+    t = []
+    for l in w:
+        t.append('_')
+    return t
+
+
+def welcome_speech(t):
+    """
+    input: t - template (string)
+    output: return None, used as just built-in function print() 
+    """
+    print(f'''
+    Добро пожаловать в игру - hangman 2000
+    Ваша задача угадать загаданное слово за несколько попыток,
+    иначе вас ждет расплата!
+    Загаданное слово состоит из {len(t)} букв {t}
+    ''')
+
+
+def user_input():
+    """
+    output: return built-in input() function
+    """
+    return input('Введите букву: ')
+
+
+def build_template(t, w, g=''):
+    """
+    input: t - template (list), w - word (string), g - guess (string)
+    output: t - template (list) with replaced characters in template
+                if character in word == guess -> 'character'
+                else -> '_'
+    """
+    for i in range(len(w)):
+        if t[i] == '_':
+            if w[i] == g:
+                t[i] = w[i]
+            else:
+                t[i] = '_'
+    return t
+
+
+def list_to_string_convert(t):
+    """
+    input: t - template (list)
+    output: s - list converted to string
+    """
+    s = ''
+    return s.join(t)
+
+
+def print_result(g):
+    """
+    input: g - template (string)
+    output: return None, used as just built-in function print(g)
+    """
+    print(f'Результат: {g}')
+
+
+def check_win(g):
+    """
+    input: g - template (string)
+    output: bool, if no '_' in g return False, else True
+    """
+    for l in g:
+        if l == '_':
+            return True
+    return False
+
+
+def check_mistake(w, g):
+    """
+    input: w - word_in_play (string), g - user_input (string)
+    output: bool, checks if user guess is wrong
+            if no such g in w, return False, else True
+    """
+    flag = False
+    for i in w:
+        if i == g:
+            flag = True
+    return flag
+
+
+def check_attempt(life):
+    """
+    input: life - int
+    output: int, life -= 1
+    """
+    life = life - 1
+    return life
+
+
+def lose_speech():
+    """
+    output: return None, used as just built-in function print() 
+    """
+    print(f'Вы проиграли!')
+
+
+def win_speech():
+    """
+    output: return None, used as just built-in function print() 
+    """
+    print(f'Поздравляем вы выиграли!')
+
+
+def game():
+    progress = True
+    word = ['orange', 'apple', 'melon']
+    lifes = 3
+
+    word_in_play = get_word(word)
+    template = start_template(word_in_play)
+    welcome_speech(list_to_string_convert(template))
+
+    while progress:
+        user_guess = user_input()
+        template = build_template(template, word_in_play, user_guess)
+        guessed = list_to_string_convert(template)
+        print_result(guessed)
+        progress = check_win(guessed)
+
+        if not check_mistake(word_in_play, user_guess):
+            print(f'Осталось {lifes} попытки')
+            lifes = check_attempt(lifes)
+
+        if lifes == 0:
+            lose_speech()
+            break
+
+        if not progress:
+            win_speech()
+
+
+game()
+
+
+
+</script></div>
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p><code>from random import choice</code>, затем <code>choice(['кот', 'питон', 'робот'])</code>.</p></div></details>
+<div class="py" data-mode="editor" data-key="l9:2"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l9_a2.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l9_a2_2.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l9_a2_3.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l9_a2_4.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l9_a2_5.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l9:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Бросаем кубики</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span></div></div>
+</div>
+<div class="task-body">
+<p>Смоделируй бросок двух игральных кубиков: выведи, что выпало на каждом, и сумму. Если выпал <b>дубль</b> (одинаковые числа) — напиши «Дубль! Бросай ещё раз».</p>
+
+<div class="py" data-mode="editor" data-key="l9:3"><script type="text/x-python">
+from random import randint
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">from random import randint
+
+a = randint(1, 6)
+b = randint(1, 6)
+print(&#x27;Кубик 1:&#x27;, a)
+print(&#x27;Кубик 2:&#x27;, b)
+print(&#x27;Сумма:&#x27;, a + b)
+if a == b:
+    print(&#x27;Дубль! Бросай ещё раз&#x27;)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l9:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Гипотенуза</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию <code>hypotenuse(a, b)</code>, которая находит гипотенузу прямоугольного треугольника по двум катетам. Используй <code>math.sqrt</code>. Формула: <code>c = √(a² + b²)</code>.</p>
+
+<div class="py" data-mode="editor" data-key="l9:4" data-tests="[{&quot;call&quot;: &quot;hypotenuse(3, 4)&quot;, &quot;want&quot;: &quot;5.0&quot;}, {&quot;call&quot;: &quot;hypotenuse(6, 8)&quot;, &quot;want&quot;: &quot;10.0&quot;}, {&quot;call&quot;: &quot;round(hypotenuse(1, 1), 3)&quot;, &quot;want&quot;: &quot;1.414&quot;}]"><script type="text/x-python">
+import math
+
+
+def hypotenuse(a, b):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">import math
+
+
+def hypotenuse(a, b):
+    return math.sqrt(a ** 2 + b ** 2)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l9:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Генератор паролей</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию <code>make_password(length)</code>, которая возвращает случайный пароль заданной длины из латинских букв и цифр.</p>
+
+<div class="py" data-mode="editor" data-key="l9:5" data-tests="[{&quot;code&quot;: &quot;assert len(make_password(8)) == 8, \&quot;Длина пароля должна быть 8\&quot;&quot;, &quot;label&quot;: &quot;len(make_password(8)) == 8&quot;}, {&quot;code&quot;: &quot;assert len(make_password(20)) == 20, \&quot;Длина пароля должна быть 20\&quot;&quot;, &quot;label&quot;: &quot;len(make_password(20)) == 20&quot;}, {&quot;code&quot;: &quot;assert make_password(12) != make_password(12), \&quot;Пароли должны быть случайными\&quot;&quot;, &quot;label&quot;: &quot;пароли разные&quot;}, {&quot;code&quot;: &quot;import string\nassert all(ch in string.ascii_letters + string.digits for ch in make_password(50)), \&quot;Только буквы и цифры\&quot;&quot;, &quot;label&quot;: &quot;только буквы и цифры&quot;}]"><script type="text/x-python">
+import random
+import string
+
+symbols = string.ascii_letters + string.digits
+
+
+def make_password(length):
+    pass
+
+
+print(make_password(8))
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">import random
+import string
+
+symbols = string.ascii_letters + string.digits
+
+
+def make_password(length):
+    password = &#x27;&#x27;
+    for _ in range(length):
+        password += random.choice(symbols)
+    return password</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l9:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Дневник в файле</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Запиши в файл <code>diary.txt</code> три строки: <code>Учил Python</code>, <code>Решил 5 задач</code>, <code>Играл в футбол</code>. Потом <b>прочитай</b> файл и выведи строки с номерами.</p>
+<p class="sample-label">Ожидаемый вывод</p><pre class="sample">1: Учил Python
+2: Решил 5 задач
+3: Играл в футбол</pre>
+
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Запись: <code>with open('diary.txt', 'w') as f: f.write('текст\n')</code>. Чтение по строкам: <code>for line in open('diary.txt'):</code>. Лишний перенос строки убирает <code>.strip()</code>.</p></div></details>
+<div class="py" data-mode="editor" data-key="l9:6" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;1: Учил Python&quot;, &quot;2: Решил 5 задач&quot;, &quot;3: Играл в футбол&quot;]}, {&quot;code&quot;: &quot;assert open(&#x27;diary.txt&#x27;, encoding=&#x27;utf-8&#x27;).read().count(&#x27;\\n&#x27;) &gt;= 2, &#x27;В файле должно быть 3 строки&#x27;&quot;, &quot;label&quot;: &quot;файл diary.txt создан&quot;}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">notes = [&#x27;Учил Python&#x27;, &#x27;Решил 5 задач&#x27;, &#x27;Играл в футбол&#x27;]
+
+with open(&#x27;diary.txt&#x27;, &#x27;w&#x27;, encoding=&#x27;utf-8&#x27;) as f:
+    for note in notes:
+        f.write(note + &#x27;\n&#x27;)
+
+with open(&#x27;diary.txt&#x27;, encoding=&#x27;utf-8&#x27;) as f:
+    for number, line in enumerate(f, start=1):
+        print(f&#x27;{number}: {line.strip()}&#x27;)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Модули</h3>
+<div class="links-grid">
+<a class="link-card" href="https://docs.python.org/3/library/" target="_blank" rel="noopener"><span class="ico">📘</span><span>Встроенные модули Python<small>docs.python.org</small></span></a>
+<a class="link-card" href="https://pythonworld.ru/moduli" target="_blank" rel="noopener"><span class="ico">📘</span><span>Основные модули на русском<small>pythonworld.ru</small></span></a>
+<a class="link-card" href="https://pythonworld.ru/osnovy/rabota-s-modulyami-sozdanie-podklyuchenie-instrukciyami-import-i-from.html" target="_blank" rel="noopener"><span class="ico">📘</span><span>Как работать с модулями<small>pythonworld.ru</small></span></a>
+</div>
+<h3 class="links-title">Файлы</h3>
+<div class="links-grid">
+<a class="link-card" href="https://pythonworld.ru/tipy-dannyx-v-python/fajly-rabota-s-fajlami.html" target="_blank" rel="noopener"><span class="ico">📘</span><span>Работа с файлами<small>pythonworld.ru</small></span></a>
+<a class="link-card" href="http://python-3.ru/page/module-pickle-python" target="_blank" rel="noopener"><span class="ico">📘</span><span>Модуль pickle<small>python-3.ru</small></span></a>
+<a class="link-card" href="http://pythonicway.com/python-functinal-programming#map" target="_blank" rel="noopener"><span class="ico">📘</span><span>Функция map<small>pythonicway.com</small></span></a>
+</div>
+<h3 class="links-title">Где потренироваться</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_modules1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Модули — упражнение<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_8.html"><small>← Предыдущий</small>Урок 8. Практика и GitHub</a>
+<a class="next" href="lesson_10.html"><small>Следующий →</small>Урок 10. Словари</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Полезные ссылки - Файлы</h2>
-        <div class="stuff">
-
-            <a href="https://pythonworld.ru/tipy-dannyx-v-python/fajly-rabota-s-fajlami.html" target="_blank" rel="noopener noreferrer">Работа с файлами</a>
-            <a href="http://python-3.ru/page/module-pickle-python" target="_blank" rel="noopener noreferrer">Модуль pickle для работы с файлами</a>
-        </div>
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
-
-            <a href="http://pythonicway.com/python-functinal-programming#map" target="_blank" rel="noopener noreferrer">Функция map</a>
-        </div>
-        <h2 class="important">Где потренироваться:</h2>
-        <div class="stuff">
-
-            <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_modules1">Модули</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=4"></script>
+<script src="assets/kk.js?v=4"></script>
 </body>
-
 </html>

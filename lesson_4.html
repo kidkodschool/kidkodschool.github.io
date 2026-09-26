@@ -1,74 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Сравнения в python
-    </title>
+    <title>Урок 4. Сравнения и условия — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Программа начинает принимать решения: учимся сравнивать значения и писать условия &lt;code&gt;if / elif / else&lt;/code&gt;.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=4" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kk:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Сравнения в python</h1>
-    <ol>
-        <li>
-            <h2>Создайте программу, которая выдает сумму двух чисел если их сумма меньше 1000, иначе результатом будет произведение.
-            </h2>
-<iframe src="https://trinket.io/embed/python3/b8e62ce9a0?outputOnly=true&runOption=run&start=result" width="100%"
-    height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_4_ans_1.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте программу, которая выдает четность или нечетность последнего числа в списке.
-            </h2>
-            <img src="img/l4_q2.png" alt="вопрос 1">
-            <img src="img/l4_q2_2.png" alt="вопрос 1_2">
-            <h2>
-                <a href="lesson_4_ans_2.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте программу, которая выдает количество необходимых пицц в зависимости от количества человек и количества денег. 
-                Количество человек и денег задается с помощью input()
-            </h2>
-<iframe src="https://trinket.io/embed/python3/ae1f1ed8c3?outputOnly=true&runOption=run&start=result" width="100%"
-    height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_4_ans_3.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-    </ol>
-    <div class="additional">
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
 
-            <a href="https://pythonworld.ru/osnovy/instrukciya-if-elif-else-proverka-istinnosti-trexmestnoe-vyrazhenie-ifelse.html" target="_blank" rel="noopener noreferrer">if-else ветвления</a>
-            <a href="http://pythonicway.com/python-operators#compare" target="_blank" rel="noopener noreferrer">Операторы сравнения</a>
-            <a href="http://pythonicway.com/python-operators#logic" target="_blank" rel="noopener noreferrer">Логические операторы</a>
-            <a href="python_tests/lesson_4/4python.html" target="_blank" rel="noopener noreferrer">Тест для 4 урока</a>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Python</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">Базовый курс</a>
+            <a href="index.html#advanced" class="hide-sm">Продвинутый</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Базовый курс</a><span>›</span><span>Урок 4</span></div>
+<h1>Сравнения в Python</h1>
+<p class="lead">Программа начинает принимать решения: учимся сравнивать значения и писать условия <code>if / elif / else</code>.</p>
+<div class="chips"><span class="chip">📋 Заданий: 7</span><span class="chip">✅ С автопроверкой: 6</span><span class="chip">✨ Новых: 4</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Сумма или произведение</span></a><a href="#task-2"><span class="n">2</span><span>Чётное или нечётное</span></a><a href="#task-3"><span class="n">3</span><span>Сколько пицц заказать?</span></a><a href="#task-4"><span class="n">4</span><span>Високосный год</span></a><a href="#task-5"><span class="n">5</span><span>Светофор</span></a><a href="#task-6"><span class="n">6</span><span>Оценка за контрольную</span></a><a href="#task-7"><span class="n">7</span><span>Самое большое из трёх</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🔀</span>Задания</h2>
+<article class="task" id="task-1" data-task="l4:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Сумма или произведение</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай программу, которая выводит <b>сумму</b> двух чисел, если их сумма меньше 1000, иначе — их <b>произведение</b>.</p>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+first_num = int(input('Введите первое число: '))
+second_num = int(input('Введите второе число: '))
+
+if first_num + second_num < 1000:
+    print(f'Сумма {first_num} и {second_num} = {first_num + second_num}')
+else:
+    print(f'Произведение {first_num} и {second_num} = {first_num * second_num}')
+
+</script></div>
+<div class="py" data-mode="editor" data-key="l4:1" data-tests="[{&quot;inputs&quot;: [&quot;300&quot;, &quot;200&quot;], &quot;expect&quot;: [&quot;500&quot;]}, {&quot;inputs&quot;: [&quot;600&quot;, &quot;700&quot;], &quot;expect&quot;: [&quot;420000&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l4_a1.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l4:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Чётное или нечётное</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай программу, которая выдаёт чётность или нечётность <b>последнего числа</b> в списке.</p>
+<div class="shots"><img class="zoomable" src="img/l4_q2.png" alt="Исходные списки" loading="lazy"><img class="zoomable" src="img/l4_q2_2.png" alt="Ожидаемый результат" loading="lazy"></div>
+<div class="py" data-mode="editor" data-key="l4:2" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;Последнее число 7 - Нечетное&quot;, &quot;Последнее число 0 - Четное&quot;, &quot;Последнее число 2 - Четное&quot;]}]"><script type="text/x-python">
+first_list = [1, 2, 5, 7]
+second_list = [0]
+third_list = [3, 2]
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l4_a2.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l4:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Сколько пицц заказать?</h3><div class="badges"><span class="badge lvl-2">средне</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай программу, которая выдаёт количество необходимых пицц в зависимости от количества человек и количества денег. Количество человек и денег задаётся с помощью <code>input()</code>.</p>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+pizza_price = 500
+
+print(f'Цена за одну пиццу {pizza_price}')
+persons = int(input('Укажите количество человек: '))
+total_money = int(input('Укажите количество имеющихся денег: '))
+
+if total_money / pizza_price < 1:
+    print('Вы не можете заказать ниодной пиццы.')
+elif total_money / pizza_price == 1:
+    print('Вы можете заказать только одну пиццу.')
+elif total_money / pizza_price > 1 and total_money / pizza_price <= 3:
+    if persons > 4 and total_money / pizza_price <= 2:
+        print(f'К сожалению {total_money // pizza_price} пиццы вам не хватит.')
+    else:
+        print(f'Для {persons} человек, как раз {total_money // pizza_price} пиццы')
+else:
+    if persons < 4:
+        print(f'Для {persons} человек, слишком много {total_money // pizza_price} пиццы')
+    else:
+        print(
+            f'Для {persons} человек, как раз {total_money // pizza_price} пиццы')
+
+</script></div>
+<div class="py" data-mode="editor" data-key="l4:3"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l4_a3.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l4:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Високосный год</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Пользователь вводит год. Выведи <b>«високосный»</b> или <b>«обычный»</b>.</p><p>Год високосный, если он делится на 4, но не делится на 100. Исключение: годы, которые делятся на 400, — тоже високосные.</p>
+<p class="sample-label">Пример работы</p><pre class="sample">Введи год: 2024
+високосный</pre>
+
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Пригодятся операторы <code>%</code>, <code>and</code>, <code>or</code>.</p></div></details>
+<div class="py" data-mode="editor" data-key="l4:4" data-tests="[{&quot;inputs&quot;: [&quot;2024&quot;], &quot;expect&quot;: [&quot;високосный&quot;], &quot;reject&quot;: [&quot;обычный&quot;]}, {&quot;inputs&quot;: [&quot;2023&quot;], &quot;expect&quot;: [&quot;обычный&quot;], &quot;reject&quot;: [&quot;високосный&quot;]}, {&quot;inputs&quot;: [&quot;1900&quot;], &quot;expect&quot;: [&quot;обычный&quot;], &quot;reject&quot;: [&quot;високосный&quot;]}, {&quot;inputs&quot;: [&quot;2000&quot;], &quot;expect&quot;: [&quot;високосный&quot;], &quot;reject&quot;: [&quot;обычный&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">year = int(input(&#x27;Введи год: &#x27;))
+
+if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+    print(&#x27;високосный&#x27;)
+else:
+    print(&#x27;обычный&#x27;)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l4:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Светофор</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Пользователь вводит цвет светофора. Программа подсказывает, что делать:</p><ul><li><code>красный</code> → Стой</li><li><code>жёлтый</code> → Жди</li><li><code>зелёный</code> → Иди</li><li>любой другой цвет → Такого цвета нет</li></ul>
+
+<div class="py" data-mode="editor" data-key="l4:5" data-tests="[{&quot;inputs&quot;: [&quot;красный&quot;], &quot;expect&quot;: [&quot;Стой&quot;]}, {&quot;inputs&quot;: [&quot;жёлтый&quot;], &quot;expect&quot;: [&quot;Жди&quot;]}, {&quot;inputs&quot;: [&quot;зелёный&quot;], &quot;expect&quot;: [&quot;Иди&quot;]}, {&quot;inputs&quot;: [&quot;синий&quot;], &quot;expect&quot;: [&quot;Такого цвета нет&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">color = input(&#x27;Какой свет горит? &#x27;).lower()
+
+if color == &#x27;красный&#x27;:
+    print(&#x27;Стой&#x27;)
+elif color == &#x27;жёлтый&#x27; or color == &#x27;желтый&#x27;:
+    print(&#x27;Жди&#x27;)
+elif color == &#x27;зелёный&#x27; or color == &#x27;зеленый&#x27;:
+    print(&#x27;Иди&#x27;)
+else:
+    print(&#x27;Такого цвета нет&#x27;)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l4:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Оценка за контрольную</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Пользователь вводит количество баллов от 0 до 100. Выведи оценку:</p><ul><li>90 и больше — <b>5</b></li><li>от 75 до 89 — <b>4</b></li><li>от 50 до 74 — <b>3</b></li><li>меньше 50 — <b>2</b></li></ul>
+<p class="sample-label">Пример работы</p><pre class="sample">Сколько баллов? 80
+Оценка: 4</pre>
+
+<div class="py" data-mode="editor" data-key="l4:6" data-tests="[{&quot;inputs&quot;: [&quot;95&quot;], &quot;expect&quot;: [&quot;Оценка: 5&quot;]}, {&quot;inputs&quot;: [&quot;75&quot;], &quot;expect&quot;: [&quot;Оценка: 4&quot;]}, {&quot;inputs&quot;: [&quot;74&quot;], &quot;expect&quot;: [&quot;Оценка: 3&quot;]}, {&quot;inputs&quot;: [&quot;12&quot;], &quot;expect&quot;: [&quot;Оценка: 2&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">points = int(input(&#x27;Сколько баллов? &#x27;))
+
+if points &gt;= 90:
+    print(&#x27;Оценка: 5&#x27;)
+elif points &gt;= 75:
+    print(&#x27;Оценка: 4&#x27;)
+elif points &gt;= 50:
+    print(&#x27;Оценка: 3&#x27;)
+else:
+    print(&#x27;Оценка: 2&#x27;)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-7" data-task="l4:7">
+<div class="task-head">
+<span class="task-num">7</span>
+<div class="task-title"><h3>Самое большое из трёх</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Пользователь вводит три числа. Выведи самое большое из них, <b>не используя</b> функцию <code>max()</code>.</p>
+<p class="sample-label">Пример работы</p><pre class="sample">Первое: 3
+Второе: 9
+Третье: 4
+Самое большое: 9</pre>
+
+<div class="py" data-mode="editor" data-key="l4:7" data-tests="[{&quot;inputs&quot;: [&quot;3&quot;, &quot;9&quot;, &quot;4&quot;], &quot;expect&quot;: [&quot;Самое большое: 9&quot;]}, {&quot;inputs&quot;: [&quot;-5&quot;, &quot;-2&quot;, &quot;-9&quot;], &quot;expect&quot;: [&quot;Самое большое: -2&quot;]}, {&quot;inputs&quot;: [&quot;7&quot;, &quot;1&quot;, &quot;7&quot;], &quot;expect&quot;: [&quot;Самое большое: 7&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">a = int(input(&#x27;Первое: &#x27;))
+b = int(input(&#x27;Второе: &#x27;))
+c = int(input(&#x27;Третье: &#x27;))
+
+biggest = a
+if b &gt; biggest:
+    biggest = b
+if c &gt; biggest:
+    biggest = c
+print(&#x27;Самое большое:&#x27;, biggest)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://pythonworld.ru/osnovy/instrukciya-if-elif-else-proverka-istinnosti-trexmestnoe-vyrazhenie-ifelse.html" target="_blank" rel="noopener"><span class="ico">📘</span><span>if-else ветвления<small>pythonworld.ru</small></span></a>
+<a class="link-card" href="http://pythonicway.com/python-operators#compare" target="_blank" rel="noopener"><span class="ico">📘</span><span>Операторы сравнения<small>pythonicway.com</small></span></a>
+<a class="link-card" href="http://pythonicway.com/python-operators#logic" target="_blank" rel="noopener"><span class="ico">📘</span><span>Логические операторы<small>pythonicway.com</small></span></a>
+<a class="link-card" href="python_tests/lesson_4/4python.html" target="_blank" rel="noopener"><span class="ico">📝</span><span>Тест для 4 урока<small>kidkodschool</small></span></a>
+</div>
+<h3 class="links-title">Где потренироваться</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_conditions1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Условия — упражнение<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_3.html"><small>← Предыдущий</small>Урок 3. Списки и кортежи</a>
+<a class="next" href="lesson_5.html"><small>Следующий →</small>Урок 5. Циклы</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Где потренироваться:</h2>
-        <div class="stuff">
-
-            <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_conditions1">Упражнение</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=4"></script>
+<script src="assets/kk.js?v=4"></script>
 </body>
-
 </html>

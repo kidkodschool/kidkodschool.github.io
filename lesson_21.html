@@ -1,90 +1,302 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Продвинутое обращение с данными в python
-    </title>
-    <style>
-        table {
-            max-width: 1200px;
-        }
-        caption {
-            background-color: #fff;
-            padding: .5em;
-        }
-        h2 a {
-            color: white;
-        }
-        </style>
+    <title>Урок 21. Однострочники — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Правило урока: ответ на каждое задание должен занимать &lt;b&gt;не больше одной строки кода&lt;/b&gt; внутри функции.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=4" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kk:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Ответ на задания должен содержать не более 1 строчки кода</h1>
-    <ol>
-        <li>
-            <h2>Функция получает на входе: Список из чисел. Задание вернуть среднее арифметическое значение элементов из этого списка. Например: [1, 5, 87, 45, 8, 8] == 25</h2>
-            <iframe src="https://trinket.io/embed/python3/cf35deaa2a?runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-        </li>
-        <li>
-            <h2>Функция получает на входе: Направление - d, и список - a. Задание вернуть отсортированный список в зависимости от направления. R - от меньшего к большему, L - от большего к меньшему. Например: 'L', [1, 4, 5, 3, 5] == [5, 5, 4, 3, 1]</h2>
-            <iframe src="https://trinket.io/embed/python3/37eb46cc7c?runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-        </li>
-        <li>
-            <h2>Функция получает на входе количество: h - часов, m - минут, s - секунд. Задание вернуть общую сумму времени в миллисекундах. Например: 1,1,1 == 3661000</h2>
-            <iframe src="https://trinket.io/embed/python3/e253c91efd?runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-        </li>
-        <li>
-            <h2>Функция получает на входе: Число - num. Задание вернуть сумму всех составляющих этого числа. Например: 4 == 10, потому что 1 + 2 + 3 + 4 = 10</h2>
-            <iframe src="https://trinket.io/embed/python3/ab17a6be1a?runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-        </li>
-        <li>
-            <h2>Функция получает на входе: Количество здоровья персонажа - health. Задание вернуть булев тип для определения его состояние (0 или меньше False). Например: -2 == False</h2>
-            <iframe src="https://trinket.io/embed/python3/a7d8943d26?runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-        </li>
-        <li>
-            <h2>Функция получает на входе: Список - arr. Задание вернуть наименьшее уникальное положительное число из возможных. Например: [0, 1, 2, 3, 5] == 4</h2>
-            <iframe src="https://trinket.io/embed/python3/8b004b398b?runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-        </li>
-    </ol>
-    <div class="additional" >
-    <h2 class="important">Что почитать:</h2>
-    <div class="stuff">
-        <a href="https://www.w3schools.com/python/python_operators.asp" target="_blank" rel="noopener noreferrer">Все операторы в python</a>
-        <a href="https://docs.python.org/3/library/functions.html" target="_blank" rel="noopener noreferrer">Все встроенные функции в python</a>
-        <a href="https://docs.python.org/3/library/functions.html#map" target="_blank" rel="noopener noreferrer">map</a>
-        <a href="https://docs.python.org/3/library/functions.html#filter" target="_blank" rel="noopener noreferrer">filter</a>
-        <a href="https://docs.python.org/3/library/functools.html#functools.reduce" target="_blank" rel="noopener noreferrer">reduce</a>
-        <a href="https://habr.com/ru/post/319164/" target="_blank" rel="noopener noreferrer">Как работают делимые объекты в python</a>
-        <a href="https://tproger.ru/translations/demystifying-decorators-in-python/" target="_blank" rel="noopener noreferrer">Что такое декораторы</a>
-        <a href="https://ru.wikipedia.org/wiki/JSON" target="_blank" rel="noopener noreferrer">Что такое JSON</a>
-        <a href="https://www.w3schools.com/python/python_json.asp" target="_blank" rel="noopener noreferrer">Что такое JSON в python</a>
+
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Python</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">Базовый курс</a>
+            <a href="index.html#advanced" class="hide-sm">Продвинутый</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
     </div>
-    <h2 class="important">Где потренироваться:</h2>
-    <h2 class="task">set</h2>
-    <div class="stuff">
-        <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_sets1">Упражнение</a>
-    </div>
-    <h2 class="task">lambda</h2>
-    <div class="stuff">
-        <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_lambda1">Упражнение</a>
-    </div>
-    </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
+</header>
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#advanced">Продвинутый курс</a><span>›</span><span>Урок 21</span></div>
+<h1>Однострочники: lambda, map, filter, set</h1>
+<p class="lead">Правило урока: ответ на каждое задание должен занимать <b>не больше одной строки кода</b> внутри функции.</p>
+<div class="chips"><span class="chip">📋 Заданий: 10</span><span class="chip">✅ С автопроверкой: 10</span><span class="chip">✨ Новых: 4</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Среднее арифметическое</span></a><a href="#task-2"><span class="n">2</span><span>Сортировка по направлению</span></a><a href="#task-3"><span class="n">3</span><span>Время в миллисекундах</span></a><a href="#task-4"><span class="n">4</span><span>Сумма от 1 до n</span></a><a href="#task-5"><span class="n">5</span><span>Жив ли персонаж?</span></a><a href="#task-6"><span class="n">6</span><span>Следующий свободный id</span></a><a href="#task-7"><span class="n">7</span><span>Сколько положительных?</span></a><a href="#task-8"><span class="n">8</span><span>Каждое Слово С Большой</span></a><a href="#task-9"><span class="n">9</span><span>Квадраты чётных</span></a><a href="#task-10"><span class="n">10</span><span>Уникальные буквы</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">⚡</span>Задания</h2>
+<article class="task" id="task-1" data-task="l21:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Среднее арифметическое</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Функция получает список чисел. Верни <b>целую часть</b> среднего арифметического. Например: <code>[1, 5, 87, 45, 8, 8]</code> → <code>25</code>.</p>
+
+<div class="py" data-mode="editor" data-key="l21:1" data-tests="[{&quot;call&quot;: &quot;get_average([2, 2, 2, 2])&quot;, &quot;want&quot;: &quot;2&quot;}, {&quot;call&quot;: &quot;get_average([1, 5, 87, 45, 8, 8])&quot;, &quot;want&quot;: &quot;25&quot;}, {&quot;call&quot;: &quot;get_average([2,5,13,20,16,16,10])&quot;, &quot;want&quot;: &quot;11&quot;}, {&quot;call&quot;: &quot;get_average([1,2,15,15,17,11,12,17,17,14,13,15,6,11,8,7])&quot;, &quot;want&quot;: &quot;11&quot;}]"><script type="text/x-python">
+def get_average(marks):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def get_average(marks):
+    return sum(marks) // len(marks)
+
+assert get_average([2, 2, 2, 2]) == 2
+assert get_average([1, 5, 87, 45, 8, 8]) == 25
+assert get_average([2,5,13,20,16,16,10]) == 11
+assert get_average([1,2,15,15,17,11,12,17,17,14,13,15,6,11,8,7]) == 11
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l21:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Сортировка по направлению</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Функция получает направление <code>d</code> и список <code>a</code>. <code>'R'</code> — сортировка по возрастанию, <code>'L'</code> — по убыванию. Например: <code>'L', [1, 4, 5, 3, 5]</code> → <code>[5, 5, 4, 3, 1]</code>.</p>
+
+<div class="py" data-mode="editor" data-key="l21:2" data-tests="[{&quot;call&quot;: &quot;flip(&#x27;L&#x27;, [1, 4, 5, 3, 5])&quot;, &quot;want&quot;: &quot;[5, 5, 4, 3, 1]&quot;}, {&quot;call&quot;: &quot;flip(&#x27;R&#x27;, [3, 2, 1, 2])&quot;, &quot;want&quot;: &quot;[1, 2, 2, 3]&quot;}]"><script type="text/x-python">
+def flip(d, a):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def flip(d, a):
+    return sorted(a) if d == &#x27;R&#x27; else sorted(a, reverse=True)
+
+assert flip(&#x27;L&#x27;, [1, 4, 5, 3, 5]) == [5, 5, 4, 3, 1]
+assert flip(&#x27;R&#x27;, [3, 2, 1, 2]) == [1, 2, 2, 3]
+assert flip(&#x27;R&#x27;, [8, 12, 14, -1]) == [-1, 8, 12, 14]</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l21:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Время в миллисекундах</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Функция получает часы <code>h</code>, минуты <code>m</code> и секунды <code>s</code>. Верни общее время в миллисекундах. Например: <code>1, 1, 1</code> → <code>3661000</code>.</p>
+
+<div class="py" data-mode="editor" data-key="l21:3" data-tests="[{&quot;call&quot;: &quot;past(0,1,1)&quot;, &quot;want&quot;: &quot;61000&quot;}, {&quot;call&quot;: &quot;past(1,1,1)&quot;, &quot;want&quot;: &quot;3661000&quot;}, {&quot;call&quot;: &quot;past(0,0,0)&quot;, &quot;want&quot;: &quot;0&quot;}, {&quot;call&quot;: &quot;past(1,0,1)&quot;, &quot;want&quot;: &quot;3601000&quot;}, {&quot;call&quot;: &quot;past(1,0,0)&quot;, &quot;want&quot;: &quot;3600000&quot;}]"><script type="text/x-python">
+# Clock shows 'h' hours, 'm' minutes and 's' seconds after midnight.
+
+# Your task is to make 'Past' function which returns time converted to milliseconds.
+
+def past(h, m, s):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code"># Clock shows &#x27;h&#x27; hours, &#x27;m&#x27; minutes and &#x27;s&#x27; seconds after midnight.
+
+# Your task is to make &#x27;Past&#x27; function which returns time converted to milliseconds.
+
+def past(h, m, s):
+    return (h * 36 * 10 ** 5) + (m * 60 * 10 ** 3) + (s * 10 ** 3)
+
+assert past(0,1,1) == 61000
+assert past(1,1,1) == 3661000
+assert past(0,0,0) == 0
+assert past(1,0,1) == 3601000
+assert past(1,0,0) == 3600000</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l21:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Сумма от 1 до n</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Функция получает число <code>num</code>. Верни сумму всех чисел от 1 до <code>num</code>. Например: <code>4</code> → <code>10</code>, потому что 1 + 2 + 3 + 4 = 10.</p>
+
+<div class="py" data-mode="editor" data-key="l21:4" data-tests="[{&quot;call&quot;: &quot;summation(1)&quot;, &quot;want&quot;: &quot;1&quot;}, {&quot;call&quot;: &quot;summation(8)&quot;, &quot;want&quot;: &quot;36&quot;}, {&quot;call&quot;: &quot;summation(22)&quot;, &quot;want&quot;: &quot;253&quot;}, {&quot;call&quot;: &quot;summation(100)&quot;, &quot;want&quot;: &quot;5050&quot;}, {&quot;call&quot;: &quot;summation(213)&quot;, &quot;want&quot;: &quot;22791&quot;}]"><script type="text/x-python">
+# Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+def summation(num):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code"># Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+def summation(num):
+    return sum(range(num+1))
+
+assert summation(1) == 1
+assert summation(4) == 10
+assert summation(8) == 36
+assert summation(22) == 253
+assert summation(100) == 5050
+assert summation(213) == 22791</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l21:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Жив ли персонаж?</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Функция получает здоровье персонажа <code>health</code>. Верни <code>False</code>, если здоровье 0 или меньше, иначе <code>True</code>.</p>
+
+<div class="py" data-mode="editor" data-key="l21:5" data-tests="[{&quot;call&quot;: &quot;check_alive(-2)&quot;, &quot;want&quot;: &quot;False&quot;}, {&quot;call&quot;: &quot;check_alive(0)&quot;, &quot;want&quot;: &quot;False&quot;}, {&quot;call&quot;: &quot;check_alive(1)&quot;, &quot;want&quot;: &quot;True&quot;}, {&quot;call&quot;: &quot;check_alive(3)&quot;, &quot;want&quot;: &quot;True&quot;}]"><script type="text/x-python">
+def check_alive(health):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def check_alive(health):
+    return True if health &gt; 0 else False
+
+assert check_alive(-2) == False
+assert check_alive(0) == False
+assert check_alive(1) == True
+assert check_alive(3) == True</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l21:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Следующий свободный id</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Функция получает список <code>arr</code>. Верни наименьшее неотрицательное целое число, которого нет в списке. Например: <code>[0, 1, 2, 3, 5]</code> → <code>4</code>.</p>
+
+<div class="py" data-mode="editor" data-key="l21:6" data-tests="[{&quot;call&quot;: &quot;next_id([0,1,2,3,4,5,6,7,8,9,10])&quot;, &quot;want&quot;: &quot;11&quot;}, {&quot;call&quot;: &quot;next_id([5,4,3,2,1])&quot;, &quot;want&quot;: &quot;0&quot;}, {&quot;call&quot;: &quot;next_id([0,1,2,3,5])&quot;, &quot;want&quot;: &quot;4&quot;}, {&quot;call&quot;: &quot;next_id([0,0,0,0,0,0])&quot;, &quot;want&quot;: &quot;1&quot;}, {&quot;call&quot;: &quot;next_id([])&quot;, &quot;want&quot;: &quot;0&quot;}]"><script type="text/x-python">
+from functools import reduce
+
+def next_id(arr):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">from functools import reduce
+
+def next_id(arr):
+    return reduce(lambda acc, x: acc + 1 if x == acc else acc, sorted(arr), 0)
+
+assert next_id([0,1,2,3,4,5,6,7,8,9,10]) == 11
+assert next_id([5,4,3,2,1]) == 0
+assert next_id([0,1,2,3,5]) == 4
+assert next_id([0,0,0,0,0,0]) == 1
+assert next_id([]) == 0
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-7" data-task="l21:7">
+<div class="task-head">
+<span class="task-num">7</span>
+<div class="task-title"><h3>Сколько положительных?</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Верни количество положительных чисел в списке — одной строкой.</p>
+
+<div class="py" data-mode="editor" data-key="l21:7" data-tests="[{&quot;call&quot;: &quot;count_positive([1, -2, 3, 0])&quot;, &quot;want&quot;: &quot;2&quot;}, {&quot;call&quot;: &quot;count_positive([])&quot;, &quot;want&quot;: &quot;0&quot;}, {&quot;call&quot;: &quot;count_positive([-1, -5])&quot;, &quot;want&quot;: &quot;0&quot;}]"><script type="text/x-python">
+def count_positive(arr):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def count_positive(arr):
+    return len([x for x in arr if x &gt; 0])</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-8" data-task="l21:8">
+<div class="task-head">
+<span class="task-num">8</span>
+<div class="task-title"><h3>Каждое Слово С Большой</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Верни строку, в которой каждое слово начинается с большой буквы. Например: <code>'hello big world'</code> → <code>'Hello Big World'</code>. Используй <code>split</code>, <code>join</code> и генератор (или <code>map</code>).</p>
+
+<div class="py" data-mode="editor" data-key="l21:8" data-tests="[{&quot;call&quot;: &quot;capitalize_words(&#x27;hello big world&#x27;)&quot;, &quot;want&quot;: &quot;&#x27;Hello Big World&#x27;&quot;}, {&quot;call&quot;: &quot;capitalize_words(&#x27;python&#x27;)&quot;, &quot;want&quot;: &quot;&#x27;Python&#x27;&quot;}, {&quot;call&quot;: &quot;capitalize_words(&#x27;&#x27;)&quot;, &quot;want&quot;: &quot;&#x27;&#x27;&quot;}]"><script type="text/x-python">
+def capitalize_words(s):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def capitalize_words(s):
+    return &#x27; &#x27;.join(word.capitalize() for word in s.split())</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-9" data-task="l21:9">
+<div class="task-head">
+<span class="task-num">9</span>
+<div class="task-title"><h3>Квадраты чётных</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Верни список квадратов только чётных чисел: <code>[1, 2, 3, 4]</code> → <code>[4, 16]</code>. Попробуй два способа: списковое включение и <code>map</code> + <code>filter</code> + <code>lambda</code>.</p>
+
+<div class="py" data-mode="editor" data-key="l21:9" data-tests="[{&quot;call&quot;: &quot;even_squares([1, 2, 3, 4])&quot;, &quot;want&quot;: &quot;[4, 16]&quot;}, {&quot;call&quot;: &quot;even_squares([1, 3])&quot;, &quot;want&quot;: &quot;[]&quot;}, {&quot;call&quot;: &quot;even_squares([0, -2])&quot;, &quot;want&quot;: &quot;[0, 4]&quot;}]"><script type="text/x-python">
+def even_squares(arr):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def even_squares(arr):
+    return list(map(lambda x: x * x, filter(lambda x: x % 2 == 0, arr)))</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-10" data-task="l21:10">
+<div class="task-head">
+<span class="task-num">10</span>
+<div class="task-title"><h3>Уникальные буквы</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Верни количество <b>разных</b> букв в слове без учёта регистра. Подсказка: множество <code>set</code> хранит только уникальные значения.</p>
+
+<div class="py" data-mode="editor" data-key="l21:10" data-tests="[{&quot;call&quot;: &quot;unique_letters(&#x27;Мама&#x27;)&quot;, &quot;want&quot;: &quot;2&quot;}, {&quot;call&quot;: &quot;unique_letters(&#x27;python&#x27;)&quot;, &quot;want&quot;: &quot;6&quot;}, {&quot;call&quot;: &quot;unique_letters(&#x27;&#x27;)&quot;, &quot;want&quot;: &quot;0&quot;}]"><script type="text/x-python">
+def unique_letters(word):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def unique_letters(word):
+    return len(set(word.lower()))</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/python/python_operators.asp" target="_blank" rel="noopener"><span class="ico">📘</span><span>Все операторы в Python<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://docs.python.org/3/library/functions.html" target="_blank" rel="noopener"><span class="ico">📘</span><span>Все встроенные функции<small>docs.python.org</small></span></a>
+<a class="link-card" href="https://docs.python.org/3/library/functions.html#map" target="_blank" rel="noopener"><span class="ico">📘</span><span>map<small>docs.python.org</small></span></a>
+<a class="link-card" href="https://docs.python.org/3/library/functions.html#filter" target="_blank" rel="noopener"><span class="ico">📘</span><span>filter<small>docs.python.org</small></span></a>
+<a class="link-card" href="https://docs.python.org/3/library/functools.html#functools.reduce" target="_blank" rel="noopener"><span class="ico">📘</span><span>reduce<small>docs.python.org</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/python/python_json.asp" target="_blank" rel="noopener"><span class="ico">📚</span><span>Что такое JSON в Python<small>w3schools.com</small></span></a>
+</div>
+<h3 class="links-title">Где потренироваться</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_sets1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>set — упражнение<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_lambda1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>lambda — упражнение<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_20.html"><small>← Предыдущий</small>Урок 20. Что делать дальше</a>
+<a class="next" href="lesson_22.html"><small>Следующий →</small>Урок 22. git и декораторы</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
+</footer>
+<script src="assets/course-map.js?v=4"></script>
+<script src="assets/kk.js?v=4"></script>
 </body>
-
 </html>
