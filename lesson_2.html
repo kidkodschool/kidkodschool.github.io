@@ -1,81 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Переменные. Строки. Ввод и вывод
-    </title>
+    <title>Урок 2. Переменные, строки, ввод и вывод — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Учим программу разговаривать: спрашивать с помощью &lt;code&gt;input()&lt;/code&gt; и отвечать с помощью &lt;code&gt;print()&lt;/code&gt;.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=4" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kk:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Переменные. Строки. Ввод и вывод</h1>
 
-    <ol>
-        <li>
-            <h2>Создайте программу, которая спрашивает у пользователя Имя и выводит приветствие.
-            </h2>
-            <iframe src="https://trinket.io/embed/python3/d9aa84cc07?outputOnly=true&runOption=run&start=result" width="100%"
-                height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_2_ans_1.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте программу, которая спрашивает у пользователя Имя и Возраст.
-                Выведите сообщение в каком году пользователю исполнится 100 лет.
-            </h2>
-            <iframe src="https://trinket.io/embed/python3/cb0a397488?outputOnly=true&runOption=run&start=result" width="100%"
-                height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_2_ans_2.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте программу, которая спрашивает у пользователя Имя и выводит его задом-наперед.
-            </h2>
-            <iframe src="https://trinket.io/embed/python3/cb1bfa225c?outputOnly=true&runOption=run&start=result" width="100%"
-                height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_2_ans_3.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Python</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">Базовый курс</a>
+            <a href="index.html#advanced" class="hide-sm">Продвинутый</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-    </ol>
-    <div class="additional">
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
-        <a href="https://pythonworld.ru/tipy-dannyx-v-python/stroki-funkcii-i-metody-strok.html" target="_blank" rel="noopener noreferrer">Cтроки (string)</a>
-        <a href="https://pythonworld.ru/osnovy/formatirovanie-strok-metod-format.html" target="_blank" rel="noopener noreferrer">Форматирование строк</a>
-        <a href="https://docs.python.org/3/library/functions.html#input" target="_blank" rel="noopener noreferrer">Пользовательский ввод</a>
-        <a href="https://docs.python.org/3/library/functions.html#print" target="_blank" rel="noopener noreferrer">Вывод данных</a>
-        <a href="immutable.html" target="_blank" rel="noopener noreferrer">Изменяемые/Неизменяемые типы данных</a>
-        <a href="python_tests/lesson_2/python.html" target="_blank" rel="noopener noreferrer">Тест для 2 урока</a>
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Базовый курс</a><span>›</span><span>Урок 2</span></div>
+<h1>Переменные. Строки. Ввод и вывод</h1>
+<p class="lead">Учим программу разговаривать: спрашивать с помощью <code>input()</code> и отвечать с помощью <code>print()</code>.</p>
+<div class="chips"><span class="chip">📋 Заданий: 7</span><span class="chip">✅ С автопроверкой: 6</span><span class="chip">✨ Новых: 4</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Приветствие</span></a><a href="#task-2"><span class="n">2</span><span>Когда мне будет 100 лет?</span></a><a href="#task-3"><span class="n">3</span><span>Имя задом наперёд</span></a><a href="#task-4"><span class="n">4</span><span>Визитка</span></a><a href="#task-5"><span class="n">5</span><span>Кричалка</span></a><a href="#task-6"><span class="n">6</span><span>Сколько букв в имени?</span></a><a href="#task-7"><span class="n">7</span><span>Инициалы</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">✍️</span>Задания</h2>
+<div class="note info"><p>Нажми <b>«▶ Запустить пример»</b>, чтобы увидеть, как должна работать программа. Когда программа попросит что-то ввести — напечатай ответ прямо в консоли и нажми <kbd>Enter</kbd>.</p></div>
+<article class="task" id="task-1" data-task="l2:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Приветствие</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай программу, которая спрашивает у пользователя <b>имя</b> и выводит приветствие.</p>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+name = input('Как вас зовут? ')
+print(f'Здравствуйте {name}')
+</script></div>
+<div class="py" data-mode="editor" data-key="l2:1" data-tests="[{&quot;inputs&quot;: [&quot;Аня&quot;], &quot;expect&quot;: [&quot;Аня&quot;]}, {&quot;inputs&quot;: [&quot;Гвидо&quot;], &quot;expect&quot;: [&quot;Гвидо&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l2_a1.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l2:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Когда мне будет 100 лет?</h3><div class="badges"><span class="badge lvl-1">легко</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай программу, которая спрашивает у пользователя <b>имя</b> и <b>возраст</b>. Выведи сообщение, в каком году пользователю исполнится 100 лет.</p>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+from datetime import date
+
+name = input('Как вас зовут? ')
+age = int(input('Сколько вам лет? '))
+
+year = date.today().year + (100 - age)
+print(f'{name}, тебе исполнится 100 лет в {year} году')
+</script></div>
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Текущий год можно узнать так: <code>from datetime import date</code>, затем <code>date.today().year</code>.</p></div></details>
+<div class="py" data-mode="editor" data-key="l2:2"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l2_a2.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l2:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Имя задом наперёд</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай программу, которая спрашивает у пользователя имя и выводит его <b>задом наперёд</b>.</p>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+name = input('Как вас зовут? ')
+
+print(name[::-1])
+</script></div>
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Вспомни срезы: <code>строка[::-1]</code>.</p></div></details>
+<div class="py" data-mode="editor" data-key="l2:3" data-tests="[{&quot;inputs&quot;: [&quot;Python&quot;], &quot;expect&quot;: [&quot;nohtyP&quot;]}, {&quot;inputs&quot;: [&quot;Анна&quot;], &quot;expect&quot;: [&quot;аннА&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l2_a3.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l2:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Визитка</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Спроси у пользователя <b>имя</b>, <b>город</b> и <b>любимое занятие</b>. Выведи красивую «визитку» в рамке из символов.</p>
+<p class="sample-label">Пример работы</p><pre class="sample">Как тебя зовут? Аня
+Из какого ты города? Москва
+Чем любишь заниматься? рисовать
+************************
+* Имя: Аня
+* Город: Москва
+* Хобби: рисовать
+************************</pre>
+
+<div class="py" data-mode="editor" data-key="l2:4" data-tests="[{&quot;inputs&quot;: [&quot;Аня&quot;, &quot;Москва&quot;, &quot;рисовать&quot;], &quot;expect&quot;: [&quot;Аня&quot;, &quot;Москва&quot;, &quot;рисовать&quot;, &quot;***&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">name = input(&#x27;Как тебя зовут? &#x27;)
+city = input(&#x27;Из какого ты города? &#x27;)
+hobby = input(&#x27;Чем любишь заниматься? &#x27;)
+
+print(&#x27;*&#x27; * 24)
+print(f&#x27;* Имя: {name}&#x27;)
+print(f&#x27;* Город: {city}&#x27;)
+print(f&#x27;* Хобби: {hobby}&#x27;)
+print(&#x27;*&#x27; * 24)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l2:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Кричалка</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Пользователь вводит слово. Программа выводит его <b>большими буквами</b> с восклицательным знаком <b>три раза подряд</b>.</p><p>Используй метод <code>.upper()</code> и умножение строки на число.</p>
+<p class="sample-label">Пример работы</p><pre class="sample">Введи слово: ура
+УРА! УРА! УРА!</pre>
+
+<div class="py" data-mode="editor" data-key="l2:5" data-tests="[{&quot;inputs&quot;: [&quot;ура&quot;], &quot;expect&quot;: [&quot;УРА! УРА! УРА!&quot;]}, {&quot;inputs&quot;: [&quot;python&quot;], &quot;expect&quot;: [&quot;PYTHON! PYTHON! PYTHON!&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">word = input(&#x27;Введи слово: &#x27;)
+print((word.upper() + &#x27;! &#x27;) * 3)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l2:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Сколько букв в имени?</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Спроси имя и выведи, сколько в нём букв. Подойдёт функция <code>len()</code>.</p>
+<p class="sample-label">Пример работы</p><pre class="sample">Как тебя зовут? Анастасия
+В имени Анастасия 9 букв</pre>
+
+<div class="py" data-mode="editor" data-key="l2:6" data-tests="[{&quot;inputs&quot;: [&quot;Анастасия&quot;], &quot;expect&quot;: [&quot;9&quot;]}, {&quot;inputs&quot;: [&quot;Ян&quot;], &quot;expect&quot;: [&quot;Ян 2&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">name = input(&#x27;Как тебя зовут? &#x27;)
+print(f&#x27;В имени {name} {len(name)} букв&#x27;)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-7" data-task="l2:7">
+<div class="task-head">
+<span class="task-num">7</span>
+<div class="task-title"><h3>Инициалы</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Спроси у пользователя <b>имя</b> и <b>фамилию</b> и выведи инициалы с точками. Первая буква строки — это <code>строка[0]</code>.</p>
+<p class="sample-label">Пример работы</p><pre class="sample">Имя: Ада
+Фамилия: Лавлейс
+Инициалы: А.Л.</pre>
+
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Чтобы буква всегда была большой, используй <code>.upper()</code>.</p></div></details>
+<div class="py" data-mode="editor" data-key="l2:7" data-tests="[{&quot;inputs&quot;: [&quot;Ада&quot;, &quot;Лавлейс&quot;], &quot;expect&quot;: [&quot;А.Л.&quot;]}, {&quot;inputs&quot;: [&quot;гвидо&quot;, &quot;ван Россум&quot;], &quot;expect&quot;: [&quot;Г.В.&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">first = input(&#x27;Имя: &#x27;)
+last = input(&#x27;Фамилия: &#x27;)
+print(f&#x27;Инициалы: {first[0].upper()}.{last[0].upper()}.&#x27;)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://pythonworld.ru/tipy-dannyx-v-python/stroki-funkcii-i-metody-strok.html" target="_blank" rel="noopener"><span class="ico">📘</span><span>Строки (string)<small>pythonworld.ru</small></span></a>
+<a class="link-card" href="https://pythonworld.ru/osnovy/formatirovanie-strok-metod-format.html" target="_blank" rel="noopener"><span class="ico">📘</span><span>Форматирование строк<small>pythonworld.ru</small></span></a>
+<a class="link-card" href="https://docs.python.org/3/library/functions.html#input" target="_blank" rel="noopener"><span class="ico">📘</span><span>Пользовательский ввод — input()<small>docs.python.org</small></span></a>
+<a class="link-card" href="https://docs.python.org/3/library/functions.html#print" target="_blank" rel="noopener"><span class="ico">📘</span><span>Вывод данных — print()<small>docs.python.org</small></span></a>
+<a class="link-card" href="immutable.html"><span class="ico">🐍</span><span>Изменяемые и неизменяемые типы<small>kidkodschool</small></span></a>
+<a class="link-card" href="python_tests/lesson_2/python.html" target="_blank" rel="noopener"><span class="ico">📝</span><span>Тест для 2 урока<small>kidkodschool</small></span></a>
+</div>
+<h3 class="links-title">Где потренироваться</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_variables1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Переменные — упражнение<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_strings1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Строки — упражнение<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_1.html"><small>← Предыдущий</small>Урок 1. Типы данных и арифметика</a>
+<a class="next" href="lesson_3.html"><small>Следующий →</small>Урок 3. Списки и кортежи</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-
-        <h2 class="important">Где потренироваться:</h2>
-        <h2 class="task">Переменные (variables)</h2>
-        <div class="stuff">
-        <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_variables1">Упражнение</a>
-        </div>
-        <h2 class="task">Строки (string)</h2>
-        <div class="stuff">
-        <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_strings1">Упражнение</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=4"></script>
+<script src="assets/kk.js?v=4"></script>
 </body>
-
 </html>

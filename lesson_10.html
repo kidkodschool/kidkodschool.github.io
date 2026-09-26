@@ -1,68 +1,565 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Словари (dict)
-    </title>
+    <title>Урок 10. Словари — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Словарь — это «телефонная книга» Python: по ключу быстро находим значение.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=4" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kk:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Словари (dict)</h1>
-    <ol>
-        <li>
-            <h2>Создайте программу, которая хранит данные о днях рождения в виде словаря
-            </h2>
-            <iframe src="https://trinket.io/embed/python3/0f16cb02b2?outputOnly=true&runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_10_ans_1.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Добавьте загрузку/сохранение в игру с 2д полем
-            </h2>
-            <img src="img/l10_q2.png" alt="">
-            <h2>
-                <a href="lesson_10_ans_2.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте программу, которая создает словарь с данными для персонажа
-            </h2>
-            <iframe src="https://trinket.io/embed/python3/cdf377e2d1?outputOnly=true&runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_10_ans_3.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-    </ol>
-    <div class="additional">
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
 
-            <a href="https://pythonworld.ru/tipy-dannyx-v-python/slovari-dict-funkcii-i-metody-slovarej.html" target="_blank" rel="noopener noreferrer">Все о словарях #1</a>
-            <a href="https://tproger.ru/explain/python-dictionaries/" target="_blank" rel="noopener noreferrer">Все о словарях #2</a>
-        </div>
-        <h2 class="important">Где потренироваться:</h2>
-        <div class="stuff">
-
-            <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_dictionaries1">Словари</a>
-        </div>
-
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Python</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">Базовый курс</a>
+            <a href="index.html#advanced" class="hide-sm">Продвинутый</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
+</header>
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Базовый курс</a><span>›</span><span>Урок 10</span></div>
+<h1>Словари (dict)</h1>
+<p class="lead">Словарь — это «телефонная книга» Python: по ключу быстро находим значение.</p>
+<div class="chips"><span class="chip">📋 Заданий: 7</span><span class="chip">✅ С автопроверкой: 5</span><span class="chip">✨ Новых: 4</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Дни рождения</span></a><a href="#task-2"><span class="n">2</span><span>Сохранение в игре с полем</span></a><a href="#task-3"><span class="n">3</span><span>Создание персонажа</span></a><a href="#task-4"><span class="n">4</span><span>Подсчёт слов</span></a><a href="#task-5"><span class="n">5</span><span>Перевёртыш</span></a><a href="#task-6"><span class="n">6</span><span>Корзина в магазине</span></a><a href="#task-7"><span class="n">7</span><span>Телефонная книга</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">📖</span>Задания</h2>
+<article class="task" id="task-1" data-task="l10:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Дни рождения</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай программу, которая хранит данные о днях рождения в виде словаря и по имени выдаёт дату.</p>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+birthdays = {
+    'Albert Einstein': '14/03/1879',
+    'Ada Lovelace': '10/12/1815',
+    'Guido van Rossum': '31/01/1956'
+}
+
+print('Welcome to the birthday dictionary. We know birdth dates of:')
+
+for name in birthdays:
+    print(name)
+
+print('What birth date you want to know?')
+
+name = input('Enter a name: ')
+
+if name in birthdays:
+    print(f'{name}`s birthday is {birthdays[name]}')
+else:
+    print(f'We dont have recors for this name: {name}')
+
+    
+</script></div>
+<div class="py" data-mode="editor" data-key="l10:1" data-tests="[{&quot;inputs&quot;: [&quot;Ada Lovelace&quot;], &quot;expect&quot;: [&quot;10/12/1815&quot;]}]"><script type="text/x-python">
+birthdays = {
+    'Albert Einstein': '14/03/1879',
+    'Ada Lovelace': '10/12/1815',
+    'Guido van Rossum': '31/01/1956'
+}
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l10_a1.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l10:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Сохранение в игре с полем</h3><div class="badges"><span class="badge lvl-3">сложно</span></div></div>
+</div>
+<div class="task-body">
+<p>Добавь загрузку и сохранение в игру с двумерным полем (команды <code>save</code> и <code>load</code>). Подойдёт модуль <code>pickle</code>.</p>
+<div class="shots single"><img class="zoomable" src="img/l10_q2.png" alt="Пример работы сохранения" loading="lazy"></div>
+<div class="py" data-mode="demo"><script type="text/x-python">
+import pickle
+from random import uniform
+
+#CONSTANT DATA
+
+OBSTACLE_PERCENT = 50
+
+def build_field(n):
+    """
+    input: n - positive integer
+    output: grid - list of lists represented field
+    example:
+    n = 3
+    [['_', '_', '_']
+     ['_', '_', '_']
+     ['_', '_', '_']]
+    """
+    tmp = []
+    field = []
+    for i in range(n):
+        tmp.append('_')
+    for j in range(n):
+        field.append(tmp[:])
+    return field
+
+def set_start_location(f):
+    """
+    input: f - field
+    output: field with added x position (x - player)
+    [['x', '_', '_']
+     ['_', '_', '_']
+     ['_', '_', '_']]
+    """
+    f[0][0] = 'x'
+    return f
+
+def show_field(f):
+    """
+    input: f - field
+    prints field in terminal
+    """
+    for i in f:
+        print(' '.join(i))
+
+def move_up(field, position):
+    """
+    input: field - field
+    output: modified field with changed x position
+    """
+    x, y = position
+
+    field[x - 1][y] = 'x'
+    field[x][y] = '_'
+
+    return field
+
+
+def move_down(field, position):
+    """
+    input: field - field
+    output: modified field with changed x position
+    """
+    x, y = position
+
+    if x + 1 > len(field) - 1:
+        field[0][y] = 'x'
+        field[x][y] = '_'
+    else:
+        field[x + 1][y] = 'x'
+        field[x][y] = '_'
+
+    return field
+
+
+def move_left(field, position):
+    """
+    input: field - field
+    output: modified field with changed x position
+    """
+    x, y = position
+
+    field[x][y - 1] = 'x'
+    field[x][y] = '_'
+
+    return field
+
+def move_right(field, position):
+    """
+    input: field - field
+    output: modified field with changed x position
+    """
+    x, y = position
+
+    if y + 1 > len(field) - 1:
+        field[x][0] = 'x'
+        field[x][y] = '_'
+    else:
+        field[x][y + 1] ='x'
+        field[x][y] = '_'
+
+    return field
+
+def direction_dispatcher(direction, field, position):
+    """
+    input: direction - string
+           field - list of lists (2d field)
+           position - tuple, represented as coordinates of player at the field (0, 0) -> top, left corner
+    output: field - list of lists, with changed player (x) position
+    This function used as dispatcher of movement
+    """
+    obstacle = check_obstacle(direction, field, position)
+
+    if direction == 'up' and not obstacle:
+        field = move_up(field, position)
+    elif direction == 'right' and not obstacle:
+        field = move_right(field, position)
+    elif direction == 'down' and not obstacle:
+        field = move_down(field, position)
+    elif direction == 'left' and not obstacle:
+        field = move_left(field, position)
+    elif obstacle:
+        blocked_direction(direction)
+
+    return field
+
+
+def blocked_direction(direction):
+    """
+    input: direction as string
+    output: None, used as print() built-in function
+    """
+    print(f'Oops... Move to {direction} is blocked!')
+
+def find_position(field):
+    """
+    input: field - list of lists (2d field)
+    output: tuple - represented as coordinates of player at the field (0, 0) -> top, left corner
+    """
+    pos_x = 0
+    pos_y = 0
+    field_length = range(len(field))
+
+    for x in field_length:
+        for y in field_length:
+            if field[x][y] == 'x':
+                pos_x = x
+                pos_y = y
+                break
+
+    return pos_x, pos_y
+
+def check_obstacle(direction, field, position):
+    """
+    input: direction - string
+           field - list of lists (2d field)
+           position - tuple, represented as coordinates of player at the field (0, 0) -> top, left corner
+    output: boolean, if move at new position is blocked -> return True, else False
+    """
+    x, y = position
+    flag = False
+
+    if direction == 'up':
+        if field[x - 1][y] == 'o':
+            flag = True
+    elif direction == 'right':
+        if y + 1 > len(field) - 1:
+            if field[x][0] == 'o':
+                flag = True
+        else:
+            if field[x][y + 1] == 'o':
+                flag = True
+    elif direction == 'down':
+        if x + 1 > len(field) - 1:
+            if field[0][y] == 'o':
+                flag = True
+        else:
+            if field[x + 1][y] == 'o':
+                flag = True
+    elif direction == 'left':
+        if field[x][y - 1] == 'o':
+            flag = True
+
+    return flag
+
+def add_obstacles(field, obs):
+    """
+    input: field - list of lists (2d list) represented field
+           obs - integer, global value of obstacle % (converted to float obs/100) 
+    output: filed - list of lists (2d list) represented field, with added obstacles (o) to it.
+    """
+    field_length = range(len(field))
+    obs_percent = obs / 100
+    for row in field_length:
+        for col in field_length:
+            if uniform(0, 1) <= obs_percent and field[row][col] != 'x':
+                field[row][col] = 'o'
+
+    return field
+
+
+def user_input():
+    return input('Выебрите одно из направлений: up right down left. exit для выхода. save для сохранения. load для загрузки. ')
+
+def user_input_fields():
+    return int(input('Укажите размер поля: '))
+
+def save_game(f):
+    """
+    input: f (field) - list of lists (2d list) represented field
+    save field to file
+    """
+    with open('save.dat', 'wb') as sf:
+        pickle.dump(f, sf)
+    print('Game saved!')
+
+def load_game():
+    """
+    output: loaded field data (list of lists (2d list) represented field)
+    """
+    with open('save.dat', 'rb') as lf:
+        loaded_data = pickle.load(lf)
+    print('Game loaded!')
+    return loaded_data
+
+def main():
+    game = True
+    fields = user_input_fields()
+    field = set_start_location(build_field(fields))
+    add_obstacles(field, OBSTACLE_PERCENT)
+    show_field(field)
+    
+    while game:
+        user_direction = user_input()
+        if user_direction == 'save':
+            save_game(field)
+        elif user_direction == 'load':
+            field = load_game()
+
+        position = find_position(field)
+        field = direction_dispatcher(user_direction, field, position)
+
+        if user_direction == 'exit':
+            game = False
+        if game:
+            show_field(field)
+
+main()
+
+
+
+</script></div>
+<div class="py" data-mode="editor" data-key="l10:2"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l10_a2_3.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l10_a2.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l10_a2_2.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l10:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Создание персонажа</h3><div class="badges"><span class="badge lvl-2">средне</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай программу, которая спрашивает имя, класс, предмет и зелье и создаёт словарь с данными персонажа.</p>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+character_class = ['pirate', 'mage', 'druid']
+items = ['sword', 'staff', 'pistol', 'shield']
+potion = ['health', 'mana']
+
+def create_character(name, char_class, char_items, char_potions):
+    return {name: {char_class: {'items': char_items, 'potions': char_potions}}}
+
+character_name = input('Choose name of your character: ')
+
+choose_class = input(f'Choose class of your character: {" ".join(character_class)} ')
+
+if choose_class not in character_class:
+    choose_class = input(f'Wrong choice, try again: {" ".join(character_class)} ')
+
+choose_item = input(f'Choose item to take with you: {" ".join(items)} ')
+
+if choose_item not in items:
+    choose_item = input(f'Wrong choice, try again: {" ".join(items)} ')
+
+choose_potion = input(f'Choose potion to take with you: {" ".join(potion)} ')
+
+if choose_potion not in potion:
+    choose_potion = input(f'Wrong choice, try again: {" ".join(potion)} ')
+
+
+character = create_character(character_name, choose_class, choose_item, choose_potion)
+
+print(f'Character created as dictionary {character}')
+
+
+
+</script></div>
+<div class="py" data-mode="editor" data-key="l10:3"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l10_a3.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l10:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Подсчёт слов</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию <code>count_words(text)</code>, которая возвращает словарь: слово → сколько раз оно встретилось. Регистр не важен: <code>Кот</code> и <code>кот</code> — одно слово.</p>
+
+<div class="py" data-mode="editor" data-key="l10:4" data-tests="[{&quot;call&quot;: &quot;count_words(&#x27;кот пёс Кот&#x27;)&quot;, &quot;want&quot;: &quot;{&#x27;кот&#x27;: 2, &#x27;пёс&#x27;: 1}&quot;}, {&quot;call&quot;: &quot;count_words(&#x27;a a a&#x27;)&quot;, &quot;want&quot;: &quot;{&#x27;a&#x27;: 3}&quot;}, {&quot;call&quot;: &quot;count_words(&#x27;&#x27;)&quot;, &quot;want&quot;: &quot;{}&quot;}]"><script type="text/x-python">
+def count_words(text):
+    pass
+
+
+print(count_words('кот пёс Кот'))
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def count_words(text):
+    counts = {}
+    for word in text.lower().split():
+        counts[word] = counts.get(word, 0) + 1
+    return counts</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l10:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Перевёртыш</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию <code>invert(d)</code>, которая меняет местами ключи и значения словаря.</p>
+<p class="sample-label">Пример</p><pre class="sample">invert({&#x27;a&#x27;: 1, &#x27;b&#x27;: 2})  →  {1: &#x27;a&#x27;, 2: &#x27;b&#x27;}</pre>
+
+<div class="py" data-mode="editor" data-key="l10:5" data-tests="[{&quot;call&quot;: &quot;invert({&#x27;a&#x27;: 1, &#x27;b&#x27;: 2})&quot;, &quot;want&quot;: &quot;{1: &#x27;a&#x27;, 2: &#x27;b&#x27;}&quot;}, {&quot;call&quot;: &quot;invert({&#x27;кот&#x27;: &#x27;cat&#x27;})&quot;, &quot;want&quot;: &quot;{&#x27;cat&#x27;: &#x27;кот&#x27;}&quot;}, {&quot;call&quot;: &quot;invert({})&quot;, &quot;want&quot;: &quot;{}&quot;}]"><script type="text/x-python">
+def invert(d):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">def invert(d):
+    result = {}
+    for key, value in d.items():
+        result[value] = key
+    return result</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l10:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Корзина в магазине</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Есть словарь цен <code>prices</code>. Напиши функцию <code>total(cart, prices)</code>, которая считает стоимость корзины <code>cart</code> (список товаров). Если товара нет в прайсе — он стоит 0.</p>
+
+<div class="py" data-mode="editor" data-key="l10:6" data-tests="[{&quot;call&quot;: &quot;total([&#x27;яблоко&#x27;, &#x27;хлеб&#x27;, &#x27;яблоко&#x27;], prices)&quot;, &quot;want&quot;: &quot;105&quot;}, {&quot;call&quot;: &quot;total([], prices)&quot;, &quot;want&quot;: &quot;0&quot;}, {&quot;call&quot;: &quot;total([&#x27;молоко&#x27;, &#x27;арбуз&#x27;], prices)&quot;, &quot;want&quot;: &quot;80&quot;}]"><script type="text/x-python">
+prices = {'яблоко': 30, 'хлеб': 45, 'молоко': 80}
+
+
+def total(cart, prices):
+    pass
+
+
+print(total(['яблоко', 'хлеб', 'яблоко'], prices))
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">prices = {&#x27;яблоко&#x27;: 30, &#x27;хлеб&#x27;: 45, &#x27;молоко&#x27;: 80}
+
+
+def total(cart, prices):
+    s = 0
+    for item in cart:
+        s += prices.get(item, 0)
+    return s</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-7" data-task="l10:7">
+<div class="task-head">
+<span class="task-num">7</span>
+<div class="task-title"><h3>Телефонная книга</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай программу-телефонную книгу, которая понимает команды:</p><ul><li><code>add</code> — спросить имя и телефон и сохранить;</li><li><code>find</code> — спросить имя и вывести телефон или «Не найдено»;</li><li><code>list</code> — вывести все записи;</li><li><code>exit</code> — выйти.</li></ul>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+book = {}
+
+while True:
+    command = input('Команда (add, find, list, exit): ')
+    if command == 'add':
+        name = input('Имя: ')
+        phone = input('Телефон: ')
+        book[name] = phone
+        print('Сохранено!')
+    elif command == 'find':
+        name = input('Имя: ')
+        print(book.get(name, 'Не найдено'))
+    elif command == 'list':
+        for name, phone in book.items():
+            print(f'{name}: {phone}')
+    elif command == 'exit':
+        print('Пока!')
+        break
+    else:
+        print('Неизвестная команда')
+</script></div>
+<div class="py" data-mode="editor" data-key="l10:7" data-tests="[{&quot;inputs&quot;: [&quot;add&quot;, &quot;Аня&quot;, &quot;123-45&quot;, &quot;find&quot;, &quot;Аня&quot;, &quot;exit&quot;], &quot;expect&quot;: [&quot;123-45&quot;]}, {&quot;inputs&quot;: [&quot;find&quot;, &quot;Боб&quot;, &quot;exit&quot;], &quot;expect&quot;: [&quot;Не найдено&quot;]}, {&quot;inputs&quot;: [&quot;add&quot;, &quot;Аня&quot;, &quot;1&quot;, &quot;add&quot;, &quot;Боб&quot;, &quot;2&quot;, &quot;list&quot;, &quot;exit&quot;], &quot;expect&quot;: [&quot;Аня&quot;, &quot;Боб&quot;]}]"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">book = {}
+
+while True:
+    command = input(&#x27;Команда (add, find, list, exit): &#x27;)
+    if command == &#x27;add&#x27;:
+        name = input(&#x27;Имя: &#x27;)
+        phone = input(&#x27;Телефон: &#x27;)
+        book[name] = phone
+        print(&#x27;Сохранено!&#x27;)
+    elif command == &#x27;find&#x27;:
+        name = input(&#x27;Имя: &#x27;)
+        print(book.get(name, &#x27;Не найдено&#x27;))
+    elif command == &#x27;list&#x27;:
+        for name, phone in book.items():
+            print(f&#x27;{name}: {phone}&#x27;)
+    elif command == &#x27;exit&#x27;:
+        print(&#x27;Пока!&#x27;)
+        break
+    else:
+        print(&#x27;Неизвестная команда&#x27;)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://pythonworld.ru/tipy-dannyx-v-python/slovari-dict-funkcii-i-metody-slovarej.html" target="_blank" rel="noopener"><span class="ico">📘</span><span>Всё о словарях #1<small>pythonworld.ru</small></span></a>
+<a class="link-card" href="https://tproger.ru/explain/python-dictionaries/" target="_blank" rel="noopener"><span class="ico">📘</span><span>Всё о словарях #2<small>tproger.ru</small></span></a>
+</div>
+<h3 class="links-title">Где потренироваться</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_dictionaries1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Словари — упражнение<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_9.html"><small>← Предыдущий</small>Урок 9. Модули и файлы</a>
+<a class="next" href="lesson_11.html"><small>Следующий →</small>Урок 11. Рекурсия и Codewars</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
+</footer>
+<script src="assets/course-map.js?v=4"></script>
+<script src="assets/kk.js?v=4"></script>
 </body>
-
 </html>

@@ -1,66 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Классы #2
-    </title>
-    <style>
-        table {
-            max-width: 1200px;
-        }
-        caption {
-            background-color: #fff;
-            padding: .5em;
-        }
-        </style>
+    <title>Урок 13. Классы #2 — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Продолжаем ООП: магические методы &lt;code&gt;__add__&lt;/code&gt;, &lt;code&gt;__str__&lt;/code&gt;, наследование и &lt;code&gt;super()&lt;/code&gt;.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=4" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kk:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Классы #2</h1>
-    <ol>
-        <li>
-            <h2>Используя классы, создайте игру</h2>
-            <iframe src="https://trinket.io/embed/python3/4a7f578f31?outputOnly=true&runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h2>
-                <a href="lesson_13_ans_2.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Используя классы, создайте игру</h2>
-            <iframe src="https://trinket.io/embed/python/ff539b4581?outputOnly=true&runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <img src="img/l13_q1.gif" alt="Игра черепашка">
-            <h2>В ответе используется метод <a href="http://fkn.ktu10.com/?q=node/4087" target="_blank" rel="noopener noreferrer">super()*</a></h2>
-            <h2>
-                <a href="lesson_13_ans_1.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
 
-    </ol>
-    <div class="additional">
-    <h2 class="important">Полезные ссылки:</h2>
-    <div class="stuff">
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Python</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">Базовый курс</a>
+            <a href="index.html#advanced" class="hide-sm">Продвинутый</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-        <a href="https://docs.python.org/3.3/library/turtle.html?highlight=turtle" target="_blank" rel="noopener noreferrer">Модуль turtle и все его методы</a>
-        <a href="https://www.python-course.eu/python3_magic_methods.php" target="_blank" rel="noopener noreferrer">Магические методы</a>
-        <a href="http://fkn.ktu10.com/?q=node/4087" target="_blank" rel="noopener noreferrer">Метод super()</a>
-    </div>
-    </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Базовый курс</a><span>›</span><span>Урок 13</span></div>
+<h1>Классы #2</h1>
+<p class="lead">Продолжаем ООП: магические методы <code>__add__</code>, <code>__str__</code>, наследование и <code>super()</code>.</p>
+<div class="chips"><span class="chip">📋 Заданий: 6</span><span class="chip">✅ С автопроверкой: 4</span><span class="chip">✨ Новых: 4</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Зельеварение</span></a><a href="#task-2"><span class="n">2</span><span>Черепашьи бега</span></a><a href="#task-3"><span class="n">3</span><span>Вектор</span></a><a href="#task-4"><span class="n">4</span><span>Зоопарк</span></a><a href="#task-5"><span class="n">5</span><span>Герой и super()</span></a><a href="#task-6"><span class="n">6</span><span>Плейлист</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🧪</span>Задания</h2>
+<article class="task" id="task-1" data-task="l13:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Зельеварение</h3><div class="badges"><span class="badge lvl-3">сложно</span></div></div>
+</div>
+<div class="task-body">
+<p>Используя классы, создай игру: игрок варит зелья и смешивает их. Сложение зелий (<code>+</code>) и вычитание (<code>-</code>) сделай через магические методы <code>__add__</code> и <code>__sub__</code>.</p>
+
+<div class="py" data-mode="demo"><script type="text/x-python">
+from random import randint
+
+
+class Potion:
+    def __init__(self, name, quality):
+        self.name = name
+        self.quality = quality
+
+    def __str__(self):
+        return f'This potion named: {self.name}'
+
+    def __add__(self, other):
+        self_len = len(self.name) // 2
+        other_len = len(other.name) // 2
+        new_name = self.name[:self_len] + other.name[other_len:]
+        new_quality = (self.quality + other.quality) // 2
+        return Potion(new_name, new_quality)
+
+    def __sub__(self, other):
+        new_quality = other.quality - randint(1, 100)
+        return Potion(self.name, new_quality)
+
+    def get_quality(self):
+        return self.quality
+
+    def get_name(self):
+        return self.name
+
+
+class QualityPotion(Potion):
+    def special(self):
+        return QualityPotion(self.name, self.quality + 20)
+
+
+class NotQualityPotion(Potion):
+    def special(self):
+        return NotQualityPotion(self.name, self.quality - 20)
+
+
+game = True
+potions = {}
+
+while game:
+    potion = input('What potion do you want to make? q - for quality, n - for non quality, exit - to exit: ').lower()
+    if potion == 'exit':
+        break
+    potion_name = input('Enter potion name: ')
+    potion_quality = randint(1, 100)
+    if potion == 'q':
+        new_potion = QualityPotion(potion_name, potion_quality)
+    else:
+        new_potion = NotQualityPotion(potion_name, potion_quality)
+    potions[potion_name] = new_potion
+
+    if len(potions) >= 2:
+        action = input('Add(+) or Subtract(-) your potions? ').lower()
+        potion1 = potions.popitem()[1]
+        potion2 = potions.popitem()[1]
+        if action == '+':
+            mixed_potion = potion1 + potion2
+        else:
+            mixed_potion = potion1 - potion2
+
+        print('Start mixing potions...')
+        if mixed_potion.get_quality() < 30:
+            print('Kaboom! Potion exploded! You die...')
+            game = False
+        else:
+            potions[mixed_potion.get_name()] = mixed_potion
+            print(f'Your potion name: {mixed_potion.get_name()}')
+            print(f'Potion quality: {mixed_potion.get_quality()}, Be careful next time!')
+</script></div>
+<div class="py" data-mode="editor" data-key="l13:1"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l13_a2_1.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l13_a2_2.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l13_a2_3.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l13_a2_4.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l13_a2_5.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l13:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Черепашьи бега</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">на компьютере</span></div></div>
+</div>
+<div class="task-body">
+<p>Используя классы и <code>turtle</code>, создай игру «Черепашьи бега». В ответе используется метод <a href="http://fkn.ktu10.com/?q=node/4087" target="_blank" rel="noopener">super()</a>.</p>
+<div class="shots single"><img class="zoomable" src="img/l13_q1.gif" alt="Черепашьи бега" loading="lazy"></div>
+<p class="note info">🖥️ Эту задачу нужно запускать в <b>VS Code</b> на компьютере (модули вроде <code>turtle</code> и <code>tkinter</code> не работают в браузере).</p>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l13_a1_1.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l13_a1_2.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l13_a1_3.png" alt="Решение задания" loading="lazy"><img class="zoomable" src="img/l13_a1_4.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l13:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Вектор</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай класс <code>Vector(x, y)</code>, который умеет:</p><ul><li>складываться: <code>Vector(1, 2) + Vector(3, 4)</code> → <code>Vector(4, 6)</code> (<code>__add__</code>);</li><li>сравниваться: <code>Vector(1, 2) == Vector(1, 2)</code> → <code>True</code> (<code>__eq__</code>);</li><li>красиво печататься: <code>str(Vector(1, 2))</code> → <code>'(1, 2)'</code> (<code>__str__</code>).</li></ul>
+
+<div class="py" data-mode="editor" data-key="l13:3" data-tests="[{&quot;call&quot;: &quot;str(Vector(1, 2))&quot;, &quot;want&quot;: &quot;&#x27;(1, 2)&#x27;&quot;}, {&quot;call&quot;: &quot;Vector(1, 2) == Vector(1, 2)&quot;, &quot;want&quot;: &quot;True&quot;}, {&quot;call&quot;: &quot;Vector(1, 2) == Vector(2, 1)&quot;, &quot;want&quot;: &quot;False&quot;}, {&quot;call&quot;: &quot;str(Vector(1, 2) + Vector(3, 4))&quot;, &quot;want&quot;: &quot;&#x27;(4, 6)&#x27;&quot;}]"><script type="text/x-python">
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
+    def __str__(self):
+        return f&#x27;({self.x}, {self.y})&#x27;</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l13:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Зоопарк</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай класс <code>Animal(name)</code> с методом <code>speak()</code>, который возвращает <code>'...'</code>. Унаследуй от него классы <code>Cat</code> и <code>Cow</code> и переопредели <code>speak()</code>:</p><ul><li><code>Cat('Мурка').speak()</code> → <code>'Мурка: Мяу!'</code></li><li><code>Cow('Зорька').speak()</code> → <code>'Зорька: Му!'</code></li></ul>
+
+<div class="py" data-mode="editor" data-key="l13:4" data-tests="[{&quot;call&quot;: &quot;Cat(&#x27;Мурка&#x27;).speak()&quot;, &quot;want&quot;: &quot;&#x27;Мурка: Мяу!&#x27;&quot;}, {&quot;call&quot;: &quot;Cow(&#x27;Зорька&#x27;).speak()&quot;, &quot;want&quot;: &quot;&#x27;Зорька: Му!&#x27;&quot;}, {&quot;call&quot;: &quot;isinstance(Cat(&#x27;A&#x27;), Animal)&quot;, &quot;want&quot;: &quot;True&quot;}, {&quot;call&quot;: &quot;Animal(&#x27;X&#x27;).speak()&quot;, &quot;want&quot;: &quot;&#x27;...&#x27;&quot;}]"><script type="text/x-python">
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return '...'
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return &#x27;...&#x27;
+
+
+class Cat(Animal):
+    def speak(self):
+        return f&#x27;{self.name}: Мяу!&#x27;
+
+
+class Cow(Animal):
+    def speak(self):
+        return f&#x27;{self.name}: Му!&#x27;</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l13:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Герой и super()</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Есть класс <code>Hero(name, hp)</code>. Создай класс <code>Wizard(name, hp, mana)</code>, который наследует <code>Hero</code> и в своём <code>__init__</code> вызывает <code>super().__init__(name, hp)</code>. Метод <code>cast()</code> тратит 10 маны и возвращает <code>True</code>, а если маны меньше 10 — возвращает <code>False</code>.</p>
+
+<div class="py" data-mode="editor" data-key="l13:5" data-tests="[{&quot;call&quot;: &quot;Wizard(&#x27;Мерлин&#x27;, 100, 30).name&quot;, &quot;want&quot;: &quot;&#x27;Мерлин&#x27;&quot;}, {&quot;call&quot;: &quot;Wizard(&#x27;Мерлин&#x27;, 100, 30).hp&quot;, &quot;want&quot;: &quot;100&quot;}, {&quot;code&quot;: &quot;w = Wizard(&#x27;Мерлин&#x27;, 100, 15)\nassert w.cast() is True, &#x27;Первое заклинание должно получиться&#x27;\nassert w.mana == 5, f&#x27;Маны должно остаться 5, а осталось {w.mana}&#x27;\nassert w.cast() is False, &#x27;Второе заклинание не должно получиться&#x27;&quot;, &quot;label&quot;: &quot;cast() тратит ману&quot;}]"><script type="text/x-python">
+class Hero:
+    def __init__(self, name, hp):
+        self.name = name
+        self.hp = hp
+
+
+class Wizard(Hero):
+    pass
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">class Hero:
+    def __init__(self, name, hp):
+        self.name = name
+        self.hp = hp
+
+
+class Wizard(Hero):
+    def __init__(self, name, hp, mana):
+        super().__init__(name, hp)
+        self.mana = mana
+
+    def cast(self):
+        if self.mana &lt; 10:
+            return False
+        self.mana -= 10
+        return True</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l13:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Плейлист</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай класс <code>Playlist</code> с методом <code>add(song)</code>. Сделай так, чтобы работали <code>len(playlist)</code> (метод <code>__len__</code>) и проверка <code>'Song' in playlist</code> (метод <code>__contains__</code>).</p>
+
+<div class="py" data-mode="editor" data-key="l13:6" data-tests="[{&quot;code&quot;: &quot;p = Playlist()\nassert len(p) == 0\np.add(&#x27;Believer&#x27;)\np.add(&#x27;Thunder&#x27;)\nassert len(p) == 2, f&#x27;len = {len(p)}&#x27;&quot;, &quot;label&quot;: &quot;len(playlist)&quot;}, {&quot;code&quot;: &quot;p = Playlist()\np.add(&#x27;Believer&#x27;)\nassert &#x27;Believer&#x27; in p\nassert &#x27;Nope&#x27; not in p&quot;, &quot;label&quot;: &quot;&#x27;Believer&#x27; in playlist&quot;}]"><script type="text/x-python">
+class Playlist:
+    def __init__(self):
+        self.songs = []
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">class Playlist:
+    def __init__(self):
+        self.songs = []
+
+    def add(self, song):
+        self.songs.append(song)
+
+    def __len__(self):
+        return len(self.songs)
+
+    def __contains__(self, song):
+        return song in self.songs</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://docs.python.org/3/library/turtle.html" target="_blank" rel="noopener"><span class="ico">📘</span><span>Модуль turtle и все его методы<small>docs.python.org</small></span></a>
+<a class="link-card" href="https://www.python-course.eu/python3_magic_methods.php" target="_blank" rel="noopener"><span class="ico">📘</span><span>Магические методы<small>python-course.eu</small></span></a>
+<a class="link-card" href="http://fkn.ktu10.com/?q=node/4087" target="_blank" rel="noopener"><span class="ico">📘</span><span>Метод super()<small>fkn.ktu10.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_12.html"><small>← Предыдущий</small>Урок 12. Классы #1</a>
+<a class="next" href="lesson_14_15.html"><small>Следующий →</small>Урок 14–15. Ошибки и исключения</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
+</footer>
+<script src="assets/course-map.js?v=4"></script>
+<script src="assets/kk.js?v=4"></script>
 </body>
-
 </html>

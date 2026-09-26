@@ -1,82 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Списки (list) и кортежи (tuple)
-    </title>
+    <title>Урок 3. Списки и кортежи — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Учимся хранить много значений в одной переменной, доставать их по индексу и делать срезы.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=4" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kk:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Списки (list) и кортежи (tuple)</h1>
-    <ol>
-        <li>
-            <h2>Что произойдет если мы попытаемся сложить list и tuple
-            </h2>
-            <img width="800" src="img/l3_q1.png" alt="вопрос 1">
-            <h2>
-                <a href="lesson_3_ans_1.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Как исправить предыдущее выражение, чтобы все работало?
-            </h2>
-            <h2>
-                <a href="lesson_3_ans_2.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Исправте код используя кортежи и списки
-            </h2>
-            <img width="800" src="img/l3_q2.png" alt="вопрос 2">
-            <h2>
-                <a href="lesson_3_ans_3.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Как получить из списка следующие значения и какой будет у них тип?
-            </h2>
-            <img src="img/l3_q3.png" width="800" alt="вопрос 3">
-            <h2>
-                <a href="lesson_3_ans_4.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-    </ol>
-    <div class="additional">
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
-            <a href="https://pythonworld.ru/tipy-dannyx-v-python/spiski-list-funkcii-i-metody-spiskov.html" target="_blank" rel="noopener noreferrer">Списки (list) и их методы</a>
-            <a href="https://pythonworld.ru/tipy-dannyx-v-python/kortezhi-tuple.html" target="_blank" rel="noopener noreferrer">Кортежи (tuple) и их свойства</a>
-            <a href="https://all-python.ru/osnovy/kortezh.html#metody" target="_blank" rel="noopener noreferrer">Методы кортежей</a>
-            <a href="python_tests/lesson_3/3python.html" target="_blank" rel="noopener noreferrer">Тест для 3 урока</a>
 
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Python</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">Базовый курс</a>
+            <a href="index.html#advanced" class="hide-sm">Продвинутый</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Базовый курс</a><span>›</span><span>Урок 3</span></div>
+<h1>Списки (list) и кортежи (tuple)</h1>
+<p class="lead">Учимся хранить много значений в одной переменной, доставать их по индексу и делать срезы.</p>
+<div class="chips"><span class="chip">📋 Заданий: 8</span><span class="chip">✅ С автопроверкой: 4</span><span class="chip">✨ Новых: 4</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Сложить list и tuple</span></a><a href="#task-2"><span class="n">2</span><span>Исправь выражение</span></a><a href="#task-3"><span class="n">3</span><span>Сказка о герое</span></a><a href="#task-4"><span class="n">4</span><span>Достань значения из списка</span></a><a href="#task-5"><span class="n">5</span><span>Список покупок</span></a><a href="#task-6"><span class="n">6</span><span>Мастер срезов</span></a><a href="#task-7"><span class="n">7</span><span>Поменяй местами</span></a><a href="#task-8"><span class="n">8</span><span>Дневник оценок</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">📦</span>Задания</h2>
+<article class="task" id="task-1" data-task="l3:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Сложить list и tuple</h3><div class="badges"><span class="badge lvl-1">легко</span></div></div>
+</div>
+<div class="task-body">
+<p>Что произойдёт, если попытаться сложить список и кортеж? Проверь в редакторе.</p>
+<div class="shots single"><img class="zoomable" src="img/l3_q1.png" alt="Сложение списка и кортежа" loading="lazy"></div>
+<div class="py" data-mode="editor" data-key="l3:1"><script type="text/x-python">
+a = [1, 2, 3]
+b = (4, 5, 6)
+print(a + b)
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l3_a1.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l3:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Исправь выражение</h3><div class="badges"><span class="badge lvl-1">легко</span></div></div>
+</div>
+<div class="task-body">
+<p>Как исправить предыдущее выражение, чтобы всё работало?</p>
+
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Превратить кортеж в список можно функцией <code>list()</code>, а список в кортеж — <code>tuple()</code>.</p></div></details>
+<div class="py" data-mode="editor" data-key="l3:2"><script type="text/x-python">
+a = [1, 2, 3]
+b = (4, 5, 6)
+# Исправь строку ниже
+print(a + b)
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l3_a2.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l3:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Сказка о герое</h3><div class="badges"><span class="badge lvl-2">средне</span></div></div>
+</div>
+<div class="task-body">
+<p>Исправь код, используя кортежи и списки: создай нужные переменные, чтобы история напечаталась без ошибок.</p>
+<div class="shots single"><img class="zoomable" src="img/l3_q2.png" alt="Код истории с ошибками NameError" loading="lazy"></div>
+<div class="py" data-mode="editor" data-key="l3:3"><script type="text/x-python">
+# Создай переменные hero_name, princess_name, villian_name,
+# списки items, hero_actions, villian_actions
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l3_a3.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l3:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Достань значения из списка</h3><div class="badges"><span class="badge lvl-2">средне</span></div></div>
+</div>
+<div class="task-body">
+<p>Как получить из списка следующие значения и какой будет у них тип?</p>
+<div class="shots single"><img class="zoomable" src="img/l3_q3.png" alt="Список с вложенными значениями" loading="lazy"></div>
+<div class="py" data-mode="editor" data-key="l3:4"><script type="text/x-python">
+# Напиши решение здесь
+
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l3_a4.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l3:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Список покупок</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Дан список <code>shopping = ['хлеб', 'яблоки', 'сыр']</code>. С помощью методов списка:</p><ul><li>добавь <code>'молоко'</code> в конец (<code>append</code>);</li><li>вставь <code>'чай'</code> в самое начало (<code>insert</code>);</li><li>удали <code>'хлеб'</code> (<code>remove</code>);</li><li>выведи получившийся список и его длину.</li></ul>
+<p class="sample-label">Ожидаемый вывод</p><pre class="sample">[&#x27;чай&#x27;, &#x27;яблоки&#x27;, &#x27;сыр&#x27;, &#x27;молоко&#x27;]
+4</pre>
+
+<div class="py" data-mode="editor" data-key="l3:5" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;[&#x27;чай&#x27;, &#x27;яблоки&#x27;, &#x27;сыр&#x27;, &#x27;молоко&#x27;]&quot;, &quot;4&quot;]}]"><script type="text/x-python">
+shopping = ['хлеб', 'яблоки', 'сыр']
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">shopping = [&#x27;хлеб&#x27;, &#x27;яблоки&#x27;, &#x27;сыр&#x27;]
+shopping.append(&#x27;молоко&#x27;)
+shopping.insert(0, &#x27;чай&#x27;)
+shopping.remove(&#x27;хлеб&#x27;)
+print(shopping)
+print(len(shopping))</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l3:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Мастер срезов</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Дан список <code>nums = list(range(1, 11))</code>. Используя только срезы, выведи:</p><ul><li>первые три числа;</li><li>последние три числа;</li><li>каждое второе число, начиная с первого;</li><li>список задом наперёд.</li></ul>
+<p class="sample-label">Ожидаемый вывод</p><pre class="sample">[1, 2, 3]
+[8, 9, 10]
+[1, 3, 5, 7, 9]
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]</pre>
+
+<div class="py" data-mode="editor" data-key="l3:6" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;[1, 2, 3]&quot;, &quot;[8, 9, 10]&quot;, &quot;[1, 3, 5, 7, 9]&quot;, &quot;[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]&quot;]}]"><script type="text/x-python">
+nums = list(range(1, 11))
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">nums = list(range(1, 11))
+print(nums[:3])
+print(nums[-3:])
+print(nums[::2])
+print(nums[::-1])</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-7" data-task="l3:7">
+<div class="task-head">
+<span class="task-num">7</span>
+<div class="task-title"><h3>Поменяй местами</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Есть две переменные: <code>a = 5</code> и <code>b = 10</code>. Поменяй их значения местами <b>одной строкой</b> с помощью распаковки кортежа и выведи <code>print(a, b)</code>.</p>
+
+<div class="py" data-mode="editor" data-key="l3:7" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;10 5&quot;]}]"><script type="text/x-python">
+a = 5
+b = 10
+# твой код
+print(a, b)
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">a = 5
+b = 10
+a, b = b, a
+print(a, b)</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-8" data-task="l3:8">
+<div class="task-head">
+<span class="task-num">8</span>
+<div class="task-title"><h3>Дневник оценок</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Дан список оценок <code>marks = [5, 3, 4, 5, 2, 5]</code>. Выведи:</p><ul><li>сколько раз встречается пятёрка (метод <code>count</code>);</li><li>самую высокую и самую низкую оценку;</li><li>оценки по возрастанию (<code>sorted</code>).</li></ul>
+<p class="sample-label">Ожидаемый вывод</p><pre class="sample">Пятёрок: 3
+Макс: 5
+Мин: 2
+[2, 3, 4, 5, 5, 5]</pre>
+
+<div class="py" data-mode="editor" data-key="l3:8" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;Пятёрок: 3&quot;, &quot;Макс: 5&quot;, &quot;Мин: 2&quot;, &quot;[2, 3, 4, 5, 5, 5]&quot;]}]"><script type="text/x-python">
+marks = [5, 3, 4, 5, 2, 5]
+</script></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">marks = [5, 3, 4, 5, 2, 5]
+print(&#x27;Пятёрок:&#x27;, marks.count(5))
+print(&#x27;Макс:&#x27;, max(marks))
+print(&#x27;Мин:&#x27;, min(marks))
+print(sorted(marks))</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://pythonworld.ru/tipy-dannyx-v-python/spiski-list-funkcii-i-metody-spiskov.html" target="_blank" rel="noopener"><span class="ico">📘</span><span>Списки (list) и их методы<small>pythonworld.ru</small></span></a>
+<a class="link-card" href="https://pythonworld.ru/tipy-dannyx-v-python/kortezhi-tuple.html" target="_blank" rel="noopener"><span class="ico">📘</span><span>Кортежи (tuple) и их свойства<small>pythonworld.ru</small></span></a>
+<a class="link-card" href="https://all-python.ru/osnovy/kortezh.html#metody" target="_blank" rel="noopener"><span class="ico">📘</span><span>Методы кортежей<small>all-python.ru</small></span></a>
+<a class="link-card" href="python_tests/lesson_3/3python.html" target="_blank" rel="noopener"><span class="ico">📝</span><span>Тест для 3 урока<small>kidkodschool</small></span></a>
+</div>
+<h3 class="links-title">Где потренироваться</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_lists1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Списки — упражнение<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/python/exercise.asp?x=xrcise_tuples1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Кортежи — упражнение<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_2.html"><small>← Предыдущий</small>Урок 2. Переменные, строки, ввод и вывод</a>
+<a class="next" href="lesson_4.html"><small>Следующий →</small>Урок 4. Сравнения и условия</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Где потренироваться:</h2>
-        <h2 class="task">Списки (list)</h2>
-        <div class="stuff">
-
-            <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_lists1">Упражнение</a>
-        </div>
-        <h2 class="task">Кортежи (tuple)</h2>
-        <div class="stuff">
-
-            <a href="https://www.w3schools.com/python/exercise.asp?x=xrcise_tuples1">Упражнение</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=4"></script>
+<script src="assets/kk.js?v=4"></script>
 </body>
-
 </html>

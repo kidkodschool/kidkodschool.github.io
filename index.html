@@ -1,83 +1,106 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style.css" rel="stylesheet">
-    <title>Базовый курс Python</title>
+    <title>Домашние задания по Python · КИДКОД</title>
+    <meta name="description" content="Домашние задания по Python для учеников школы программирования КИДКОД: задачи с запуском кода прямо в браузере и автопроверкой.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=4" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kk:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <div class="main-page">
-        <h1 class="begin">Базовый курс Python</h1>
-        <div class="course">    
-            <a href="./lesson_1.html">Урок 1</a>
-        
-            <a href="./lesson_2.html">Урок 2</a>
-        
-            <a href="./lesson_3.html">Урок 3</a>
-        
-            <a href="./lesson_4.html">Урок 4</a>
-        
-            <a href="./lesson_5.html">Урок 5</a>
-        
-            <a href="./lesson_6.html">Урок 6</a>
-        
-            <a href="./lesson_7.html">Урок 7</a>
-        
-            <a href="./lesson_8.html">Урок 8</a>
-        
-            <a href="./lesson_9.html">Урок 9</a>
-        
-            <a href="./lesson_10.html">Урок 10</a>
-        
-            <a href="./lesson_11.html">Урок 11</a>
-        
-            <a href="./lesson_12.html">Урок 12</a>
-        
-            <a href="./lesson_13.html">Урок 13</a>
-        
-            <a href="./lesson_14_15.html">Урок 14-15</a>
-        
-            <a href="./lesson_16.html">Урок 16</a>
-        
-            <a href="./lesson_17_18.html">Урок 17-18</a>
-        
-            <a href="./lesson_19.html">Урок 19</a>
-        
-            <a href="./lesson_20.html">Урок 20</a>
-        </div>
-        <h1 class="adv-j">Продвинутый курс Python</h1>
-        <div class="course">
-            <a href="./lesson_21.html">Урок 21</a>
-            <a href="./lesson_22.html">Урок 22</a>
-            <a href="./lesson_23.html">Урок 23</a>
-            <a href="./lesson_24.html">Урок 24</a>
-            <a href="./lesson_25.html">Урок 25</a>
-            <a href="./lesson_26.html">Урок 26</a>
-            <a href="./lesson_27.html">Урок 27</a>
-            <a href="./lesson_28.html">Урок 28</a>
-            <a href="./lesson_29.html">Урок 29</a>
-            <a href="./lesson_30.html">Урок 30</a>
-            <a href="./lesson_31.html">Урок 31</a>
-            <a href="./lesson_32.html">Урок 32</a>
-            <a href="./lesson_33.html">Урок 33</a>
-            <a href="./lesson_34.html">Урок 34</a>
-        </div>
-        <div class="footer">
-            <h5>Связь с преподавателем:</h5>
-            <div class="links">
-                <a href="https://t.me/kidkodschool" target="_blank">
-                    <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-                </a>
-                <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                    <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-                </a>
-            </div>
-        </div>
-</body>
 
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Python</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">Базовый курс</a>
+            <a href="index.html#advanced" class="hide-sm">Продвинутый</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
+
+<main>
+<section class="hero"><div class="blob b1"></div><div class="blob b2"></div><div class="wrap hero-grid"><div>
+<span class="eyebrow">🐍 Школа программирования КИДКОД</span>
+<h1>Домашние задания по <span class="hl">Python</span></h1>
+<p class="lead">126 заданий от первых <code>print()</code> до классов, алгоритмов и декораторов. Пиши код и запускай его прямо на странице — устанавливать ничего не нужно. 90 задач проверяются автоматически.</p>
+<div class="hero-actions"><a class="btn btn-lg" href="lesson_1.html">Начать с урока 1 →</a><a class="btn btn-ghost btn-lg" href="#basic">Все уроки</a></div>
+<div class="progress-card" data-total-progress><span>Твой прогресс:</span><div class="bar"><i></i></div><b class="cnt">0 из 0</b><button class="link-btn reset-progress" type="button">сбросить</button></div>
+</div>
+<div class="hero-art" aria-hidden="true"><span class="c"># домашка на сегодня</span><br><span class="k">def</span> <span class="f">hello</span>(name):<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="s">f"Привет, {name}!"</span><br><br>name = <span class="f">input</span>(<span class="s">"Как тебя зовут? "</span>)<br><span class="f">print</span>(hello(name))<br><br><span class="c"># ▶ Привет, Аня!</span></div>
+</div></section>
+<div class="wrap">
+<div class="features">
+<div class="feature"><div class="ico">▶️</div><h3>Запуск в браузере</h3><p>Python работает прямо на странице — даже с <code>input()</code>.</p></div>
+<div class="feature"><div class="ico">✅</div><h3>Автопроверка</h3><p>Нажми «Проверить» — и сразу узнаешь, правильно ли решено.</p></div>
+<div class="feature"><div class="ico">💾</div><h3>Всё сохраняется</h3><p>Код и отметки о выполнении хранятся в твоём браузере.</p></div>
+<div class="feature"><div class="ico">🔑</div><h3>Ответы и подсказки</h3><p>Застрял? Открой подсказку или посмотри решение.</p></div>
+</div>
+<div class="section-head" id="basic"><div><h2>Базовый курс</h2><p>Переменные, условия, циклы, функции, классы и первые игры.</p></div><input class="lesson-search" type="search" placeholder="Поиск по урокам…" aria-label="Поиск по урокам"></div>
+<div class="lesson-grid">
+<a class="lesson-card c1" href="lesson_1.html" data-lesson="l1"><span class="tag">+5 новых</span><span class="num">1</span><h3>Типы данных и арифметика</h3><p>Числа int и float, операции + − * / // % **</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/6</span></div></a>
+<a class="lesson-card c2" href="lesson_2.html" data-lesson="l2"><span class="tag">+4 новых</span><span class="num">2</span><h3>Переменные, строки, ввод и вывод</h3><p>input(), print(), f-строки, срезы строк</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/7</span></div></a>
+<a class="lesson-card c3" href="lesson_3.html" data-lesson="l3"><span class="tag">+4 новых</span><span class="num">3</span><h3>Списки и кортежи</h3><p>Индексы, срезы, методы append, insert, remove</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/8</span></div></a>
+<a class="lesson-card c4" href="lesson_4.html" data-lesson="l4"><span class="tag">+4 новых</span><span class="num">4</span><h3>Сравнения и условия</h3><p>if, elif, else, and, or, not</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/7</span></div></a>
+<a class="lesson-card c5" href="lesson_5.html" data-lesson="l5"><span class="tag">+5 новых</span><span class="num">5</span><h3>Циклы</h3><p>for, while, range(), break</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/10</span></div></a>
+<a class="lesson-card c6" href="lesson_6.html" data-lesson="l6"><span class="tag">+5 новых</span><span class="num">6</span><h3>Функции</h3><p>def, return, аргументы, значения по умолчанию</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/9</span></div></a>
+<a class="lesson-card c1" href="lesson_7.html" data-lesson="l7"><span class="num">7</span><h3>VS Code, GitHub и «Виселица»</h3><p>Установка VS Code, git, аккаунт на GitHub</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/2</span></div></a>
+<a class="lesson-card c2" href="lesson_8.html" data-lesson="l8"><span class="tag">+4 новых</span><span class="num">8</span><h3>Практика и GitHub</h3><p>Строки, вложенные циклы, двумерное поле</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/8</span></div></a>
+<a class="lesson-card c3" href="lesson_9.html" data-lesson="l9"><span class="tag">+4 новых</span><span class="num">9</span><h3>Модули и файлы</h3><p>import, random, math, open(), with</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/6</span></div></a>
+<a class="lesson-card c4" href="lesson_10.html" data-lesson="l10"><span class="tag">+4 новых</span><span class="num">10</span><h3>Словари</h3><p>Ключи и значения, .get(), .items(), pickle</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/7</span></div></a>
+<a class="lesson-card c5" href="lesson_11.html" data-lesson="l11"><span class="tag">+5 новых</span><span class="num">11</span><h3>Рекурсия и Codewars</h3><p>Функция, которая вызывает саму себя</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/5</span></div></a>
+<a class="lesson-card c6" href="lesson_12.html" data-lesson="l12"><span class="tag">+3 новых</span><span class="num">12</span><h3>Классы #1</h3><p>class, __init__, self, наследование</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/6</span></div></a>
+<a class="lesson-card c1" href="lesson_13.html" data-lesson="l13"><span class="tag">+4 новых</span><span class="num">13</span><h3>Классы #2</h3><p>Магические методы, super(), игры на классах</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/6</span></div></a>
+<a class="lesson-card c2" href="lesson_14_15.html" data-lesson="l14"><span class="tag">+3 новых</span><span class="num">14–15</span><h3>Ошибки и исключения</h3><p>SyntaxError, NameError, try / except</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/8</span></div></a>
+<a class="lesson-card c3" href="lesson_16.html" data-lesson="l16"><span class="tag">+2 новых</span><span class="num">16</span><h3>Графический интерфейс tkinter</h3><p>Окна, кнопки, поля ввода, холст</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/4</span></div></a>
+<a class="lesson-card c4" href="lesson_17_18.html" data-lesson="l17"><span class="tag">+2 новых</span><span class="num">17–18</span><h3>Проект «Лабиринт»</h3><p>Собираем игру из всего изученного</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/3</span></div></a>
+<a class="lesson-card c5" href="lesson_19.html" data-lesson="l19"><span class="tag">+4 новых</span><span class="num">19</span><h3>Алгоритмы</h3><p>Задачи в стиле Codewars</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/7</span></div></a>
+<a class="lesson-card c6" href="lesson_20.html" data-lesson="l20"><span class="tag">+1 новых</span><span class="num">20</span><h3>Что делать дальше</h3><p>Zen of Python, PEP 8, итоговый проект</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/1</span></div></a>
+</div>
+<div class="section-head" id="advanced"><div><h2>Продвинутый курс</h2><p>Однострочники, декораторы, git, веб-запросы, Flask и Django.</p></div></div>
+<div class="lesson-grid">
+<a class="lesson-card c4" href="lesson_21.html" data-lesson="l21"><span class="tag">+4 новых</span><span class="num">21</span><h3>Однострочники</h3><p>Решения в одну строку</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/10</span></div></a>
+<a class="lesson-card c5" href="lesson_22.html" data-lesson="l22"><span class="tag">+3 новых</span><span class="num">22</span><h3>git и декораторы</h3><p>Команды git, функции-обёртки</p><div class="meta"><div class="bar"><i></i></div><span class="cnt">0/6</span></div></a>
+<a class="lesson-card c6" href="lesson_23.html" data-lesson="l23"><span class="num">23</span><h3>Веб-запросы и API</h3><p>GET, POST, requests, JSON</p></a>
+<a class="lesson-card c1" href="lesson_24.html" data-lesson="l24"><span class="num">24</span><h3>Веб-сервер на Flask</h3><p>Первое веб-приложение</p></a>
+<a class="lesson-card c2" href="lesson_25.html" data-lesson="l25"><span class="num">25</span><h3>Django: введение</h3><p>Проект, приложения, миграции</p></a>
+<a class="lesson-card c3" href="lesson_26.html" data-lesson="l26"><span class="num">26</span><h3>Django: шаблоны</h3><p>extends, include, block</p></a>
+<a class="lesson-card c4" href="lesson_27.html" data-lesson="l27"><span class="num">27</span><h3>Django: формы</h3><p>Формы и структура приложения</p></a>
+<a class="lesson-card c5" href="lesson_28.html" data-lesson="l28"><span class="num">28</span><h3>Django: вход и регистрация</h3><p>Login, Logout, Register</p></a>
+<a class="lesson-card c6" href="lesson_29.html" data-lesson="l29"><span class="num">29</span><h3>Django: логика приложения</h3><p>Комментарии и база данных</p></a>
+<a class="lesson-card c1" href="lesson_30.html" data-lesson="l30"><span class="num">30</span><h3>Django: картинки профиля</h3><p>Static, ImageField</p></a>
+<a class="lesson-card c2" href="lesson_31.html" data-lesson="l31"><span class="num">31</span><h3>Django: публикация</h3><p>Размещение приложения</p></a>
+<a class="lesson-card c3" href="lesson_32.html" data-lesson="l32"><span class="num">32</span><h3>Django: CBV</h3><p>Class-based views, CRUD</p></a>
+<a class="lesson-card c4" href="lesson_33.html" data-lesson="l33"><span class="num">33</span><h3>Django: своё приложение</h3><p>Фильтры, сообщения, тесты</p></a>
+<a class="lesson-card c5" href="lesson_34.html" data-lesson="l34"><span class="num">34</span><h3>Django: сторонние модули</h3><p>Админка и продвинутые формы</p></a>
+<a class="lesson-card c6" href="lesson_35.html" data-lesson="l35"><span class="num">35</span><h3>Проект ToDo</h3><p>Приложение-список дел</p></a>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
+        </div>
+    </div>
+</footer>
+<script src="assets/course-map.js?v=4"></script>
+<script src="assets/kk.js?v=4"></script>
+</body>
 </html>
