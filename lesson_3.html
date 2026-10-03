@@ -83,12 +83,34 @@ print(a + b)
 </div>
 <div class="task-body">
 <p>Исправь код, используя кортежи и списки: создай нужные переменные, чтобы история напечаталась без ошибок.</p>
-<div class="shots single"><img class="zoomable" src="img/l3_q2.png" alt="Код истории с ошибками NameError" loading="lazy"></div>
+<p>Сейчас программа останавливается с ошибкой <code>NameError</code>: Python не знает имён из фигурных скобок. Допиши переменные в начале программы и запусти её.</p>
 <div class="py" data-mode="editor" data-key="l3:3"><script type="text/x-python">
-# Создай переменные hero_name, princess_name, villian_name,
-# списки items, hero_actions, villian_actions
+# Создай переменные hero_name, princess_name, villain_name,
+# список items и кортежи hero_actions, villain_actions
+
+print(f'''Наша история начнётся с героя - {hero_name}
+Он жил в далёком-далёком королевстве
+и однажды встретил принцессу - {princess_name}.
+Но злой король не разрешил им быть вместе
+и приказал {hero_name} победить злодея - {villain_name}
+Герой отправился на поиски злодея и взял с собой - {items}
+Найдя злодея, герой попытался {hero_actions[0]} {items[0]} - {villain_name}
+Но злодей оказался сильнее, чем думал {hero_name},
+и {villain_actions[0]} в ответ!
+{hero_name} успешно использовал {items[1]} и успешно {hero_actions[1]}!
+{villain_name} повержен!!! И герою досталось его оружие''')
+items.append('Rakzul Sword')
+print(f'''Теперь у героя есть {items}
+Добравшись обратно до королевства,
+{princess_name} и {hero_name} стали жить долго и счастливо!
+Конец.''')
 </script></div>
-<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><img class="zoomable" src="img/l3_a3.png" alt="Решение задания" loading="lazy"></div></details>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code">hero_name = &#x27;Arthur&#x27;
+princess_name = &#x27;Morgana&#x27;
+villain_name = &#x27;Rakzul&#x27;
+hero_actions = (&#x27;attack&#x27;, &#x27;defend&#x27;)
+villain_actions = (&#x27;attack&#x27;, &#x27;defend&#x27;)
+items = [&#x27;sword&#x27;, &#x27;shield&#x27;]</pre><p>Значения можно выбрать свои. Важно, чтобы <code>items</code> был списком из двух предметов, а действия — кортежами из двух действий.</p></div></details>
 </div>
 <div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
 </article>
